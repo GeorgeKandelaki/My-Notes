@@ -1,4 +1,4 @@
-# CODIGN NOTES
+# CODING NOTES
 This Reposirtory is for my notes, which I have written and collected throughout watching all types of Coding and Programming Educational Videos. I have written all the theory I **CURRENTLY** Know in this repository.
 
 ***
