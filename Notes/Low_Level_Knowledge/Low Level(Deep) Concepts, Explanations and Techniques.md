@@ -3191,11 +3191,11 @@ Routers that use some adaptive protocols, such as the [Spanning Tree Protocol](
 Routers that use other adaptive protocols, such as **grouped adaptive routing**, find a group of _all_ the links that could be used to get the packet one hop closer to its final destination. The router sends the packet out any link of that group which is idle. The [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation "Link aggregation") of that group of links effectively becomes a single high-bandwidth connection.
 
 ### Outside of computer networks
-[Contact centres](https://en.wikipedia.org/wiki/Call_centre "Call centre") employ dynamic routing based on the customer's enquiry and agent's skills to increase the operational efficiency of the call handling by agents, which boosts both agent and customer satisfaction. This adaptive strategy is known as [omnichannel](https://en.wikipedia.org/wiki/Omnichannel "Omnichannel").
+[Contact centres](https://en.wikipedia.org/wiki/Call_centre "Call centre") employ dynamic routing based on the customer's inquiry and agent's skills to increase the operational efficiency of the call handling by agents, which boosts both agent and customer satisfaction. This adaptive strategy is known as [omnichannel](https://en.wikipedia.org/wiki/Omnichannel "Omnichannel").
 
 Dynamic routing in found the [brain](https://en.wikipedia.org/wiki/Brain "Brain") in relation between sensory and mnemonic signals and decision making, and is a subject of studies in [neuroscience](https://en.wikipedia.org/wiki/Neuroscience "Neuroscience").
 
-People using [public transport](https://en.wikipedia.org/wiki/Public_transport "Public transport") also exhibit dynamic routing behaviour. For example, if a local railway station is closed, people can alight from the train at a different station and use a bus to reach their destination.
+People using [public transport](https://en.wikipedia.org/wiki/Public_transport "Public transport") also exhibit dynamic routing behavior. For example, if a local railway station is closed, people can alight from the train at a different station and use a bus to reach their destination.
 
 ## Instance
 In computer science, an **instance** is an occurrence of a [software](https://en.wikipedia.org/wiki/Software "Software") element that is based on a [type](https://en.wikipedia.org/wiki/Data_type "Data type") definition. When created, an occurrence is said to have been _instantiated_, and both the creation process and the result of creation are called _instantiation_.
@@ -7150,3 +7150,2123 @@ Some notable unit names that are today obsolete or only used in limited contexts
 - 128 bits: hexlet
 - 256 bytes: [page](https://en.wikipedia.org/wiki/Page_\(computer_memory\) "Page (computer memory)") (on Intel 4004, [8080](https://en.wikipedia.org/wiki/Intel_8080 "Intel 8080") and 8086 processors,) also many other 8-bit processors – typically much larger on many 16-bit/32-bit processors)
 - 6 trits: [tryte](https://en.wikipedia.org/wiki/Tryte "Tryte"), combit, comword
+
+
+## Side Effect (Computer Science)
+In [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), an operation, [function](https://en.wikipedia.org/wiki/Subroutine "Subroutine") or [expression](https://en.wikipedia.org/wiki/Expression_\(programming\) "Expression (programming)") is said to have a **side effect** if it has any observable effect other than its primary effect of reading the value of its arguments and returning a value to the invoker of the operation. Example side effects include modifying a [non-local variable](https://en.wikipedia.org/wiki/Non-local_variable "Non-local variable"), a [static local variable](https://en.wikipedia.org/wiki/Static_local_variable "Static local variable") or a mutable argument [passed by reference](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference "Evaluation strategy"); raising errors or exceptions; performing [I/O](https://en.wikipedia.org/wiki/I/O "I/O"); or calling other functions with side-effects. In the presence of side effects, a program's behaviour may depend on history; that is, the order of evaluation matters. Understanding and debugging a function with side effects requires knowledge about the context and its possible histories. Side effects play an important role in the design and analysis of [programming languages](https://en.wikipedia.org/wiki/Programming_language "Programming language"). The degree to which side effects are used depends on the programming paradigm. For example, [imperative programming](https://en.wikipedia.org/wiki/Imperative_programming "Imperative programming") is commonly used to produce side effects, to update a system's state. By contrast, [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming "Declarative programming") is commonly used to report on the state of system, without side effects.
+
+[Functional programming](https://en.wikipedia.org/wiki/Functional_programming "Functional programming") aims to minimize or eliminate side effects. The lack of side effects makes it easier to do [formal verification](https://en.wikipedia.org/wiki/Formal_verification "Formal verification") of a program. The functional language [Haskell](https://en.wikipedia.org/wiki/Haskell_\(programming_language\) "Haskell (programming language)") eliminates side effects such as [I/O](https://en.wikipedia.org/wiki/Input/output "Input/output") and other stateful computations by replacing them with [monadic](https://en.wikipedia.org/wiki/Monad_\(functional_programming\) "Monad (functional programming)") actions. Functional languages such as [Standard ML](https://en.wikipedia.org/wiki/Standard_ML "Standard ML"), [Scheme](https://en.wikipedia.org/wiki/Scheme_\(programming_language\) "Scheme (programming language)") and [Scala](https://en.wikipedia.org/wiki/Scala_\(programming_language\) "Scala (programming language)") do not restrict side effects, but it is customary for programmers to avoid them.
+
+[Effect systems](https://en.wikipedia.org/wiki/Effect_system "Effect system") extend types to keep track of effects, permitting concise notation for functions with effects, while maintaining information about the extent and nature of side effects. In particular, functions without effects correspond to pure functions.
+
+[Assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") programmers must be aware of _hidden_ side effects—instructions that modify parts of the processor state which are not mentioned in the instruction's mnemonic. A classic example of a hidden side effect is an arithmetic instruction that implicitly modifies [condition codes](https://en.wikipedia.org/wiki/Status_register "Status register") (a hidden side effect) while it explicitly modifies a [register](https://en.wikipedia.org/wiki/Processor_register "Processor register") (the intended effect). One potential drawback of an [instruction set](https://en.wikipedia.org/wiki/Instruction_set "Instruction set") with hidden side effects is that, if many instructions have side effects on a single piece of state, like condition codes, then the logic required to update that state sequentially may become a performance bottleneck. The problem is particularly acute on some processors designed with [pipelining](https://en.wikipedia.org/wiki/Instruction_pipeline "Instruction pipeline") (since 1990) or with [out-of-order execution](https://en.wikipedia.org/wiki/Out-of-order_execution "Out-of-order execution"). Such a processor may require additional control circuitry to detect hidden side effects and stall the pipeline if the next instruction depends on the results of those effects.
+
+### Referential transparency
+Absence of side effects is a necessary, but not sufficient, condition for referential transparency. Referential transparency means that an expression (such as a function call) can be replaced with its value. This requires that the expression is [pure](https://en.wikipedia.org/wiki/Pure_function "Pure function"), that is to say the expression must be [deterministic](https://en.wikipedia.org/wiki/Deterministic_algorithm "Deterministic algorithm") (always give the same [value](https://en.wikipedia.org/wiki/Value_\(computer_science\) "Value (computer science)") for the same input) and side-effect free.
+
+### Temporal side effects
+Side effects caused by the time taken for an operation to execute are usually ignored when discussing side effects and referential transparency. There are some cases, such as with hardware timing or testing, where operations are inserted specifically for their temporal side effects e.g. `sleep(5000)` or `for (int i = 0; i < 10000; ++i) {}`. These instructions do not change state other than taking an amount of time to complete.
+
+### Idempotence
+A [subroutine](https://en.wikipedia.org/wiki/Subroutine "Subroutine") with side effects is idempotent if multiple applications of the subroutine have the same effect on the system state as a single application, in other words if the function from the system state space to itself associated with the subroutine is idempotent in the [mathematical sense](https://en.wikipedia.org/wiki/Idempotence#Definition "Idempotence"). For instance, consider the following [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)") program:
+```python
+
+x = 0
+
+def setx(n):
+    global x
+    x = n
+
+setx(3)
+assert x == 3
+setx(3)
+assert x == 3
+```
+
+`setx` is idempotent because the second application of `setx` to 3 has the same effect on the system state as the first application: `x` was already set to 3 after the first application, and it is still set to 3 after the second application.
+
+A [pure function](https://en.wikipedia.org/wiki/Pure_function "Pure function") is idempotent if it is idempotent in the [mathematical sense](https://en.wikipedia.org/wiki/Idempotence#Definition "Idempotence"). For instance, consider the following Python program:
+
+```python
+def abs(n):
+    return -n if n < 0 else n
+
+assert abs(abs(-3)) == abs(-3)
+```
+
+`abs` is idempotent because the second application of `abs` to the return value of the first application to -3 returns the same value as the first application to -3.
+
+### Example
+
+One common demonstration of side effect behavior is that of the [assignment operator](https://en.wikipedia.org/wiki/Assignment_operator "Assignment operator") in [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"). The assignment `a = b` is an expression that evaluates to the same value as the expression `b`, with the side effect of storing the [R-value](https://en.wikipedia.org/wiki/Value_\(computer_science\)#lrvalue "Value (computer science)") of `b` into the [L-value](https://en.wikipedia.org/wiki/Value_\(computer_science\)#lrvalue "Value (computer science)") of `a`. This allows multiple assignment:
+
+```C
+a = (b = 3);  // b = 3 evaluates to 3, which then gets assigned to a
+```
+
+Because the operator [right associates](https://en.wikipedia.org/wiki/Operator_associativity#Right-associativity_of_assignment_operators "Operator associativity"), this is equivalent to
+```C
+a = b = 3;
+```
+
+This presents a potential hangup for novice programmers who may confuse
+
+```C
+while (b == 3) {}  // tests if b evaluates to 3
+```
+
+with
+```C
+while (b = 3) {}  // b = 3 evaluates to 3, which then casts to true so the loop is infinite
+```
+
+## Process (Computing)
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **process** is the [instance](https://en.wikipedia.org/wiki/Instance_\(computer_science\) "Instance (computer science)") of a [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program") that is being executed by one or many [threads](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)"). There are many different process models, some of which are light weight, but almost all processes (even entire [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine")) are rooted in an [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") (OS) process which comprises the program code, assigned system resources, physical and logical access permissions, and data structures to initiate, control and coordinate execution activity. Depending on the OS, a process may be made up of multiple threads of execution that execute instructions [concurrently](https://en.wikipedia.org/wiki/Concurrency_\(computer_science\) "Concurrency (computer science)").
+
+While a computer program is a passive collection of [instructions](https://en.wikipedia.org/wiki/Instruction_set "Instruction set") typically stored in a file on disk, a process is the execution of those instructions after being loaded from the disk into memory. Several processes may be associated with the same program; for example, opening up several instances of the same program often results in more than one process being executed.
+
+[Multitasking](https://en.wikipedia.org/wiki/Computer_multitasking "Computer multitasking") is a method to allow multiple processes to share [processors](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPUs) and other system resources. Each CPU (core) executes a single process at a time. However, multitasking allows each processor to [switch](https://en.wikipedia.org/wiki/Context_switch "Context switch") between tasks that are being executed without having to wait for each task to finish ([preemption](https://en.wikipedia.org/wiki/Preemption_\(computing\) "Preemption (computing)")). Depending on the operating system implementation, switches could be performed when tasks initiate and wait for completion of [input/output](https://en.wikipedia.org/wiki/Input/output "Input/output") operations, when a task voluntarily yields the CPU, on hardware [interrupts](https://en.wikipedia.org/wiki/Interrupt "Interrupt"), and when the operating system scheduler decides that a process has expired its fair share of CPU time (e.g, by the [Completely Fair Scheduler](https://en.wikipedia.org/wiki/Completely_Fair_Scheduler "Completely Fair Scheduler") of the [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel "Linux kernel")).
+
+A common form of multitasking is provided by CPU's [time-sharing](https://en.wikipedia.org/wiki/Time-sharing "Time-sharing") that is a method for interleaving the execution of users' processes and threads, and even of independent kernel tasks – although the latter feature is feasible only in preemptive [kernels](https://en.wikipedia.org/wiki/Kernel_\(operating_system\) "Kernel (operating system)") such as [Linux](https://en.wikipedia.org/wiki/Linux_kernel "Linux kernel"). Preemption has an important side effect for interactive processes that are given higher priority with respect to CPU bound processes, therefore users are immediately assigned computing resources at the simple pressing of a key or when moving a mouse. Furthermore, applications like video and music reproduction are given some kind of real-time priority, preempting any other lower priority process. In time-sharing systems, [context switches](https://en.wikipedia.org/wiki/Context_switch "Context switch") are performed rapidly, which makes it seem like multiple processes are being executed simultaneously on the same processor. This seemingly-simultaneous execution of multiple processes is called [concurrency](https://en.wikipedia.org/wiki/Concurrency_\(computer_science\) "Concurrency (computer science)").
+
+For security and reliability, most modern [operating systems](https://en.wikipedia.org/wiki/Operating_system "Operating system") prevent direct [communication](https://en.wikipedia.org/wiki/Inter-process_communication "Inter-process communication") between independent processes, providing strictly mediated and controlled inter-process communication.
+
+### Representation
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Htop_3.0.1_screenshot.png/500px-Htop_3.0.1_screenshot.png)](https://en.wikipedia.org/wiki/File:Htop_3.0.1_screenshot.png)
+
+A list of processes as displayed by [htop](https://en.wikipedia.org/wiki/Htop "Htop")
+
+[![A process table as displayed by KDE System Guard](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/KSysGuard_5.22.0_process_table_screenshot.png/500px-KSysGuard_5.22.0_process_table_screenshot.png)](https://en.wikipedia.org/wiki/File:KSysGuard_5.22.0_process_table_screenshot.png)
+
+A process table as displayed by [KDE System Guard](https://en.wikipedia.org/wiki/KDE_System_Guard "KDE System Guard")
+
+In general, a computer system process consists of (or is said to _own_) the following resources:
+
+- An _image_ of the executable [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") associated with a program.
+- Memory (typically some region of [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory "Virtual memory")); which includes the executable code, process-specific data (input and output), a [call stack](https://en.wikipedia.org/wiki/Call_stack "Call stack") (to keep track of active [subroutines](https://en.wikipedia.org/wiki/Subroutine "Subroutine") and/or other events), and a [heap](https://en.wikipedia.org/wiki/Heap_memory "Heap memory") to hold intermediate computation data generated during run time.
+- Operating system descriptors of resources that are allocated to the process, such as [file descriptors](https://en.wikipedia.org/wiki/File_descriptor "File descriptor") ([Unix](https://en.wikipedia.org/wiki/Unix "Unix") terminology) or [handles](https://en.wikipedia.org/wiki/Handle_\(computing\) "Handle (computing)") ([Windows](https://en.wikipedia.org/wiki/Microsoft_Windows "Microsoft Windows")), and data sources and sinks.
+- [Security](https://en.wikipedia.org/wiki/Computer_security "Computer security") attributes, such as the process owner and the process' set of permissions (allowable operations).
+- [Processor](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") state ([context](https://en.wikipedia.org/wiki/Context_\(computing\) "Context (computing)")), such as the content of [registers](https://en.wikipedia.org/wiki/Processor_register "Processor register") and physical memory addressing. The _state_ is typically stored in computer registers when the process is executing, and in memory otherwise.
+The operating system holds most of this information about active processes in data structures called [process control blocks](https://en.wikipedia.org/wiki/Process_control_block "Process control block"). Any subset of the resources, typically at least the processor state, may be associated with each of the process' [threads](https://en.wikipedia.org/wiki/Thread_\(computer_science\) "Thread (computer science)") in operating systems that support threads or _child_ processes.
+
+The operating system keeps its processes separate and allocates the resources they need, so that they are less likely to interfere with each other and cause system failures (e.g., [deadlock](https://en.wikipedia.org/wiki/Deadlock_\(computer_science\) "Deadlock (computer science)") or [thrashing](https://en.wikipedia.org/wiki/Thrashing_\(computer_science\) "Thrashing (computer science)")). The operating system may also provide mechanisms for [inter-process communication](https://en.wikipedia.org/wiki/Inter-process_communication "Inter-process communication") to enable processes to interact in safe and predictable ways.
+
+### Multitasking and process management
+
+Main article: [Process management (computing)](https://en.wikipedia.org/wiki/Process_management_\(computing\) "Process management (computing)")
+
+A [multitasking](https://en.wikipedia.org/wiki/Computer_multitasking "Computer multitasking") [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") may just switch between processes to give the appearance of many processes [executing](https://en.wikipedia.org/wiki/Execution_\(computing\) "Execution (computing)") simultaneously (that is, in [parallel](https://en.wikipedia.org/wiki/Parallel_computing "Parallel computing")), though in fact only one process can be executing at any one time on a single [CPU](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (unless the CPU has multiple cores, then [multithreading](https://en.wikipedia.org/wiki/Multithreading_\(computer_architecture\) "Multithreading (computer architecture)") or other similar technologies can be used).
+
+It is usual to associate a single process with a main program, and child processes with any spin-off, parallel processes, which behave like [asynchronous](https://en.wikipedia.org/wiki/Asynchrony_\(computer_programming\) "Asynchrony (computer programming)") subroutines. A process is said to _own_ resources, of which an _image_ of its program (in memory) is one such resource. However, in multiprocessing systems _many_ processes may run off of, or share, the same [reentrant](https://en.wikipedia.org/wiki/Reentrancy_\(computing\) "Reentrancy (computing)") program at the same location in memory, but each process is said to own its own _image_ of the program.
+
+Processes are often called "tasks" in [embedded](https://en.wikipedia.org/wiki/Embedded_system "Embedded system") operating systems. The sense of "process" (or task) is "something that takes up time", as opposed to "memory", which is "something that takes up space".
+The above description applies to both processes managed by an operating system, and processes as defined by [process calculi](https://en.wikipedia.org/wiki/Process_calculus "Process calculus").
+
+If a process requests something for which it must wait, it will be blocked. When the process is in the [blocked state](https://en.wikipedia.org/wiki/Process_state "Process state"), it is eligible for swapping to disk, but this is transparent in a [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory "Virtual memory") system, where regions of a process's memory may be really on disk and not in [main memory](https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage "Computer data storage") at any time. Even portions of active processes/tasks (executing programs) are eligible for swapping to disk, if the portions have not been used recently. Not all parts of an executing program and its data have to be in physical memory for the associated process to be active.
+
+#### Process states
+
+Main article: [Process state](https://en.wikipedia.org/wiki/Process_state "Process state")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Process_states.svg/330px-Process_states.svg.png)](https://en.wikipedia.org/wiki/File:Process_states.svg)
+
+The various process states, displayed in a [state diagram](https://en.wikipedia.org/wiki/State_diagram "State diagram"), with arrows indicating possible transitions between states
+
+An operating system [kernel](https://en.wikipedia.org/wiki/Kernel_\(operating_system\) "Kernel (operating system)") that allows multitasking needs processes to have [certain states](https://en.wikipedia.org/wiki/Process_states "Process states"). Names for these states are not standardised, but they have similar functionality.
+
+- First, the process is "created" by being loaded from a [secondary storage](https://en.wikipedia.org/wiki/Auxiliary_memory "Auxiliary memory") device ([hard disk drive](https://en.wikipedia.org/wiki/Hard_disk_drive "Hard disk drive"), [CD-ROM](https://en.wikipedia.org/wiki/CD-ROM "CD-ROM"), etc.) into [main memory](https://en.wikipedia.org/wiki/Main_memory "Main memory"). After that the [process scheduler](https://en.wikipedia.org/wiki/Scheduling_\(computing\) "Scheduling (computing)") assigns it the "waiting" state.
+- While the process is "waiting", it waits for the [scheduler](https://en.wikipedia.org/wiki/Scheduling_\(computing\) "Scheduling (computing)") to do a so-called [context switch](https://en.wikipedia.org/wiki/Context_switch "Context switch"). The context switch loads the process into the processor and changes the state to "running" while the previously "running" process is stored in a "waiting" state.
+- If a process in the "running" state needs to wait for a resource (wait for user input or file to open, for example), it is assigned the "blocked" state. The process state is changed back to "waiting" when the process no longer needs to wait (in a blocked state).
+- Once the process finishes execution, or is terminated by the operating system, it is no longer needed. The process is removed instantly or is moved to the "terminated" state. When removed, it just waits to be removed from main memory.
+
+### Inter-process communication
+
+Main article: [Inter-process communication](https://en.wikipedia.org/wiki/Inter-process_communication "Inter-process communication")
+
+When processes need to communicate with each other they must share parts of their [address spaces](https://en.wikipedia.org/wiki/Address_space "Address space") or use other forms of inter-process communication (IPC). For instance in a [shell](https://en.wikipedia.org/wiki/Shell_\(computing\) "Shell (computing)") [pipeline](https://en.wikipedia.org/wiki/Pipeline_\(computing\) "Pipeline (computing)"), the output of the first process needs to pass to the second one, and so on. Another example is a task that has been decomposed into cooperating but partially independent processes which can run simultaneously (i.e., using concurrency, or true parallelism – the latter model is a particular case of concurrent execution and is feasible whenever multiple CPU cores are available for the processes that are ready to run).
+
+It is even possible for two or more processes to be running on different machines that may run different operating system (OS), therefore some mechanisms for communication and synchronization (called [communications protocols](https://en.wikipedia.org/wiki/Communications_protocol "Communications protocol") for distributed computing) are needed (e.g., the [Message Passing Interface](https://en.wikipedia.org/wiki/Message_Passing_Interface "Message Passing Interface") {MPI}).
+
+## Type-Token Distinction
+The **type–token distinction** is the difference between a _**type**_ of objects (analogous to a [_class_](https://en.wikipedia.org/wiki/Class_\(philosophy\) "Class (philosophy)")) and the individual _**tokens**_ of that type (analogous to [_instances_](https://en.wikipedia.org/wiki/Instantiation_principle "Instantiation principle")). Since each type may be instantiated by multiple tokens, there are generally more tokens than types of an object.
+
+For example, the sentence "A Rose is a rose is a rose" contains three word types: three word tokens of the type _a_, two word tokens of the type _is,_ and three word tokens of the type _rose_. The distinction is important in disciplines such as [logic](https://en.wikipedia.org/wiki/Logic "Logic"), [linguistics](https://en.wikipedia.org/wiki/Linguistics "Linguistics"), [metalogic](https://en.wikipedia.org/wiki/Metalogic "Metalogic"), [typography](https://en.wikipedia.org/wiki/Typography "Typography"), and [computer programming](https://en.wikipedia.org/wiki/Computer_programming "Computer programming").
+
+### Overview
+
+The type–token distinction separates _types_ (abstract descriptive concepts) from _tokens_ (objects that instantiate concepts). For example, in the sentence "_the bicycle is becoming more popular_" the word _bicycle_ represents the abstract concept of bicycles and this abstract concept is a type, whereas in the sentence "_the bicycle is in the garage_", it represents a particular object and this particular object is a token. Similarly, the word type 'letter' uses only four letter types: _L_, _E_, _T_ and _R_. Nevertheless, it uses both _E_ and _T_ twice. One can say that the word type 'letter' has six letter tokens, with two tokens each of the letter types _E_ and _T_. Whenever a word type is inscribed, the number of letter tokens created equals the number of letter occurrences in the word type.
+
+Some logicians consider a word type to be the class of its tokens. Other logicians counter that the word type has a permanence and constancy not found in the class of its tokens. The type remains the same while the class of its tokens is continually gaining new members and losing old members.
+
+### Typography
+In [typography](https://en.wikipedia.org/wiki/Typography "Typography"), the type–token distinction is used to determine the presence of a text printed by [movable type](https://en.wikipedia.org/wiki/Movable_type "Movable type"):
+
+> The defining criteria which a typographic print has to fulfill is that of the type identity of the various [letter forms](https://en.wikipedia.org/wiki/Letter_form "Letter form") which make up the printed text. In other words: each letter form which appears in the text has to be shown as a particular instance ("token") of one and the same type which contains a reverse image of the printed [letter](https://en.wikipedia.org/wiki/Letter_\(alphabet\) "Letter (alphabet)").
+
+### Charles Sanders Peirce
+
+The distinctions between using words as types or tokens were first made by American logician and philosopher [Charles Sanders Peirce](https://en.wikipedia.org/wiki/Charles_Sanders_Peirce "Charles Sanders Peirce") in 1906 using terminology that he established. Peirce's type–token distinction applies to words, sentences, paragraphs and so on: to anything in a universe of discourse of character-string theory, or [concatenation theory](https://en.wikipedia.org/wiki/Concatenation_theory "Concatenation theory").
+
+Peirce's original words are the following:
+
+> A common mode of estimating the amount of matter in a ... printed book is to count the number of words. There will ordinarily be about twenty 'thes' on a page, and, of course, they count as twenty words. In another sense of the word 'word,' however, there is but one word 'the' in the English language; and it is impossible that this word should lie visibly on a page, or be heard in any voice .... Such a ... Form, I propose to term a Type. A Single ... Object ... such as this or that word on a single line of a single page of a single copy of a book, I will venture to call a Token. .... In order that a Type may be used, it has to be embodied in a Token which shall be a sign of the Type, and thereby of the object the Type signifies.
+
+—  Peirce 1906, also Ogden and Richards, 1923, 280-1.
+
+## Logic
+**Logic** is the study of correct [reasoning](https://en.wikipedia.org/wiki/Logical_reasoning "Logical reasoning"). It includes both [formal](https://en.wikipedia.org/wiki/Logic#Formal_logic) and [informal logic](https://en.wikipedia.org/wiki/Logic#Informal_logic). Formal logic is the study of [deductively valid](https://en.wikipedia.org/wiki/Validity_\(logic\) "Validity (logic)") inferences or [logical truths](https://en.wikipedia.org/wiki/Logical_truth "Logical truth"). It examines how conclusions follow from [premises](https://en.wikipedia.org/wiki/Premise "Premise") based on the structure of arguments alone, independent of their topic and content. Informal logic is associated with [informal fallacies](https://en.wikipedia.org/wiki/Informal_fallacies "Informal fallacies"), [critical thinking](https://en.wikipedia.org/wiki/Critical_thinking "Critical thinking"), and [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory "Argumentation theory"). Informal logic examines arguments expressed in [natural language](https://en.wikipedia.org/wiki/Natural_language "Natural language") whereas formal logic uses [formal language](https://en.wikipedia.org/wiki/Formal_language "Formal language"). When used as a [countable noun](https://en.wikipedia.org/wiki/Countable_noun "Countable noun"), the term "a logic" refers to a specific logical [formal system](https://en.wikipedia.org/wiki/Formal_system "Formal system") that articulates a [proof system](https://en.wikipedia.org/wiki/Proof_system "Proof system"). Logic plays a central role in many fields, such as [philosophy](https://en.wikipedia.org/wiki/Philosophy "Philosophy"), [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), and [linguistics](https://en.wikipedia.org/wiki/Linguistics "Linguistics").
+
+Logic studies arguments, which consist of a set of premises that leads to a conclusion. An example is the argument from the premises "it's Sunday" and "if it's Sunday then I don't have to work" leading to the conclusion "I don't have to work." Premises and conclusions express [propositions](https://en.wikipedia.org/wiki/Proposition "Proposition") or claims that can be true or false. An important feature of propositions is their internal structure. For example, complex propositions are made up of simpler propositions linked by [logical vocabulary](https://en.wikipedia.org/wiki/Logical_connective "Logical connective") like ∧![{\displaystyle \land }](https://wikimedia.org/api/rest_v1/media/math/render/svg/d6823e5a222eb3ca49672818ac3d13ec607052c4) ([and](https://en.wikipedia.org/wiki/Logical_conjunction "Logical conjunction")) or →![{\displaystyle \to }](https://wikimedia.org/api/rest_v1/media/math/render/svg/1daab843254cfcb23a643070cf93f3badc4fbbbd) ([if...then](https://en.wikipedia.org/wiki/Material_conditional "Material conditional")). Simple propositions also have parts, like "Sunday" or "work" in the example. The truth of a proposition usually depends on the meanings of all of its parts. However, this is not the case for logically true propositions. They are true only because of their logical structure independent of the specific meanings of the individual parts.
+
+Arguments can be either correct or incorrect. An argument is correct if its premises support its conclusion. [Deductive arguments](https://en.wikipedia.org/wiki/Deductive_reasoning "Deductive reasoning") have the strongest form of support: if their premises are true then their conclusion must also be true. This is not the case for [ampliative](https://en.wikipedia.org/wiki/Ampliative "Ampliative") arguments, which arrive at genuinely new information not found in the premises. Many arguments in everyday discourse and the sciences are ampliative arguments. They are divided into [inductive](https://en.wikipedia.org/wiki/Inductive_reasoning "Inductive reasoning") and [abductive](https://en.wikipedia.org/wiki/Abductive_reasoning "Abductive reasoning") arguments. Inductive arguments are statistical generalizations, such as inferring that all ravens are black based on many individual observations of black ravens. Abductive arguments are [inferences](https://en.wikipedia.org/wiki/Inference "Inference") to the best explanation, for example, when a doctor concludes that a patient has a certain disease which explains the symptoms they suffer. Arguments that fall short of the standards of correct reasoning often embody [fallacies](https://en.wikipedia.org/wiki/Fallacies "Fallacies"). Systems of logic are theoretical frameworks for assessing the correctness of arguments.
+
+Logic has been studied since [antiquity](https://en.wikipedia.org/wiki/Ancient_history "Ancient history"). Early approaches include [Aristotelian logic](https://en.wikipedia.org/wiki/Aristotelian_logic "Aristotelian logic"), [Stoic logic](https://en.wikipedia.org/wiki/Stoic_logic "Stoic logic"), [Nyaya](https://en.wikipedia.org/wiki/Nyaya "Nyaya"), and [Mohism](https://en.wikipedia.org/wiki/Mohism "Mohism"). Aristotelian logic focuses on reasoning in the form of [syllogisms](https://en.wikipedia.org/wiki/Syllogism "Syllogism"). It was considered the main system of logic in the Western world until it was replaced by modern formal logic, which has its roots in the work of late 19th-century mathematicians such as [Gottlob Frege](https://en.wikipedia.org/wiki/Gottlob_Frege "Gottlob Frege"). Today, the most commonly used system is [classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic"). It consists of [propositional logic](https://en.wikipedia.org/wiki/Propositional_logic "Propositional logic") and [first-order logic](https://en.wikipedia.org/wiki/First-order_logic "First-order logic"). Propositional logic only considers logical relations between full propositions. First-order logic also takes the internal parts of propositions into account, like [predicates](https://en.wikipedia.org/wiki/Predicate_\(mathematical_logic\) "Predicate (mathematical logic)") and [quantifiers](https://en.wikipedia.org/wiki/Quantifier_\(logic\) "Quantifier (logic)"). Extended logics accept the basic intuitions behind classical logic and apply it to other fields, such as [metaphysics](https://en.wikipedia.org/wiki/Metaphysics "Metaphysics"), [ethics](https://en.wikipedia.org/wiki/Ethics "Ethics"), and [epistemology](https://en.wikipedia.org/wiki/Epistemology "Epistemology"). Deviant logics, on the other hand, reject certain classical intuitions and provide alternative explanations of the basic laws of logic.
+
+## Definition
+
+The word "logic" originates from the Greek word _logos_, which has a variety of translations, such as [reason](https://en.wikipedia.org/wiki/Reason "Reason"), [discourse](https://en.wikipedia.org/wiki/Discourse "Discourse"), or [language](https://en.wikipedia.org/wiki/Language "Language"). Logic is traditionally defined as the study of the [laws of thought](https://en.wikipedia.org/wiki/Laws_of_thought "Laws of thought") or [correct reasoning](https://en.wikipedia.org/wiki/Logical_reasoning "Logical reasoning"), and is usually understood in terms of [inferences](https://en.wikipedia.org/wiki/Inference "Inference") or [arguments](https://en.wikipedia.org/wiki/Argument "Argument"). Reasoning is the activity of drawing inferences. Arguments are the outward expression of inferences. An argument is a set of premises together with a conclusion. Logic is interested in whether arguments are correct, i.e. whether their premises support the conclusion. These general characterizations apply to logic in the widest sense, i.e., to both [formal](https://en.wikipedia.org/wiki/Logic#Formal_logic) and [informal logic](https://en.wikipedia.org/wiki/Informal_logic "Informal logic") since they are both concerned with assessing the correctness of arguments. Formal logic is the traditionally dominant field, and some logicians restrict logic to formal logic.
+
+#### Formal logic
+
+Further information: [Formal system](https://en.wikipedia.org/wiki/Formal_system "Formal system")
+
+_Formal logic_ (also known as _symbolic logic_) is widely used in [mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic "Mathematical logic"). It uses a [formal](https://en.wikipedia.org/wiki/Formal_system "Formal system") approach to study reasoning: it replaces concrete expressions with abstract symbols to examine the [logical form](https://en.wikipedia.org/wiki/Logical_form "Logical form") of arguments independent of their concrete content. In this sense, it is topic-neutral since it is only concerned with the abstract structure of arguments and not with their concrete content.
+
+Formal logic is interested in deductively [valid](https://en.wikipedia.org/wiki/Validity_\(logic\) "Validity (logic)") arguments, for which the truth of their premises ensures the truth of their conclusion. This means that it is impossible for the premises to be true and the conclusion to be false. For valid arguments, the logical structure that leads from the premises to the conclusion follows a pattern called a [rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference "Rule of inference"). For example, _[modus ponens](https://en.wikipedia.org/wiki/Modus_ponens "Modus ponens")_ is a rule of inference according to which all arguments of the form "(1) _p_, (2) if _p_ then _q_, (3) therefore _q_" are valid, independent of what the terms _p_ and _q_ stand for. In this sense, formal logic can be defined as the science of valid inferences. An alternative definition sees logic as the study of [logical truths](https://en.wikipedia.org/wiki/Logical_truth "Logical truth"). A proposition is logically true if its truth depends only on the logical vocabulary used in it. This means that it is true in all [possible worlds](https://en.wikipedia.org/wiki/Possible_world "Possible world") and under all [interpretations](https://en.wikipedia.org/wiki/Interpretation_\(logic\) "Interpretation (logic)") of its non-logical terms, like the claim "either it is raining, or it is not". These two definitions of formal logic are not identical, but they are closely related. For example, if the inference from _p_ to _q_ is deductively valid then the claim "if _p_ then _q_" is a logical truth.
+
+[![Visualization of how to translate an English sentence into first-order logic](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/First-order_logic.png/500px-First-order_logic.png)](https://en.wikipedia.org/wiki/File:First-order_logic.png)
+
+Formal logic needs to translate natural language arguments into a formal language, like first-order logic, to assess whether they are valid. In this example, the letter "c" represents Carmen while the letters "M" and "T" stand for "Mexican" and "teacher". The symbol "∧" has the meaning of "and".
+
+Formal logic uses [formal languages](https://en.wikipedia.org/wiki/Formal_language "Formal language") to express, analyze, and clarify arguments. They normally have a very limited vocabulary and exact [syntactic rules](https://en.wikipedia.org/wiki/Syntax "Syntax"). These rules specify how their symbols can be combined to construct sentences, so-called [well-formed formulas](https://en.wikipedia.org/wiki/Well-formed_formula "Well-formed formula"). This simplicity and exactness of formal logic make it capable of formulating precise rules of inference. They determine whether a given argument is valid. Because of the reliance on formal language, natural language arguments cannot be studied directly. Instead, they need to be [translated into formal language](https://en.wikipedia.org/wiki/Logic_translation#Natural_language_formalization "Logic translation") before their validity can be assessed.
+
+The term "logic" can also be used in a slightly different sense as a countable noun. In this sense, _a logic_ is a logical formal system. Distinct logics differ from each other concerning the rules of inference they accept as valid and the formal languages used to express them. Starting in the late 19th century, many new formal systems have been proposed. There are disagreements about what makes a formal system a logic. For example, it has been suggested that only [logically complete](https://en.wikipedia.org/wiki/Completeness_\(logic\) "Completeness (logic)") systems, like [first-order logic](https://en.wikipedia.org/wiki/First-order_logic "First-order logic"), qualify as logics. For such reasons, some theorists deny that [higher-order logics](https://en.wikipedia.org/wiki/Higher-order_logic "Higher-order logic") are logics in the strict sense.
+
+#### Informal logic
+Main article: [Informal logic](https://en.wikipedia.org/wiki/Informal_logic "Informal logic")
+
+When understood in a wide sense, logic encompasses both formal and informal logic.Informal logic uses non-formal criteria and standards to analyze and assess the correctness of arguments. Its main focus is on everyday discourse. Its development was prompted by difficulties in applying the insights of formal logic to natural language arguments. In this regard, it considers problems that formal logic on its own is unable to address. Both provide criteria for assessing the correctness of arguments and distinguishing them from fallacies.
+
+Many characterizations of informal logic have been suggested but there is no general agreement on its precise definition. The most literal approach sees the terms "formal" and "informal" as applying to the language used to express arguments. On this view, informal logic studies arguments that are in informal or natural language. Formal logic can only examine them indirectly by translating them first into a formal language while informal logic investigates them in their original form. On this view, the argument "Birds fly. Tweety is a bird. Therefore, Tweety flies." belongs to natural language and is examined by informal logic. But the formal translation "(1) ∀x(Bird(x)→Flies(x))![{\displaystyle \forall x(Bird(x)\to Flies(x))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/47470c39cb95609466e0ced564f7554e6aed5c2a); (2) Bird(Tweety)![{\displaystyle Bird(Tweety)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/d7410bba34fafd2dd9cf92e72eb6bf6864d31f8c); (3) Flies(Tweety)![{\displaystyle Flies(Tweety)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/61b341702eeb3e76d6d1ddedf05c4ed81c6b0993)" is studied by formal logic. The study of natural language arguments comes with various difficulties. For example, natural language expressions are often ambiguous, vague, and context-dependent. Another approach defines informal logic in a wide sense as the normative study of the standards, criteria, and procedures of argumentation. In this sense, it includes questions about the role of [rationality](https://en.wikipedia.org/wiki/Rationality "Rationality"), [critical thinking](https://en.wikipedia.org/wiki/Critical_thinking "Critical thinking"), and the psychology of argumentation.
+
+Another characterization identifies informal logic with the study of non-deductive arguments. In this way, it contrasts with deductive reasoning examined by formal logic. Non-deductive arguments make their conclusion probable but do not ensure that it is true. An example is the [inductive argument](https://en.wikipedia.org/wiki/Inductive_reasoning "Inductive reasoning") from the empirical observation that "all ravens I have seen so far are black" to the conclusion "all ravens are black".
+
+A further approach is to define informal logic as the study of [informal fallacies](https://en.wikipedia.org/wiki/Informal_fallacies "Informal fallacies"). Informal fallacies are incorrect arguments in which errors are present in the content and the [context](https://en.wikipedia.org/wiki/Context_\(language_use\) "Context (language use)") of the argument. A [false dilemma](https://en.wikipedia.org/wiki/False_dilemma "False dilemma"), for example, involves an error of content by excluding viable options. This is the case in the fallacy "you are either with us or against us; you are not with us; therefore, you are against us". Some theorists state that formal logic studies the general form of arguments while informal logic studies particular instances of arguments. Another approach is to hold that formal logic only considers the role of logical constants for correct inferences while informal logic also takes the meaning of substantive [concepts](https://en.wikipedia.org/wiki/Concept "Concept") into account. Further approaches focus on the discussion of logical topics with or without formal devices and on the role of [epistemology](https://en.wikipedia.org/wiki/Epistemology "Epistemology") for the assessment of arguments.
+
+### Basic concepts
+#### Premises, conclusions, and truth
+##### Premises and conclusions
+
+Main articles: [Premise](https://en.wikipedia.org/wiki/Premise "Premise") and [Logical consequence](https://en.wikipedia.org/wiki/Logical_consequence "Logical consequence")
+
+_Premises_ and _conclusions_ are the basic parts of inferences or arguments and therefore play a central role in logic. In the case of a valid inference or a correct argument, the conclusion follows from the premises, or in other words, the premises support the conclusion.For instance, the premises "Mars is red" and "Mars is a planet" support the conclusion "Mars is a red planet". For most types of logic, it is accepted that premises and conclusions have to be [truth-bearers](https://en.wikipedia.org/wiki/Truth-bearer "Truth-bearer"). This means that they have a [truth value](https://en.wikipedia.org/wiki/Truth_value "Truth value"): they are either true or false. Contemporary philosophy generally sees them either as _[propositions](https://en.wikipedia.org/wiki/Proposition "Proposition")_ or as _[sentences](https://en.wikipedia.org/wiki/Sentence_\(linguistics\) "Sentence (linguistics)")_. Propositions are the [denotations](https://en.wikipedia.org/wiki/Denotation "Denotation") of sentences and are usually seen as [abstract objects](https://en.wikipedia.org/wiki/Abstract_object "Abstract object"). For example, the English sentence "the tree is green" is different from the German sentence "der Baum ist grün" but both express the same proposition.
+
+Propositional theories of premises and conclusions are often criticized because they rely on abstract objects. For instance, [philosophical naturalists](https://en.wikipedia.org/wiki/Naturalism_\(philosophy\) "Naturalism (philosophy)") usually reject the existence of abstract objects. Other arguments concern the challenges involved in specifying the identity criteria of propositions. These objections are avoided by seeing premises and conclusions not as propositions but as sentences, i.e. as concrete linguistic objects like the symbols displayed on a page of a book. But this approach comes with new problems of its own: sentences are often context-dependent and ambiguous, meaning an argument's validity would not only depend on its parts but also on its context and on how it is interpreted. Another approach is to understand premises and conclusions in psychological terms as thoughts or judgments. This position is known as [psychologism](https://en.wikipedia.org/wiki/Psychologism "Psychologism"). It was discussed at length around the turn of the 20th century but it is not widely accepted today.
+
+##### Internal structure
+
+Premises and conclusions have an internal structure. As propositions or sentences, they can be either simple or complex. A complex proposition has other propositions as its constituents, which are linked to each other through [propositional connectives](https://en.wikipedia.org/wiki/Logical_connective "Logical connective") like "and" or "if...then". Simple propositions, on the other hand, do not have propositional parts. But they can also be conceived as having an internal structure: they are made up of subpropositional parts, like [singular terms](https://en.wikipedia.org/wiki/Singular_term "Singular term") and [predicates](https://en.wikipedia.org/wiki/Predicate_\(grammar\) "Predicate (grammar)"). For example, the simple proposition "Mars is red" can be formed by applying the predicate "red" to the singular term "Mars". In contrast, the complex proposition "Mars is red and Venus is white" is made up of two simple propositions connected by the propositional connective "and".
+
+Whether a proposition is true depends, at least in part, on its constituents. For complex propositions formed using [truth-functional](https://en.wikipedia.org/wiki/Truth_function "Truth function") propositional connectives, their truth only depends on the truth values of their parts. But this relation is more complicated in the case of simple propositions and their subpropositional parts. These subpropositional parts have meanings of their own, like referring to objects or classes of objects. Whether the simple proposition they form is true depends on their relation to reality, i.e. what the objects they refer to are like. This topic is studied by [theories of reference](https://en.wikipedia.org/wiki/Theories_of_reference "Theories of reference").
+
+##### Logical truth
+Main article: [Logical truth](https://en.wikipedia.org/wiki/Logical_truth "Logical truth")
+
+Some complex propositions are true independently of the substantive meanings of their parts. In classical logic, for example, the complex proposition "either Mars is red or Mars is not red" is true independent of whether its parts, like the simple proposition "Mars is red", are true or false. In such cases, the truth is called a logical truth: a proposition is logically true if its truth depends only on the logical vocabulary used in it. This means that it is true under all interpretations of its non-logical terms. In some [modal logics](https://en.wikipedia.org/wiki/Modal_logic "Modal logic"), this means that the proposition is true in all possible worlds. Some theorists define logic as the study of logical truths.
+
+##### Truth tables
+[Truth tables](https://en.wikipedia.org/wiki/Truth_table "Truth table") can be used to show how logical connectives work or how the truth values of complex propositions depends on their parts. They have a column for each input variable. Each row corresponds to one possible combination of the truth values these variables can take; for truth tables presented in the English literature, the symbols "T" and "F" or "1" and "0" are commonly used as abbreviations for the truth values "true" and "false". The first columns present all the possible truth-value combinations for the input variables. Entries in the other columns present the truth values of the corresponding expressions as determined by the input values. For example, the expression "p∧q![{\displaystyle p\land q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/4904e68d8180ec4c12e20fabc15017b60b098b9e)" uses the logical connective ∧![{\displaystyle \land }](https://wikimedia.org/api/rest_v1/media/math/render/svg/d6823e5a222eb3ca49672818ac3d13ec607052c4) ([and](https://en.wikipedia.org/wiki/Logical_conjunction "Logical conjunction")). It could be used to express a sentence like "yesterday was Sunday and the weather was good". It is only true if both of its input variables, p![{\displaystyle p}](https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36) ("yesterday was Sunday") and q![{\displaystyle q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/06809d64fa7c817ffc7e323f85997f783dbdf71d) ("the weather was good"), are true. In all other cases, the expression as a whole is false. Other important logical connectives are ¬![{\displaystyle \lnot }](https://wikimedia.org/api/rest_v1/media/math/render/svg/099107443792f5fec9bebe39b919a690db7198c1) ([not](https://en.wikipedia.org/wiki/Negation "Negation")), ∨![{\displaystyle \lor }](https://wikimedia.org/api/rest_v1/media/math/render/svg/ab47f6b1f589aedcf14638df1d63049d233d851a) ([or](https://en.wikipedia.org/wiki/Logical_disjunction "Logical disjunction")), →![{\displaystyle \to }](https://wikimedia.org/api/rest_v1/media/math/render/svg/1daab843254cfcb23a643070cf93f3badc4fbbbd) ([if...then](https://en.wikipedia.org/wiki/Material_conditional "Material conditional")), and ↑![{\displaystyle \uparrow }](https://wikimedia.org/api/rest_v1/media/math/render/svg/ddb20b28c74cdaa09e1f101d426441da1996072f) ([Sheffer stroke](https://en.wikipedia.org/wiki/Sheffer_stroke "Sheffer stroke")). Given the conditional proposition p→q![{\displaystyle p\to q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8fccb3827df1efe7930f9d1febd15d2359971b93), one can form truth tables of its [converse](https://en.wikipedia.org/wiki/Converse_\(logic\) "Converse (logic)") q→p![{\displaystyle q\to p}](https://wikimedia.org/api/rest_v1/media/math/render/svg/4f0cb04539b19dc2826d0215f22383710a565599), its [inverse](https://en.wikipedia.org/wiki/Inverse_\(logic\) "Inverse (logic)") (¬p→¬q![{\displaystyle \lnot p\to \lnot q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0ddaf4545f34c586fe44965b121a2f050f8f17b9)), and its [contrapositive](https://en.wikipedia.org/wiki/Contrapositive_\(logic\) "Contrapositive (logic)") (¬q→¬p![{\displaystyle \lnot q\to \lnot p}](https://wikimedia.org/api/rest_v1/media/math/render/svg/234339d9722ddb73bdfe059073d84108bdffccc3)). Truth tables can also be defined for more complex expressions that use several propositional connectives.
+
+
+#### Arguments and inferences
+Main articles: [Argument](https://en.wikipedia.org/wiki/Argument "Argument") and [inference](https://en.wikipedia.org/wiki/Inference "Inference")
+
+Logic is commonly defined in terms of arguments or inferences as the study of their correctness. An _argument_ is a set of premises together with a conclusion. An _inference_ is the process of reasoning from these premises to the conclusion. But these terms are often used interchangeably in logic. Arguments are correct or incorrect depending on whether their premises support their conclusion. Premises and conclusions, on the other hand, are true or false depending on whether they are in accord with reality. In formal logic, a [sound](https://en.wikipedia.org/wiki/Soundness_\(logic\) "Soundness (logic)") argument is an argument that is both correct and has only true premises. Sometimes a distinction is made between simple and complex arguments. A complex argument is made up of a chain of simple arguments. This means that the conclusion of one argument acts as a premise of later arguments. For a complex argument to be successful, each link of the chain has to be successful.[]
+
+[![Diagram of argument terminology used in logic](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Argument_terminology.svg/500px-Argument_terminology.svg.png)](https://en.wikipedia.org/wiki/File:Argument_terminology.svg)
+
+[Argument](https://en.wikipedia.org/wiki/Argument "Argument") terminology used in logic
+
+Arguments and inferences are either correct or incorrect. If they are correct then their premises support their conclusion. In the incorrect case, this support is missing. It can take different forms corresponding to the different [types of reasoning](https://en.wikipedia.org/wiki/Method_of_reasoning "Method of reasoning"). The strongest form of support corresponds to [deductive reasoning](https://en.wikipedia.org/wiki/Deductive_reasoning "Deductive reasoning"). But even arguments that are not deductively valid may still be good arguments because their premises offer non-deductive support to their conclusions. For such cases, the term _ampliative_ or _inductive reasoning_ is used. Deductive arguments are associated with formal logic in contrast to the relation between ampliative arguments and informal logic.
+
+##### Deductive
+A deductively valid argument is one whose premises guarantee the truth of its conclusion. For instance, the argument "(1) all frogs are amphibians; (2) no cats are amphibians; (3) therefore no cats are frogs" is deductively valid. For deductive validity, it does not matter whether the premises or the conclusion are actually true. So the argument "(1) all frogs are mammals; (2) no cats are mammals; (3) therefore no cats are frogs" is also valid because the conclusion follows necessarily from the premises.
+
+According to an influential view by [Alfred Tarski](https://en.wikipedia.org/wiki/Alfred_Tarski "Alfred Tarski"), deductive arguments have three essential features: (1) they are formal, i.e. they depend only on the form of the premises and the conclusion; (2) they are a priori, i.e. no sense experience is needed to determine whether they obtain; (3) they are modal, i.e. that they hold by [logical necessity](https://en.wikipedia.org/wiki/Logical_necessity "Logical necessity") for the given propositions, independent of any other circumstances.
+
+Because of the first feature, the focus on formality, deductive inference is usually identified with rules of inference. Rules of inference specify the form of the premises and the conclusion: how they have to be structured for the inference to be valid. Arguments that do not follow any rule of inference are deductively invalid. The _modus ponens_ is a prominent rule of inference. It has the form "_p_; if _p_, then _q_; therefore _q_". Knowing that it has just rained (p![{\displaystyle p}](https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36)) and that after rain the streets are wet (p→q![{\displaystyle p\to q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8fccb3827df1efe7930f9d1febd15d2359971b93)), one can use _modus ponens_ to deduce that the streets are wet (q![{\displaystyle q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/06809d64fa7c817ffc7e323f85997f783dbdf71d)).
+The third feature can be expressed by stating that deductively valid inferences are truth-preserving: it is impossible for the premises to be true and the conclusion to be false. Because of this feature, it is often asserted that deductive inferences are uninformative since the conclusion cannot arrive at new information not already present in the premises. But this point is not always accepted since it would mean, for example, that most of mathematics is uninformative. A different characterization distinguishes between surface and depth information. The surface information of a sentence is the information it presents explicitly. Depth information is the totality of the information contained in the sentence, both explicitly and implicitly. According to this view, deductive inferences are uninformative on the depth level. But they can be highly informative on the surface level by making implicit information explicit. This happens, for example, in mathematical proofs.
+
+##### Ampliative
+Ampliative arguments are arguments whose conclusions contain additional information not found in their premises. In this regard, they are more interesting since they contain information on the depth level and the thinker may learn something genuinely new. But this feature comes with a certain cost: the premises support the conclusion in the sense that they make its truth more likely but they do not ensure its truth. This means that the conclusion of an ampliative argument may be false even though all its premises are true. This characteristic is closely related to _[non-monotonicity](https://en.wikipedia.org/wiki/Non-monotonic_logic "Non-monotonic logic")_ and _[defeasibility](https://en.wikipedia.org/wiki/Defeasible_reasoning "Defeasible reasoning")_: it may be necessary to retract an earlier conclusion upon receiving new information or in light of new inferences drawn. Ampliative reasoning plays a central role in many arguments found in everyday discourse and the sciences. Ampliative arguments are not automatically incorrect. Instead, they just follow different standards of correctness. The support they provide for their conclusion usually comes in degrees. This means that strong ampliative arguments make their conclusion very likely while weak ones are less certain. As a consequence, the line between correct and incorrect arguments is blurry in some cases, such as when the premises offer weak but non-negligible support. This contrasts with deductive arguments, which are either valid or invalid with nothing in-between.
+The terminology used to categorize ampliative arguments is inconsistent. Some authors, like James Hawthorne, use the term "[induction](https://en.wikipedia.org/wiki/Inductive_reasoning "Inductive reasoning")" to cover all forms of non-deductive arguments. But in a more narrow sense, _induction_ is only one type of ampliative argument alongside _[abductive arguments](https://en.wikipedia.org/wiki/Abductive_reasoning "Abductive reasoning")_. Some philosophers, like [Leo Groarke](https://en.wikipedia.org/wiki/Leo_Groarke "Leo Groarke"), also allow _conductive arguments_ as another type. In this narrow sense, induction is often defined as a form of statistical generalization. In this case, the premises of an inductive argument are many individual observations that all show a certain pattern. The conclusion then is a general law that this pattern always obtains. In this sense, one may infer that "all elephants are gray" based on one's past observations of the color of elephants. A closely related form of inductive inference has as its conclusion not a general law but one more specific instance, as when it is inferred that an elephant one has not seen yet is also gray. Some theorists, like Igor Douven, stipulate that inductive inferences rest only on statistical considerations. This way, they can be distinguished from abductive inference.
+
+Abductive inference may or may not take statistical observations into consideration. In either case, the premises offer support for the conclusion because the conclusion is the best [explanation](https://en.wikipedia.org/wiki/Explanation "Explanation") of why the premises are true. In this sense, abduction is also called the _inference to the best explanation_. For example, given the premise that there is a plate with breadcrumbs in the kitchen in the early morning, one may infer the conclusion that one's house-mate had a midnight snack and was too tired to clean the table. This conclusion is justified because it is the best explanation of the current state of the kitchen. For abduction, it is not sufficient that the conclusion explains the premises. For example, the conclusion that a burglar broke into the house last night, got hungry on the job, and had a midnight snack, would also explain the state of the kitchen. But this conclusion is not justified because it is not the best or most likely explanation.
+
+#### Fallacies
+Not all arguments live up to the standards of correct reasoning. When they do not, they are usually referred to as [fallacies](https://en.wikipedia.org/wiki/Fallacy "Fallacy"). Their central aspect is not that their conclusion is false but that there is some flaw with the reasoning leading to this conclusion. So the argument "it is sunny today; therefore spiders have eight legs" is fallacious even though the conclusion is true. Some theorists, like [John Stuart Mill](https://en.wikipedia.org/wiki/John_Stuart_Mill "John Stuart Mill"), give a more restrictive definition of fallacies by additionally requiring that they appear to be correct. This way, genuine fallacies can be distinguished from mere mistakes of reasoning due to carelessness. This explains why people tend to commit fallacies: because they have an alluring element that seduces people into committing and accepting them. However, this reference to appearances is controversial because it belongs to the field of [psychology](https://en.wikipedia.org/wiki/Psychology "Psychology"), not logic, and because appearances may be different for different people.
+[![Poster from 1901](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Young_America%27s_dilemma_-_Dalrymple._LCCN2010651418.jpg/500px-Young_America%27s_dilemma_-_Dalrymple._LCCN2010651418.jpg)](https://en.wikipedia.org/wiki/File:Young_America%27s_dilemma_-_Dalrymple._LCCN2010651418.jpg)
+
+Young America's dilemma: Shall I be wise and great, or rich and powerful? (poster from 1901). This is an example of a [false dilemma](https://en.wikipedia.org/wiki/False_dilemma "False dilemma"): an [informal fallacy](https://en.wikipedia.org/wiki/Informal_fallacy "Informal fallacy") using a disjunctive premise that excludes viable alternatives.
+
+Fallacies are usually divided into [formal](https://en.wikipedia.org/wiki/Formal_fallacy "Formal fallacy") and informal fallacies. For formal fallacies, the source of the error is found in the _form_ of the argument. For example, [denying the antecedent](https://en.wikipedia.org/wiki/Denying_the_antecedent "Denying the antecedent") is one type of formal fallacy, as in "if Othello is a bachelor, then he is male; Othello is not a bachelor; therefore Othello is not male". But most fallacies fall into the category of informal fallacies, of which a great variety is discussed in the academic literature. The source of their error is usually found in the _content_ or the _context_ of the argument. Informal fallacies are sometimes categorized as fallacies of ambiguity, fallacies of presumption, or fallacies of relevance. For fallacies of ambiguity, the ambiguity and vagueness of natural language are responsible for their flaw, as in "feathers are light; what is light cannot be dark; therefore feathers cannot be dark". Fallacies of presumption have a wrong or unjustified premise but may be valid otherwise. In the case of fallacies of relevance, the premises do not support the conclusion because they are not relevant to it.
+
+#### Definitory and strategic rules
+The main focus of most logicians is to study the criteria according to which an argument is correct or incorrect. A fallacy is committed if these criteria are violated. In the case of formal logic, they are known as _rules of inference_. They are definitory rules, which determine whether an inference is correct or which inferences are allowed. Definitory rules contrast with strategic rules. Strategic rules specify which inferential moves are necessary to reach a given conclusion based on a set of premises. This distinction does not just apply to logic but also to games. In [chess](https://en.wikipedia.org/wiki/Chess "Chess"), for example, the definitory rules dictate that [bishops](https://en.wikipedia.org/wiki/Bishop_\(chess\) "Bishop (chess)") may only move diagonally. The strategic rules, on the other hand, describe how the allowed moves may be used to win a game, for instance, by controlling the center and by defending one's [king](https://en.wikipedia.org/wiki/King_\(chess\) "King (chess)"). It has been argued that logicians should give more emphasis to strategic rules since they are highly relevant for effective reasoning.
+
+#### Formal systems
+Main article: [Formal system](https://en.wikipedia.org/wiki/Formal_system "Formal system")
+
+A formal system of logic consists of a formal language together with a set of [axioms](https://en.wikipedia.org/wiki/Axiom "Axiom") and a [proof system](https://en.wikipedia.org/wiki/Proof_system "Proof system") used to draw inferences from these axioms. In logic, axioms are statements that are accepted without proof. They are used to justify other statements. Some theorists also include a [semantics](https://en.wikipedia.org/wiki/Semantics_of_logic "Semantics of logic") that specifies how the expressions of the formal language relate to real objects. Starting in the late 19th century, many new formal systems have been proposed.
+
+A _formal language_ consists of an _alphabet_ and syntactic rules. The alphabet is the set of basic symbols used in [expressions](https://en.wikipedia.org/wiki/Expression_\(mathematics\) "Expression (mathematics)"). The syntactic rules determine how these symbols may be arranged to result in well-formed formulas. For instance, the syntactic rules of [propositional logic](https://en.wikipedia.org/wiki/Propositional_logic "Propositional logic") determine that "P∧Q![{\displaystyle P\land Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c5690bb4822d8c821a00cfe3c6644b046a884af4)" is a well-formed formula but "∧Q![{\displaystyle \land Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/4e1393b3f36b277a9aa8490660cb150921741a39)" is not since the logical conjunction ∧![{\displaystyle \land }](https://wikimedia.org/api/rest_v1/media/math/render/svg/d6823e5a222eb3ca49672818ac3d13ec607052c4) requires terms on both sides.
+A _proof system_ is a collection of rules to construct formal proofs. It is a tool to arrive at conclusions from a set of axioms. Rules in a proof system are defined in terms of the syntactic form of formulas independent of their specific content. For instance, the classical rule of [conjunction introduction](https://en.wikipedia.org/wiki/Conjunction_introduction "Conjunction introduction") states that P∧Q![{\displaystyle P\land Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c5690bb4822d8c821a00cfe3c6644b046a884af4) follows from the premises P![{\displaystyle P}](https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a) and Q![{\displaystyle Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8752c7023b4b3286800fe3238271bbca681219ed). Such rules can be applied sequentially, giving a mechanical procedure for generating conclusions from premises. There are different types of proof systems including [natural deduction](https://en.wikipedia.org/wiki/Natural_deduction "Natural deduction") and [sequent calculi](https://en.wikipedia.org/wiki/Sequent_calculus "Sequent calculus").
+
+A _semantics_ is a system for [mapping](https://en.wikipedia.org/wiki/Map_\(mathematics\) "Map (mathematics)") expressions of a formal language to their denotations. In many systems of logic, denotations are truth values. For instance, the semantics for [classical](https://en.wikipedia.org/wiki/Classical_logic "Classical logic") propositional logic assigns the formula P∧Q![{\displaystyle P\land Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c5690bb4822d8c821a00cfe3c6644b046a884af4) the denotation "true" whenever P![{\displaystyle P}](https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a) and Q![{\displaystyle Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8752c7023b4b3286800fe3238271bbca681219ed) are true. From the semantic point of view, a premise entails a conclusion if the conclusion is true whenever the premise is true.
+
+A system of logic is [sound](https://en.wikipedia.org/wiki/Soundness "Soundness") when its proof system cannot derive a conclusion from a set of premises unless it is semantically entailed by them. In other words, its proof system cannot lead to false conclusions, as defined by the semantics. A system is complete when its proof system can derive every conclusion that is semantically entailed by its premises. In other words, its proof system can lead to any true conclusion, as defined by the semantics. Thus, soundness and completeness together describe a system whose notions of validity and entailment line up perfectly.
+
+### Systems of logic
+Systems of logic are theoretical frameworks for assessing the correctness of reasoning and arguments. For over two thousand years, [Aristotelian logic](https://en.wikipedia.org/wiki/Aristotelian_logic "Aristotelian logic") was treated as the canon of logic in the Western world, but modern developments in this field have led to a vast proliferation of logical systems. One prominent categorization divides modern formal logical systems into [classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic"), extended logics, and [deviant logics](https://en.wikipedia.org/wiki/Deviant_logic "Deviant logic").
+
+#### Aristotelian
+Main article: [Aristotelian logic](https://en.wikipedia.org/wiki/Aristotelian_logic "Aristotelian logic")
+
+[Aristotelian logic](https://en.wikipedia.org/wiki/Aristotelian_logic "Aristotelian logic") encompasses a great variety of topics. They include [metaphysical](https://en.wikipedia.org/wiki/Metaphysics "Metaphysics") theses about [ontological](https://en.wikipedia.org/wiki/Ontology "Ontology") categories and problems of scientific explanation. But in a more narrow sense, it is identical to [term logic](https://en.wikipedia.org/wiki/Term_logic "Term logic") or syllogistics. A [syllogism](https://en.wikipedia.org/wiki/Syllogism "Syllogism") is a form of argument involving three propositions: two premises and a conclusion. Each proposition has three essential parts: a [subject](https://en.wikipedia.org/wiki/Subject_\(grammar\) "Subject (grammar)"), a predicate, and a [copula](https://en.wikipedia.org/wiki/Copula_\(linguistics\) "Copula (linguistics)") connecting the subject to the predicate. For example, the proposition "Socrates is wise" is made up of the subject "Socrates", the predicate "wise", and the copula "is". The subject and the predicate are the _terms_ of the proposition. Aristotelian logic does not contain complex propositions made up of simple propositions. It differs in this aspect from propositional logic, in which any two propositions can be linked using a logical connective like "and" to form a new complex proposition.
+
+[![Diagram of the square of opposition](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Square_of_opposition%2C_set_diagrams.svg/350px-Square_of_opposition%2C_set_diagrams.svg.png)](https://en.wikipedia.org/wiki/File:Square_of_opposition,_set_diagrams.svg)
+
+The [square of opposition](https://en.wikipedia.org/wiki/Square_of_opposition "Square of opposition") is often used to visualize the relations between the four basic [categorical propositions](https://en.wikipedia.org/wiki/Categorical_propositions "Categorical propositions") in Aristotelian logic. It shows, for example, that the propositions "All S are P" and "Some S are not P" are contradictory, meaning that one of them has to be true while the other is false.
+
+In Aristotelian logic, the subject can be _universal_, _particular_, _indefinite_, or _singular_. For example, the term "all humans" is a universal subject in the proposition "all humans are mortal". A similar proposition could be formed by replacing it with the particular term "some humans", the indefinite term "a human", or the singular term "Socrates".
+
+Aristotelian logic only includes predicates for simple [properties](https://en.wikipedia.org/wiki/Property_\(philosophy\) "Property (philosophy)") of entities. But it lacks predicates corresponding to [relations](https://en.wikipedia.org/wiki/Relations_\(philosophy\) "Relations (philosophy)") between entities. The predicate can be linked to the subject in two ways: either by affirming it or by denying it. For example, the proposition "Socrates is not a cat" involves the denial of the predicate "cat" to the subject "Socrates". Using combinations of subjects and predicates, a great variety of propositions and syllogisms can be formed. Syllogisms are characterized by the fact that the premises are linked to each other and to the conclusion by sharing one term in each case. Thus, these three propositions contain three terms, referred to as _major term_, _minor term_, and _middle term_. The central aspect of Aristotelian logic involves classifying all possible syllogisms into valid and invalid arguments according to how the propositions are formed. For example, the syllogism "all men are mortal; Socrates is a man; therefore Socrates is mortal" is valid. The syllogism "all cats are mortal; Socrates is mortal; therefore Socrates is a cat", on the other hand, is invalid.
+
+#### Classical
+Main article: [Classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic")
+
+[Classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic") is distinct from traditional or Aristotelian logic. It encompasses propositional logic and first-order logic. It is "classical" in the sense that it is based on basic logical intuitions shared by most logicians. These intuitions include the [law of excluded middle](https://en.wikipedia.org/wiki/Law_of_excluded_middle "Law of excluded middle"), the [double negation elimination](https://en.wikipedia.org/wiki/Double_negation_elimination "Double negation elimination"), the [principle of explosion](https://en.wikipedia.org/wiki/Principle_of_explosion "Principle of explosion"), and the bivalence of truth. It was originally developed to analyze mathematical arguments and was only later applied to other fields as well. Because of this focus on mathematics, it does not include logical vocabulary relevant to many other topics of philosophical importance. Examples of concepts it overlooks are the contrast between necessity and possibility and the problem of ethical obligation and permission. Similarly, it does not address the relations between past, present, and future. Such issues are addressed by extended logics. They build on the basic intuitions of classical logic and expand it by introducing new logical vocabulary. This way, the exact logical approach is applied to fields like [ethics](https://en.wikipedia.org/wiki/Ethics "Ethics") or epistemology that lie beyond the scope of mathematics.
+
+##### Propositional logic
+Main article: [Propositional calculus](https://en.wikipedia.org/wiki/Propositional_calculus "Propositional calculus")
+
+Propositional logic comprises formal systems in which formulae are built from [atomic propositions](https://en.wikipedia.org/wiki/Atomic_propositions "Atomic propositions") using [logical connectives](https://en.wikipedia.org/wiki/Logical_connectives "Logical connectives"). For instance, propositional logic represents the [conjunction](https://en.wikipedia.org/wiki/Conjunction_\(logic\) "Conjunction (logic)") of two atomic propositions P![{\displaystyle P}](https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a) and Q![{\displaystyle Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8752c7023b4b3286800fe3238271bbca681219ed) as the complex formula P∧Q![{\displaystyle P\land Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/c5690bb4822d8c821a00cfe3c6644b046a884af4). Unlike predicate logic where terms and predicates are the smallest units, propositional logic takes full propositions with truth values as its most basic component. Thus, propositional logics can only represent logical relationships that arise from the way complex propositions are built from simpler ones. But it cannot represent inferences that result from the inner structure of a proposition.
+
+##### First-order logic
+
+[![Symbol introduced by Gottlob Frege for the universal quantifier](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/BS-12-Begriffsschrift_Quantifier1-svg.svg/250px-BS-12-Begriffsschrift_Quantifier1-svg.svg.png)](https://en.wikipedia.org/wiki/File:BS-12-Begriffsschrift_Quantifier1-svg.svg)
+
+[Gottlob Frege](https://en.wikipedia.org/wiki/Gottlob_Frege "Gottlob Frege")'s _[Begriffschrift](https://en.wikipedia.org/wiki/Begriffschrift "Begriffschrift")_ introduced the notion of quantifier in a graphical notation, which here represents the judgment that ∀x.F(x)![{\displaystyle \forall x.F(x)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/ba23799cf40a6e9b0a427c429dc89fbb8a74bfee) is true.
+
+Main article: [First-order logic](https://en.wikipedia.org/wiki/First-order_logic "First-order logic")
+
+First-order logic includes the same propositional connectives as propositional logic but differs from it because it articulates the internal structure of propositions. This happens through devices such as singular terms, which refer to particular objects, [predicates](https://en.wikipedia.org/wiki/Predicate_\(mathematical_logic\) "Predicate (mathematical logic)"), which refer to properties and relations, and quantifiers, which treat notions like "some" and "all". For example, to express the proposition "this raven is black", one may use the predicate B![{\displaystyle B}](https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a) for the property "black" and the singular term r![{\displaystyle r}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0d1ecb613aa2984f0576f70f86650b7c2a132538) referring to the raven to form the expression B(r)![{\displaystyle B(r)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/fdf985b9cc5e851d080440261106d69b6d61dd88). To express that some objects are black, the existential quantifier ∃![{\displaystyle \exists }](https://wikimedia.org/api/rest_v1/media/math/render/svg/77ed842b6b90b2fdd825320cf8e5265fa937b583) is combined with the variable x![{\displaystyle x}](https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4) to form the proposition ∃xB(x)![{\displaystyle \exists xB(x)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9f4426e051732eddd927ca9b665c90a8b7e0b8e0). First-order logic contains various rules of inference that determine how expressions articulated this way can form valid arguments, for example, that one may infer ∃xB(x)![{\displaystyle \exists xB(x)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9f4426e051732eddd927ca9b665c90a8b7e0b8e0) from B(r)![{\displaystyle B(r)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/fdf985b9cc5e851d080440261106d69b6d61dd88).
+
+#### Extended
+Extended logics are logical systems that accept the basic principles of classical logic. They introduce additional symbols and principles to apply it to fields like [metaphysics](https://en.wikipedia.org/wiki/Metaphysics "Metaphysics"), [ethics](https://en.wikipedia.org/wiki/Ethics "Ethics"), and [epistemology](https://en.wikipedia.org/wiki/Epistemology "Epistemology").
+
+#### Modal logic
+Main article: [Modal logic](https://en.wikipedia.org/wiki/Modal_logic "Modal logic")
+
+[Modal logic](https://en.wikipedia.org/wiki/Modal_logic "Modal logic") is an extension of classical logic. In its original form, sometimes called "alethic modal logic", it introduces two new symbols: ◊![{\displaystyle \Diamond }](https://wikimedia.org/api/rest_v1/media/math/render/svg/1e5e6f31a91de53f443e2cd4c7478693a1a6a57b) expresses that something is possible while ◻![{\displaystyle \Box }](https://wikimedia.org/api/rest_v1/media/math/render/svg/029b77f09ebeaf7528fc831fe57848be51f2240b) expresses that something is necessary. For example, if the formula B(s)![{\displaystyle B(s)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/eafeec3a494b40022d4f4402ec11aff5a45ca2c0) stands for the sentence "Socrates is a banker" then the formula ◊B(s)![{\displaystyle \Diamond B(s)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/77c5d10926155e9fedc321c80588d3272d495e19) articulates the sentence "It is possible that Socrates is a banker". To include these symbols in the logical formalism, modal logic introduces new rules of inference that govern what role they play in inferences. One rule of inference states that, if something is necessary, then it is also possible. This means that ◊A![{\displaystyle \Diamond A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/98e1c8a6d2e420ba59226c86cf7a81787fbbf450) follows from ◻A![{\displaystyle \Box A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/38a5cd9c3308f520a7b3c53b9f828a97b7eb697d). Another principle states that if a proposition is necessary then its negation is impossible and vice versa. This means that ◻A![{\displaystyle \Box A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/38a5cd9c3308f520a7b3c53b9f828a97b7eb697d) is equivalent to ¬◊¬A![{\displaystyle \lnot \Diamond \lnot A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9ac9a1e59ec369a33da38f90189a5a2255ffd53d).
+Other forms of modal logic introduce similar symbols but associate different meanings with them to apply modal logic to other fields. For example, [deontic logic](https://en.wikipedia.org/wiki/Deontic_logic "Deontic logic") concerns the field of ethics and introduces symbols to express the ideas of [obligation](https://en.wikipedia.org/wiki/Obligation "Obligation") and [permission](https://en.wikipedia.org/wiki/Permission_\(philosophy\) "Permission (philosophy)"), i.e. to describe whether an agent has to perform a certain action or is allowed to perform it. The modal operators in [temporal modal logic](https://en.wikipedia.org/wiki/Temporal_logic "Temporal logic") articulate temporal relations. They can be used to express, for example, that something happened at one time or that something is happening all the time. In epistemology, [epistemic modal logic](https://en.wikipedia.org/wiki/Epistemic_modal_logic "Epistemic modal logic") is used to represent the ideas of [knowing](https://en.wikipedia.org/wiki/Knowledge "Knowledge") something in contrast to merely [believing](https://en.wikipedia.org/wiki/Belief "Belief") it to be the case.
+
+#### Higher order logic
+
+Main article: [Higher-order logic](https://en.wikipedia.org/wiki/Higher-order_logic "Higher-order logic")
+
+[Higher-order logics](https://en.wikipedia.org/wiki/Higher-order_logic "Higher-order logic") extend classical logic not by using modal operators but by introducing new forms of quantification. Quantifiers correspond to terms like "all" or "some". In classical first-order logic, quantifiers are only applied to individuals. The formula "∃x(Apple(x)∧Sweet(x))![{\displaystyle \exists x(Apple(x)\land Sweet(x))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/91553ca9cfa2cb1d9476194df2acbd86689b0d74)" (_some_ apples are sweet) is an example of the [existential quantifier](https://en.wikipedia.org/wiki/Existential_quantification "Existential quantification") "∃![{\displaystyle \exists }](https://wikimedia.org/api/rest_v1/media/math/render/svg/77ed842b6b90b2fdd825320cf8e5265fa937b583)" applied to the individual variable "x![{\displaystyle x}](https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4)". In higher-order logics, quantification is also allowed over predicates. This increases its expressive power. For example, to express the idea that Mary and John share some qualities, one could use the formula "∃Q(Q(Mary)∧Q(John))![{\displaystyle \exists Q(Q(Mary)\land Q(John))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/e0558c050f0f79e86630ebac840b936b5b368f44)". In this case, the existential quantifier is applied to the predicate variable "Q![{\displaystyle Q}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8752c7023b4b3286800fe3238271bbca681219ed)". The added expressive power is especially useful for mathematics since it allows for more succinct formulations of mathematical theories. But it has drawbacks in regard to its meta-logical properties and ontological implications, which is why first-order logic is still more commonly used.
+
+#### Deviant
+Main article: [Deviant logic](https://en.wikipedia.org/wiki/Deviant_logic "Deviant logic")
+
+[Deviant logics](https://en.wikipedia.org/wiki/Deviant_logic "Deviant logic") are logical systems that reject some of the basic intuitions of classical logic. Because of this, they are usually seen not as its supplements but as its rivals. Deviant logical systems differ from each other either because they reject different classical intuitions or because they propose different alternatives to the same issue.
+
+[Intuitionistic logic](https://en.wikipedia.org/wiki/Intuitionistic_logic "Intuitionistic logic") is a restricted version of classical logic. It uses the same symbols but excludes some rules of inference. For example, according to the law of double negation elimination, if a sentence is not not true, then it is true. This means that A![{\displaystyle A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3) follows from ¬¬A![{\displaystyle \lnot \lnot A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/631eaaaa1c4f2d430a0ecd582b0b98b20d514129). This is a valid rule of inference in classical logic but it is invalid in intuitionistic logic. Another classical principle not part of intuitionistic logic is the [law of excluded middle](https://en.wikipedia.org/wiki/Law_of_excluded_middle "Law of excluded middle"). It states that for every sentence, either it or its negation is true. This means that every proposition of the form A∨¬A![{\displaystyle A\lor \lnot A}](https://wikimedia.org/api/rest_v1/media/math/render/svg/42bc39c90e40298464f5f82377cb9e7ed52e938f) is true. These deviations from classical logic are based on the idea that truth is established by verification using a proof. Intuitionistic logic is especially prominent in the field of [constructive mathematics](https://en.wikipedia.org/wiki/Constructivism_\(philosophy_of_mathematics\) "Constructivism (philosophy of mathematics)"), which emphasizes the need to find or construct a specific example to prove its existence.
+
+[Multi-valued logics](https://en.wikipedia.org/wiki/Multi-valued_logics "Multi-valued logics") depart from classicality by rejecting the [principle of bivalence](https://en.wikipedia.org/wiki/Principle_of_bivalence "Principle of bivalence"), which requires all propositions to be either true or false. For instance, [Jan Łukasiewicz](https://en.wikipedia.org/wiki/Jan_%C5%81ukasiewicz "Jan Łukasiewicz") and [Stephen Cole Kleene](https://en.wikipedia.org/wiki/Stephen_Cole_Kleene "Stephen Cole Kleene") both proposed [ternary logics](https://en.wikipedia.org/wiki/Ternary_logic "Ternary logic") which have a third truth value representing that a statement's truth value is indeterminate. These logics have been applied in the field of linguistics. [Fuzzy logics](https://en.wikipedia.org/wiki/Fuzzy_logics "Fuzzy logics") are multivalued logics that have an infinite number of "degrees of truth", represented by a [real number](https://en.wikipedia.org/wiki/Real_number "Real number") between 0 and 1.
+
+[Paraconsistent logics](https://en.wikipedia.org/wiki/Paraconsistent_logic "Paraconsistent logic") are logical systems that can deal with contradictions. They are formulated to avoid the principle of explosion: for them, it is not the case that anything follows from a contradiction. They are often motivated by [dialetheism](https://en.wikipedia.org/wiki/Dialetheism "Dialetheism"), the view that contradictions are real or that reality itself is contradictory. [Graham Priest](https://en.wikipedia.org/wiki/Graham_Priest "Graham Priest") is an influential contemporary proponent of this position and similar views have been ascribed to [Georg Wilhelm Friedrich Hegel](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel "Georg Wilhelm Friedrich Hegel").
+
+#### Informal
+Main article: [Informal logic](https://en.wikipedia.org/wiki/Informal_logic "Informal logic")
+
+Informal logic is usually carried out in a less systematic way. It often focuses on more specific issues, like investigating a particular type of fallacy or studying a certain aspect of argumentation. Nonetheless, some frameworks of informal logic have also been presented that try to provide a systematic characterization of the correctness of arguments.
+
+The _pragmatic_ or _dialogical approach_ to informal logic sees arguments as [speech acts](https://en.wikipedia.org/wiki/Speech_act "Speech act") and not merely as a set of premises together with a conclusion. As speech acts, they occur in a certain context, like a [dialogue](https://en.wikipedia.org/wiki/Dialogue "Dialogue"), which affects the standards of right and wrong arguments. A prominent version by [Douglas N. Walton](https://en.wikipedia.org/wiki/Douglas_N._Walton "Douglas N. Walton") understands a dialogue as a game between two players. The initial position of each player is characterized by the propositions to which they are committed and the conclusion they intend to prove. Dialogues are games of persuasion: each player has the goal of convincing the opponent of their own conclusion. This is achieved by making arguments: arguments are the moves of the game. They affect to which propositions the players are committed. A winning move is a successful argument that takes the opponent's commitments as premises and shows how one's own conclusion follows from them. This is usually not possible straight away. For this reason, it is normally necessary to formulate a sequence of arguments as intermediary steps, each of which brings the opponent a little closer to one's intended conclusion. Besides these positive arguments leading one closer to victory, there are also negative arguments preventing the opponent's victory by denying their conclusion. Whether an argument is correct depends on whether it promotes the progress of the dialogue. Fallacies, on the other hand, are violations of the standards of proper argumentative rules. These standards also depend on the type of dialogue. For example, the standards governing the scientific discourse differ from the standards in business negotiations.
+
+The _epistemic approach_ to informal logic, on the other hand, focuses on the epistemic role of arguments. It is based on the idea that arguments aim to increase our knowledge. They achieve this by linking justified beliefs to beliefs that are not yet justified. Correct arguments succeed at expanding knowledge while fallacies are epistemic failures: they do not justify the belief in their conclusion. For example, the [fallacy of begging the question](https://en.wikipedia.org/wiki/Fallacy_of_begging_the_question "Fallacy of begging the question") is a _fallacy_ because it fails to provide independent justification for its conclusion, even though it is deductively valid. In this sense, logical normativity consists in epistemic success or rationality. The [Bayesian approach](https://en.wikipedia.org/wiki/Bayesian_epistemology "Bayesian epistemology") is one example of an epistemic approach. Central to Bayesianism is not just whether the agent believes something but the degree to which they believe it, the so-called _credence_. Degrees of belief are seen as [subjective probabilities](https://en.wikipedia.org/wiki/Subjective_probability "Subjective probability") in the believed proposition, i.e. how certain the agent is that the proposition is true. On this view, reasoning can be interpreted as a process of changing one's credences, often in reaction to new incoming information. Correct reasoning and the arguments it is based on follow the laws of probability, for example, the [principle of conditionalization](https://en.wikipedia.org/wiki/Bayesian_epistemology#Principle_of_conditionalization "Bayesian epistemology"). Bad or irrational reasoning, on the other hand, violates these laws.
+
+### Areas of research
+Logic is studied in various fields. In many cases, this is done by applying its formal method to specific topics outside its scope, like to ethics or computer science. In other cases, logic itself is made the subject of research in another discipline. This can happen in diverse ways. For instance, it can involve investigating the philosophical assumptions linked to the basic concepts used by logicians. Other ways include interpreting and analyzing logic through mathematical structures as well as studying and comparing abstract properties of formal logical systems.
+
+#### Philosophy of logic and philosophical logic
+Main articles: [Philosophy of logic](https://en.wikipedia.org/wiki/Philosophy_of_logic "Philosophy of logic") and [Philosophical logic](https://en.wikipedia.org/wiki/Philosophical_logic "Philosophical logic")
+
+_Philosophy of logic_ is the philosophical discipline studying the scope and nature of logic. It examines many presuppositions implicit in logic, like how to define its basic concepts or the metaphysical assumptions associated with them. It is also concerned with how to classify logical systems and considers the [ontological](https://en.wikipedia.org/wiki/Ontological "Ontological") commitments they incur. _Philosophical logic_ is one of the areas within the philosophy of logic. It studies the application of logical methods to philosophical problems in fields like metaphysics, ethics, and epistemology. This application usually happens in the form of [extended](https://en.wikipedia.org/wiki/Logic#Extended) or [deviant logical systems](https://en.wikipedia.org/wiki/Logic#Deviant).
+
+#### Metalogic
+Main article: [Metalogic](https://en.wikipedia.org/wiki/Metalogic "Metalogic")
+
+Metalogic is the field of inquiry studying the properties of formal logical systems. For example, when a new formal system is developed, metalogicians may study it to determine which formulas can be proven in it. They may also study whether an [algorithm](https://en.wikipedia.org/wiki/Algorithm "Algorithm") could be developed to find a proof for each formula and whether every provable formula in it is a tautology. Finally, they may compare it to other logical systems to understand its distinctive features. A key issue in metalogic concerns the relation between syntax and semantics. The syntactic rules of a formal system determine how to deduce conclusions from premises, i.e. how to formulate proofs. The semantics of a formal system governs which sentences are true and which ones are false. This determines the validity of arguments since, for valid arguments, it is impossible for the premises to be true and the conclusion to be false. The relation between syntax and semantics concerns issues like whether every valid argument is provable and whether every provable argument is valid. Metalogicians also study whether logical systems are complete, sound, and [consistent](https://en.wikipedia.org/wiki/Consistency "Consistency"). They are interested in whether the systems are [decidable](https://en.wikipedia.org/wiki/Decidability_\(logic\) "Decidability (logic)") and what [expressive power](https://en.wikipedia.org/wiki/Expressive_power_\(computer_science\) "Expressive power (computer science)") they have. Metalogicians usually rely heavily on abstract mathematical reasoning when examining and formulating metalogical proofs. This way, they aim to arrive at precise and general conclusions on these topics.
+
+#### Mathematical logic
+Main article: [Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic "Mathematical logic")
+
+[![Photograph of Bertrand Russell](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Russell1907-2.jpg/250px-Russell1907-2.jpg)](https://en.wikipedia.org/wiki/File:Russell1907-2.jpg)
+
+Bertrand Russell made various contributions to mathematical logic.
+
+The term "mathematical logic" is sometimes used as a synonym of "formal logic". But in a more restricted sense, it refers to the study of logic within mathematics. Major subareas include [model theory](https://en.wikipedia.org/wiki/Model_theory "Model theory"), [proof theory](https://en.wikipedia.org/wiki/Proof_theory "Proof theory"), [set theory](https://en.wikipedia.org/wiki/Set_theory "Set theory"), and [computability theory](https://en.wikipedia.org/wiki/Computability_theory "Computability theory"). Research in mathematical logic commonly addresses the mathematical properties of formal systems of logic. However, it can also include attempts to use logic to analyze mathematical reasoning or to establish logic-based [foundations of mathematics](https://en.wikipedia.org/wiki/Foundations_of_mathematics "Foundations of mathematics"). The latter was a major concern in early 20th-century mathematical logic, which pursued the program of [logicism](https://en.wikipedia.org/wiki/Logicism "Logicism") pioneered by philosopher-logicians such as Gottlob Frege, [Alfred North Whitehead](https://en.wikipedia.org/wiki/Alfred_North_Whitehead "Alfred North Whitehead"), and [Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell "Bertrand Russell"). Mathematical theories were supposed to be logical [tautologies](https://en.wikipedia.org/wiki/Tautology_\(logic\) "Tautology (logic)"), and their program was to show this by means of a reduction of mathematics to logic. Many attempts to realize this program failed, from the crippling of Frege's project in his __Grundgesetze__ by [Russell's paradox](https://en.wikipedia.org/wiki/Russell%27s_paradox "Russell's paradox"), to the defeat of [Hilbert's program](https://en.wikipedia.org/wiki/Hilbert%27s_program "Hilbert's program") by [Gödel's incompleteness theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorem "Gödel's incompleteness theorem").
+
+Set theory originated in the study of the infinite by [Georg Cantor](https://en.wikipedia.org/wiki/Georg_Cantor "Georg Cantor"), and it has been the source of many of the most challenging and important issues in mathematical logic. They include [Cantor's theorem](https://en.wikipedia.org/wiki/Cantor%27s_theorem "Cantor's theorem"), the status of the [Axiom of Choice](https://en.wikipedia.org/wiki/Axiom_of_Choice "Axiom of Choice"), the question of the independence of the [continuum hypothesis](https://en.wikipedia.org/wiki/Continuum_hypothesis "Continuum hypothesis"), and the modern debate on [large cardinal](https://en.wikipedia.org/wiki/Large_cardinal "Large cardinal") axioms.
+
+Computability theory is the branch of mathematical logic that studies effective procedures to solve calculation problems. One of its main goals is to understand whether it is possible to solve a given problem using an algorithm. For instance, given a certain claim about the positive integers, it examines whether an algorithm can be found to determine if this claim is true. Computability theory uses various theoretical tools and models, such as [Turing machines](https://en.wikipedia.org/wiki/Turing_machines "Turing machines"), to explore this type of issue.
+
+#### Computational logic
+Main articles: [Computational logic](https://en.wikipedia.org/wiki/Computational_logic "Computational logic") and [Logic in computer science](https://en.wikipedia.org/wiki/Logic_in_computer_science "Logic in computer science")
+
+[![Diagram of an AND gate using transistors](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/TransistorANDgate.png/250px-TransistorANDgate.png)](https://en.wikipedia.org/wiki/File:TransistorANDgate.png)
+
+Conjunction (AND) is one of the basic operations of Boolean logic. It can be electronically implemented in several ways, for example, by using two [transistors](https://en.wikipedia.org/wiki/Transistor "Transistor").
+
+Computational logic is the branch of logic and [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science") that studies how to implement mathematical reasoning and logical formalisms using computers. This includes, for example, [automatic theorem provers](https://en.wikipedia.org/wiki/Automatic_theorem_prover "Automatic theorem prover"), which employ rules of inference to construct a proof step by step from a set of premises to the intended conclusion without human intervention. languages are designed specifically to express facts using logical formulas and to draw inferences from these facts. For example, [Prolog](https://en.wikipedia.org/wiki/Prolog "Prolog") is a logic programming language based on predicate logic. Computer scientists also apply concepts from logic to problems in computing. The works of [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon "Claude Shannon") were influential in this regard. He showed how [Boolean logic](https://en.wikipedia.org/wiki/Boolean_logic "Boolean logic") can be used to understand and implement computer circuits. This can be achieved using electronic [logic gates](https://en.wikipedia.org/wiki/Logic_gates "Logic gates"), i.e. electronic circuits with one or more inputs and usually one output. The truth values of propositions are represented by voltage levels. In this way, logic functions can be simulated by applying the corresponding voltages to the inputs of the circuit and determining the value of the function by measuring the voltage of the output.
+
+#### Formal semantics of natural language
+Main article: [Formal semantics (natural language)](https://en.wikipedia.org/wiki/Formal_semantics_\(natural_language\) "Formal semantics (natural language)")
+
+Formal semantics is a subfield of logic, [linguistics](https://en.wikipedia.org/wiki/Linguistics "Linguistics"), and the [philosophy of language](https://en.wikipedia.org/wiki/Philosophy_of_language "Philosophy of language"). The discipline of [semantics](https://en.wikipedia.org/wiki/Semantics "Semantics") studies the meaning of language. Formal semantics uses formal tools from the fields of symbolic logic and mathematics to give precise theories of the meaning of [natural language](https://en.wikipedia.org/wiki/Natural_language "Natural language") expressions. It understands meaning usually in relation to [truth conditions](https://en.wikipedia.org/wiki/Truth_condition "Truth condition"), i.e. it examines in which situations a sentence would be true or false. One of its central methodological assumptions is the [principle of compositionality](https://en.wikipedia.org/wiki/Principle_of_compositionality "Principle of compositionality"). It states that the meaning of a complex expression is determined by the meanings of its parts and how they are combined. For example, the meaning of the verb phrase "walk and sing" depends on the meanings of the individual expressions "walk" and "sing". Many theories in formal semantics rely on model theory. This means that they employ set theory to construct a model and then interpret the meanings of expression in relation to the elements in this model. For example, the term "walk" may be interpreted as the set of all individuals in the model that share the property of walking. Early influential theorists in this field were [Richard Montague](https://en.wikipedia.org/wiki/Richard_Montague "Richard Montague") and [Barbara Partee](https://en.wikipedia.org/wiki/Barbara_Partee "Barbara Partee"), who focused their analysis on the English language.
+
+#### Epistemology of logic
+The epistemology of logic studies how one knows that an argument is valid or that a proposition is logically true. This includes questions like how to justify that _modus ponens_ is a valid rule of inference or that contradictions are false. The traditionally dominant view is that this form of logical understanding belongs to knowledge [a priori](https://en.wikipedia.org/wiki/A_priori_and_a_posteriori "A priori and a posteriori"). In this regard, it is often argued that the [mind](https://en.wikipedia.org/wiki/Mind "Mind") has a special faculty to examine relations between pure ideas and that this faculty is also responsible for apprehending logical truths. A similar approach understands the rules of logic in terms of [linguistic conventions](https://en.wikipedia.org/wiki/Conventionalism "Conventionalism"). On this view, the laws of logic are trivial since they are true by definition: they just express the meanings of the logical vocabulary.
+
+Some theorists, like [Hilary Putnam](https://en.wikipedia.org/wiki/Hilary_Putnam "Hilary Putnam") and [Penelope Maddy](https://en.wikipedia.org/wiki/Penelope_Maddy "Penelope Maddy"), object to the view that logic is knowable a priori. They hold instead that logical truths depend on the [empirical](https://en.wikipedia.org/wiki/Empirical "Empirical") world. This is usually combined with the claim that the laws of logic express universal regularities found in the structural features of the world. According to this view, they may be explored by studying general patterns of the [fundamental sciences](https://en.wikipedia.org/wiki/Fundamental_sciences "Fundamental sciences"). For example, it has been argued that certain insights of [quantum mechanics](https://en.wikipedia.org/wiki/Quantum_mechanics "Quantum mechanics") refute the [principle of distributivity](https://en.wikipedia.org/wiki/Principle_of_distributivity "Principle of distributivity") in classical logic, which states that the formula A∧(B∨C)![{\displaystyle A\land (B\lor C)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/df394b2737c9b42f114b26dbce84dfa4917b1a17) is equivalent to (A∧B)∨(A∧C)![{\displaystyle (A\land B)\lor (A\land C)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/f564623cc81c802fdbd0f0d4cdf60d4d7a474922). This claim can be used as an empirical argument for the thesis that [quantum logic](https://en.wikipedia.org/wiki/Quantum_logic "Quantum logic") is the correct logical system and should replace classical logic.
+
+## Computer Program
+A **computer program** is a [sequence](https://en.wikipedia.org/wiki/Sequence "Sequence") or set of instructions in a [programming language](https://en.wikipedia.org/wiki/Programming_language "Programming language") for a [computer](https://en.wikipedia.org/wiki/Computer "Computer") to [execute](https://en.wikipedia.org/wiki/Execution_\(computing\) "Execution (computing)"). It is one component of [software](https://en.wikipedia.org/wiki/Software "Software"), which also includes [documentation](https://en.wikipedia.org/wiki/Software_documentation "Software documentation") and other intangible components.
+
+A _computer program_ in its [human-readable](https://en.wikipedia.org/wiki/Human-readable "Human-readable") form is called [source code](https://en.wikipedia.org/wiki/Source_code "Source code"). Source code needs another computer program to execute because computers can only execute their native [machine instructions](https://en.wikipedia.org/wiki/Machine_instructions "Machine instructions"). Therefore, source code may be [translated](https://en.wikipedia.org/wiki/Translator_\(computing\) "Translator (computing)") to machine instructions using a [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") written for the language. ([Assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") programs are translated using an [assembler](https://en.wikipedia.org/wiki/Assembler_\(computing\) "Assembler (computing)").) The resulting file is called an [executable](https://en.wikipedia.org/wiki/Executable "Executable"). Alternatively, source code may execute within an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") written for the language.
+
+If the executable is requested for execution, then the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") [loads](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)") it into [memory](https://en.wikipedia.org/wiki/Random-access_memory "Random-access memory") and starts a [process](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)"). The [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") will soon [switch](https://en.wikipedia.org/wiki/Context_switch "Context switch") to this process so it can [fetch, decode, and then execute](https://en.wikipedia.org/wiki/Instruction_cycle "Instruction cycle") each machine instruction.
+
+If the source code is requested for execution, then the operating system loads the corresponding interpreter into memory and starts a process. The interpreter then loads the source code into memory to translate and execute each [statement](https://en.wikipedia.org/wiki/Statement_\(computer_science\) "Statement (computer science)"). Running the source code is slower than running an executable. Moreover, the interpreter must be installed on the computer.
+
+### Example computer program
+The ["Hello, World!" program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program "\"Hello, World!\" program") is used to illustrate a language's basic syntax. The syntax of the language [BASIC](https://en.wikipedia.org/wiki/Dartmouth_BASIC "Dartmouth BASIC") (1964) was intentionally limited to make the language easy to learn. For example, [variables](https://en.wikipedia.org/wiki/Variable_\(computer_science\) "Variable (computer science)") are not [declared](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)") before being used. Also, variables are automatically initialized to zero. Here is an example computer program, in Basic, to [average](https://en.wikipedia.org/wiki/Average "Average") a list of numbers:
+
+```
+10 INPUT "How many numbers to average?", A
+20 FOR I = 1 TO A
+30 INPUT "Enter number:", B
+40 LET C = C + B
+50 NEXT I
+60 LET D = C/A
+70 PRINT "The average is", D
+80 END
+```
+
+Once the mechanics of basic computer programming are learned, more sophisticated and powerful languages are available to build large computer systems.
+
+### Programming paradigms and languages
+Programming language features exist to provide building blocks to be combined to express programming ideals. Ideally, a programming language should:
+
+- express ideas directly in the code.
+- express independent ideas independently.
+- express relationships among ideas directly in the code.
+- combine ideas freely.
+- combine ideas only where combinations make sense.
+- express simple ideas simply.
+
+The [programming style](https://en.wikipedia.org/wiki/Programming_style "Programming style") of a programming language to provide these building blocks may be categorized into [programming paradigms](https://en.wikipedia.org/wiki/Programming_paradigm "Programming paradigm"). For example, different paradigms may differentiate:
+
+- [procedural languages](https://en.wikipedia.org/wiki/Procedural_programming "Procedural programming"), [functional languages](https://en.wikipedia.org/wiki/Functional_language "Functional language"), and [logical languages](https://en.wikipedia.org/wiki/Logic_programming "Logic programming").
+- different levels of [data abstraction](https://en.wikipedia.org/wiki/Data_abstraction "Data abstraction").
+- different levels of [class hierarchy](https://en.wikipedia.org/wiki/Class_hierarchy "Class hierarchy").
+- different levels of input [datatypes](https://en.wikipedia.org/wiki/Datatypes "Datatypes"), as in [container types](https://en.wikipedia.org/wiki/Container_\(abstract_data_type\) "Container (abstract data type)") and [generic programming](https://en.wikipedia.org/wiki/Generic_programming "Generic programming").
+
+Each of these programming styles has contributed to the synthesis of different _programming languages_.
+
+A _programming language_ is a set of [keywords](https://en.wikipedia.org/wiki/Reserved_word "Reserved word"), [symbols](https://en.wikipedia.org/wiki/Character_\(computing\) "Character (computing)"), [identifiers](https://en.wikipedia.org/wiki/Identifier_\(computer_languages\) "Identifier (computer languages)"), and rules by which programmers can communicate instructions to the computer. They follow a set of rules called a [syntax](https://en.wikipedia.org/wiki/Syntax_\(programming_languages\) "Syntax (programming languages)").
+
+- _Keywords_ are reserved words to form [declarations](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)") and [statements](https://en.wikipedia.org/wiki/Statement_\(computer_science\) "Statement (computer science)").
+- _Symbols_ are characters to form [operations](https://en.wikipedia.org/wiki/Operation_\(mathematics\) "Operation (mathematics)"), [assignments](https://en.wikipedia.org/wiki/Assignment_\(computer_science\) "Assignment (computer science)"), [control flow](https://en.wikipedia.org/wiki/Control_flow "Control flow"), and [delimiters](https://en.wikipedia.org/wiki/Delimiter "Delimiter").
+- _Identifiers_ are words created by programmers to form [constants](https://en.wikipedia.org/wiki/Constant_\(computer_programming\) "Constant (computer programming)"), [variable names](https://en.wikipedia.org/wiki/Variable_\(computer_science\) "Variable (computer science)"), [structure names](https://en.wikipedia.org/wiki/Record_\(computer_science\) "Record (computer science)"), and [function names](https://en.wikipedia.org/wiki/Function_\(computer_programming\) "Function (computer programming)").
+- _Syntax Rules_ are defined in the [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form "Backus–Naur form").
+
+_Programming languages_ get their basis from [formal languages](https://en.wikipedia.org/wiki/Formal_language "Formal language"). The purpose of defining a solution in terms of its _formal language_ is to generate an [algorithm](https://en.wikipedia.org/wiki/Algorithm "Algorithm") to solve the underlining problem. An _algorithm_ is a sequence of simple instructions that solve a problem.
+
+#### Generations of programming language
+
+Main article: [Programming language generations](https://en.wikipedia.org/wiki/Programming_language_generations "Programming language generations")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/W65C816S_Machine_Code_Monitor.jpeg/250px-W65C816S_Machine_Code_Monitor.jpeg)](https://en.wikipedia.org/wiki/File:W65C816S_Machine_Code_Monitor.jpeg)
+
+[Machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language") monitor on a [W65C816S](https://en.wikipedia.org/wiki/W65C816S "W65C816S") [microprocessor](https://en.wikipedia.org/wiki/Microprocessor "Microprocessor")
+
+The evolution of programming languages began when the [EDSAC](https://en.wikipedia.org/wiki/EDSAC "EDSAC") (1949) used the first [stored computer program](https://en.wikipedia.org/wiki/Stored-program_computer "Stored-program computer") in its [von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture "Von Neumann architecture"). Programming the EDSAC was in the first [generation of programming language](https://en.wikipedia.org/wiki/Programming_language_generations "Programming language generations").
+- The [first generation of programming language](https://en.wikipedia.org/wiki/First-generation_programming_language "First-generation programming language") is [machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language"). _Machine language_ requires the programmer to enter instructions using _instruction numbers_ called [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code"). For example, the ADD operation on the [PDP-11](https://en.wikipedia.org/wiki/PDP-11_architecture "PDP-11 architecture") has instruction number 24576.
+
+- The [second generation of programming language](https://en.wikipedia.org/wiki/Second-generation_programming_language "Second-generation programming language") is [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language"). _Assembly language_ allows the programmer to use [mnemonic](https://en.wikipedia.org/wiki/Assembly_language#Mnemonics "Assembly language") [instructions](https://en.wikipedia.org/wiki/Instruction_set_architecture#Instructions "Instruction set architecture") instead of remembering instruction numbers. An [assembler](https://en.wikipedia.org/wiki/Assembler_\(computing\) "Assembler (computing)") translates each assembly language mnemonic into its machine language number. For example, on the PDP-11, the operation 24576 can be referenced as ADD R0,R0 in the source code. The four basic arithmetic operations have assembly instructions like ADD, SUB, MUL, and DIV. Computers also have instructions like DW (Define [Word](https://en.wikipedia.org/wiki/Word_\(computer_architecture\) "Word (computer architecture)")) to reserve [memory](https://en.wikipedia.org/wiki/Random-access_memory "Random-access memory") cells. Then the MOV instruction can copy [integers](https://en.wikipedia.org/wiki/Integer "Integer") between [registers](https://en.wikipedia.org/wiki/Processor_register "Processor register") and memory.
+
+- The basic structure of an assembly language statement is a label, [operation](https://en.wikipedia.org/wiki/Operation_\(mathematics\) "Operation (mathematics)"), [operand](https://en.wikipedia.org/wiki/Operand "Operand"), and comment.
+
+- _Labels_ allow the programmer to work with [variable names](https://en.wikipedia.org/wiki/Variable_\(computer_science\) "Variable (computer science)"). The assembler will later translate labels into physical [memory addresses](https://en.wikipedia.org/wiki/Memory_address "Memory address").
+- _Operations_ allow the programmer to work with mnemonics. The assembler will later translate mnemonics into instruction numbers.
+- _Operands_ tell the assembler which data the operation will process.
+- _Comments_ allow the programmer to articulate a narrative because the instructions alone are vague.
+
+The key characteristic of an assembly language program is it forms a one-to-one mapping to its corresponding machine language target.
+
+- The [third generation of programming language](https://en.wikipedia.org/wiki/Third-generation_programming_language "Third-generation programming language") uses [compilers](https://en.wikipedia.org/wiki/Compiler "Compiler") and [interpreters](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") to execute computer programs. The distinguishing feature of a _third generation_ language is its independence from particular hardware. Early languages include [Fortran](https://en.wikipedia.org/wiki/Fortran "Fortran") (1958), [COBOL](https://en.wikipedia.org/wiki/COBOL "COBOL") (1959), [ALGOL](https://en.wikipedia.org/wiki/ALGOL "ALGOL") (1960), and [BASIC](https://en.wikipedia.org/wiki/BASIC "BASIC") (1964). In 1973, the [C programming language](https://en.wikipedia.org/wiki/C_programming_language "C programming language") emerged as a [high-level language](https://en.wikipedia.org/wiki/High-level_language "High-level language") that produced efficient machine language instructions. Whereas _third-generation_ languages historically generated many machine instructions for each statement, C has statements that may generate a single machine instruction. Moreover, an [optimizing compiler](https://en.wikipedia.org/wiki/Optimizing_compiler "Optimizing compiler") might overrule the programmer and produce fewer machine instructions than statements. Today, an entire [paradigm](https://en.wikipedia.org/wiki/Programming_paradigm "Programming paradigm") of languages fill the [imperative](https://en.wikipedia.org/wiki/Imperative_programming "Imperative programming"), _third generation_ spectrum.
+
+- The [fourth generation of programming language](https://en.wikipedia.org/wiki/Fourth-generation_programming_language "Fourth-generation programming language") emphasizes what output results are desired, rather than how programming statements should be constructed. [Declarative languages](https://en.wikipedia.org/wiki/Declarative_language "Declarative language") attempt to limit [side effects](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\) "Side effect (computer science)") and allow programmers to write code with relatively few errors. One popular _fourth generation_ language is called [Structured Query Language](https://en.wikipedia.org/wiki/Structured_Query_Language "Structured Query Language") (SQL). [Database](https://en.wikipedia.org/wiki/Database "Database") developers no longer need to process each database record one at a time. Also, a simple [select statement](https://en.wikipedia.org/wiki/Select_\(SQL\) "Select (SQL)") can generate output records without having to understand how they are retrieved.
+
+#### Imperative languages
+
+Main article: [Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming "Imperative programming")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Object-Oriented-Programming-Methods-And-Classes-with-Inheritance.png/250px-Object-Oriented-Programming-Methods-And-Classes-with-Inheritance.png)](https://en.wikipedia.org/wiki/File:Object-Oriented-Programming-Methods-And-Classes-with-Inheritance.png)
+
+A computer program written in an imperative language
+
+_Imperative languages_ specify a sequential [algorithm](https://en.wikipedia.org/wiki/Algorithm#Computer_algorithm "Algorithm") using [declarations](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)"), [expressions](https://en.wikipedia.org/wiki/Expression_\(computer_science\) "Expression (computer science)"), and [statements](https://en.wikipedia.org/wiki/Statement_\(computer_science\) "Statement (computer science)"):
+- A _declaration_ introduces a [variable](https://en.wikipedia.org/wiki/Variable_\(programming\) "Variable (programming)") name to the _computer program_ and assigns it to a [datatype](https://en.wikipedia.org/wiki/Datatype "Datatype") – for example: `var x: integer;`
+- An _expression_ yields a value – for example: `2 + 2` yields 4
+- A _statement_ might [assign](https://en.wikipedia.org/wiki/Assignment_\(computer_science\) "Assignment (computer science)") an expression to a variable or use the value of a variable to alter the program's [control flow](https://en.wikipedia.org/wiki/Control_flow "Control flow") – for example: `x := 2 + 2; if x = 4 then do_something();`
+
+##### Fortran
+[FORTRAN](https://en.wikipedia.org/wiki/FORTRAN "FORTRAN") (1958) was unveiled as "The IBM Mathematical FORmula TRANslating system". It was designed for scientific calculations, without [string](https://en.wikipedia.org/wiki/String_\(computer_science\) "String (computer science)") handling facilities. Along with [declarations](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)"), [expressions](https://en.wikipedia.org/wiki/Expression_\(computer_science\) "Expression (computer science)"), and [statements](https://en.wikipedia.org/wiki/Statement_\(computer_science\) "Statement (computer science)"), it supported:
+
+- [arrays](https://en.wikipedia.org/wiki/Array_data_structure "Array data structure").
+- [subroutines](https://en.wikipedia.org/wiki/Function_\(computer_programming\)#Jump_to_subroutine "Function (computer programming)").
+- ["do" loops](https://en.wikipedia.org/wiki/For_loop#1957:_FORTRAN "For loop").
+
+It succeeded because:
+
+- programming and debugging costs were below computer running costs.
+- it was supported by IBM.
+- applications at the time were scientific.
+However, non-IBM vendors also wrote Fortran compilers, but with a syntax that would likely fail IBM's compiler. The [American National Standards Institute](https://en.wikipedia.org/wiki/American_National_Standards_Institute "American National Standards Institute") (ANSI) developed the first Fortran standard in 1966. In 1978, Fortran 77 became the standard until 1991. Fortran 90 supports:
+
+- [records](https://en.wikipedia.org/wiki/Record_\(computer_science\) "Record (computer science)").
+- [pointers](https://en.wikipedia.org/wiki/Pointer_\(computer_programming\) "Pointer (computer programming)") to arrays.
+
+##### COBOL
+[COBOL](https://en.wikipedia.org/wiki/COBOL "COBOL") (1959) stands for "COmmon Business Oriented Language". Fortran manipulated symbols. It was soon realized that symbols did not need to be numbers, so [strings](https://en.wikipedia.org/wiki/String_\(computer_science\) "String (computer science)") were introduced. The [US Department of Defense](https://en.wikipedia.org/wiki/US_Department_of_Defense "US Department of Defense") influenced COBOL's development, with [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper "Grace Hopper") being a major contributor. The statements were English-like and verbose. The goal was to design a language so managers could read the programs. However, the lack of structured statements hindered this goal.
+
+COBOL's development was tightly controlled, so dialects did not emerge to require ANSI standards. As a consequence, it was not changed for 15 years until 1974. The 1990s version did make consequential changes, like [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming "Object-oriented programming").
+
+##### Algol
+[ALGOL](https://en.wikipedia.org/wiki/ALGOL "ALGOL") (1960) stands for "ALGOrithmic Language". It had a profound influence on programming language design. Emerging from a committee of European and American programming language experts, it used standard [mathematical notation](https://en.wikipedia.org/wiki/Mathematical_notation "Mathematical notation") and had a readable, structured design. Algol was first to define its syntax using the [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form "Backus–Naur form"). This led to [syntax-directed](https://en.wikipedia.org/wiki/Syntax-directed_translation "Syntax-directed translation") compilers. It added features like:
+
+- [block structure](https://en.wikipedia.org/wiki/Block_\(programming\) "Block (programming)"), where variables were local to their block.
+- arrays with variable bounds.
+- ["for" loops](https://en.wikipedia.org/wiki/For_loop "For loop").
+- [functions](https://en.wikipedia.org/wiki/Function_\(computer_programming\) "Function (computer programming)").
+- [recursion](https://en.wikipedia.org/wiki/Recursion_\(computer_science\) "Recursion (computer science)").
+
+Algol's direct descendants include [Pascal](https://en.wikipedia.org/wiki/Pascal_\(programming_language\) "Pascal (programming language)"), [Modula-2](https://en.wikipedia.org/wiki/Modula-2 "Modula-2"), [Ada](https://en.wikipedia.org/wiki/Ada_\(programming_language\) "Ada (programming language)"), [Delphi](https://en.wikipedia.org/wiki/Delphi_\(software\) "Delphi (software)") and [Oberon](https://en.wikipedia.org/wiki/Oberon_\(programming_language\) "Oberon (programming language)") on one branch. On another branch the descendants include [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"), [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++") and [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)").
+
+##### Basic
+[BASIC](https://en.wikipedia.org/wiki/BASIC "BASIC") (1964) stands for "Beginner's All-Purpose Symbolic Instruction Code". It was developed at [Dartmouth College](https://en.wikipedia.org/wiki/Dartmouth_College "Dartmouth College") for all of their students to learn. If a student did not go on to a more powerful language, the student would still remember Basic. A Basic interpreter was installed in the [microcomputers](https://en.wikipedia.org/wiki/Microcomputers "Microcomputers") manufactured in the late 1970s. As the microcomputer industry grew, so did the language.
+
+Basic pioneered the [interactive session](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "Read–eval–print loop"). It offered [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") commands within its environment:
+
+- The 'new' command created an empty slate.
+- Statements evaluated immediately.
+- Statements could be programmed by preceding them with line numbers.
+- The 'list' command displayed the program.
+- The 'run' command executed the program.
+
+However, the Basic syntax was too simple for large programs. Recent dialects added structure and object-oriented extensions. [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft")'s [Visual Basic](https://en.wikipedia.org/wiki/Visual_Basic "Visual Basic") is still widely used and produces a [graphical user interface](https://en.wikipedia.org/wiki/Graphical_user_interface "Graphical user interface").
+
+##### C
+[C programming language](https://en.wikipedia.org/wiki/C_programming_language "C programming language") (1973) got its name because the language [BCPL](https://en.wikipedia.org/wiki/BCPL "BCPL") was replaced with [B](https://en.wikipedia.org/wiki/B_\(programming_language\) "B (programming language)"), and [AT&T Bell Labs](https://en.wikipedia.org/wiki/AT%26T_Bell_Labs "AT&T Bell Labs") called the next version "C". Its purpose was to write the [UNIX](https://en.wikipedia.org/wiki/UNIX "UNIX") [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system"). C is a relatively small language, making it easy to write compilers. Its growth mirrored the hardware growth in the 1980s. Its growth also was because it has the facilities of [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language"), but it uses a [high-level syntax](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language"). It added advanced features like:
+
+- [inline assembler](https://en.wikipedia.org/wiki/Inline_assembler "Inline assembler").
+- arithmetic on pointers.
+- pointers to functions.
+- bit operations.
+- freely combining complex [operators](https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B "Operators in C and C++").
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Computer-memory-map.png/250px-Computer-memory-map.png)](https://en.wikipedia.org/wiki/File:Computer-memory-map.png)
+
+Computer memory map
+
+_C_ allows the programmer to control which region of memory data is to be stored. [Global variables](https://en.wikipedia.org/wiki/Global_variable "Global variable") and [static variables](https://en.wikipedia.org/wiki/Static_variable "Static variable") require the fewest [clock cycles](https://en.wikipedia.org/wiki/Clock_cycle "Clock cycle") to store. The [stack](https://en.wikipedia.org/wiki/Call_stack "Call stack") is automatically used for the standard variable [declarations](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)"). [Heap](https://en.wikipedia.org/wiki/Manual_memory_management "Manual memory management") memory is returned to a [pointer variable](https://en.wikipedia.org/wiki/Pointer_variable "Pointer variable") from the [`malloc()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation "C dynamic memory allocation") function.
+
+- The _global and static data_ region is located just above the _program_ region. (The program region is technically called the _text_ region. It is where machine instructions are stored.)
+
+- The global and static data region is technically two regions. One region is called the _initialized [data segment](https://en.wikipedia.org/wiki/Data_segment "Data segment")_, where variables declared with default values are stored. The other region is called the _[block started by segment](https://en.wikipedia.org/wiki/.bss ".bss")_, where variables declared without default values are stored.
+- Variables stored in the _global and static data_ region have their [addresses](https://en.wikipedia.org/wiki/Memory_address "Memory address") set at compile time. They retain their values throughout the life of the process.
+
+- The global and static region stores the _global variables_ that are declared on top of (outside) the `main()` function. Global variables are visible to `main()` and every other function in the source code.
+
+On the other hand, variable declarations inside of `main()`, other functions, or within `{` `}` [block delimiters](https://en.wikipedia.org/wiki/Block_\(programming\) "Block (programming)") are _local variables_. Local variables also include _[formal parameter](https://en.wikipedia.org/wiki/Formal_parameter "Formal parameter") variables_. Parameter variables are enclosed within the parenthesis of a function definition. Parameters provide an [interface](https://en.wikipedia.org/wiki/Interface_\(computing\) "Interface (computing)") to the function.
+
+- _Local variables_ declared using the `static` prefix are also stored in the _global and static data_ region. Unlike global variables, static variables are only visible within the function or block. Static variables always retain their value. An example usage would be the function `int increment_counter(){static int counter = 0; counter++; return counter;}
+
+- The [stack](https://en.wikipedia.org/wiki/Call_stack "Call stack") region is a contiguous block of memory located near the top memory address. Variables placed in the stack are populated from top to bottom. A [stack pointer](https://en.wikipedia.org/wiki/Call_stack#STACK-POINTER "Call stack") is a special-purpose [register](https://en.wikipedia.org/wiki/Processor_register "Processor register") that keeps track of the last memory address populated. Variables are placed into the stack via the _assembly language_ PUSH instruction. Therefore, the addresses of these variables are set during [runtime](https://en.wikipedia.org/wiki/Runtime_\(program_lifecycle_phase\) "Runtime (program lifecycle phase)"). The method for stack variables to lose their [scope](https://en.wikipedia.org/wiki/Scope_\(computer_science\) "Scope (computer science)") is via the POP instruction.
+
+- _Local variables_ declared without the `static` prefix, including formal parameter variables, are called _automatic variables_ and are stored in the stack. They are visible inside the function or block and lose their scope upon exiting the function or block.
+
+- The [heap](https://en.wikipedia.org/wiki/Manual_memory_management "Manual memory management") region is located below the stack. It is populated from the bottom to the top. The [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") manages the heap using a _heap pointer_ and a list of allocated memory blocks. Like the stack, the addresses of heap variables are set during runtime. An [out of memory](https://en.wikipedia.org/wiki/Out_of_memory "Out of memory") error occurs when the heap pointer and the stack pointer meet.
+
+- _C_ provides the `malloc()` library function to [allocate](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation "C dynamic memory allocation") heap memory. Populating the heap with data is an additional copy function. Variables stored in the heap are economically passed to functions using pointers. Without pointers, the entire block of data would have to be passed to the function via the stack.
+
+##### C++
+In the 1970s, [software engineers](https://en.wikipedia.org/wiki/Software_engineers "Software engineers") needed language support to break large projects down into [modules](https://en.wikipedia.org/wiki/Modular_programming "Modular programming"). One obvious feature was to decompose large projects _physically_ into separate [files](https://en.wikipedia.org/wiki/Computer_file "Computer file"). A less obvious feature was to decompose large projects _logically_ into [abstract data types](https://en.wikipedia.org/wiki/Abstract_data_type "Abstract data type"). At the time, languages supported [concrete (scalar)](https://en.wikipedia.org/wiki/Type_system "Type system") datatypes like [integer](https://en.wikipedia.org/wiki/Integer "Integer") numbers, [floating-point](https://en.wikipedia.org/wiki/Floating-point "Floating-point") numbers, and [strings](https://en.wikipedia.org/wiki/String_\(computer_science\) "String (computer science)") of [characters](https://en.wikipedia.org/wiki/Character_\(computing\) "Character (computing)"). Abstract datatypes are [structures](https://en.wikipedia.org/wiki/Record_\(computer_science\) "Record (computer science)") of concrete datatypes, with a new name assigned. For example, a [list](https://en.wikipedia.org/wiki/List_\(abstract_data_type\) "List (abstract data type)") of integers could be called `integer_list`.
+
+In object-oriented jargon, abstract datatypes are called [classes](https://en.wikipedia.org/wiki/Class_\(computer_programming\) "Class (computer programming)"). However, a _class_ is only a definition; no memory is allocated. When memory is allocated to a class and [bound](https://en.wikipedia.org/wiki/Name_binding "Name binding") to an [identifier](https://en.wikipedia.org/wiki/Identifier "Identifier"), it is called an [object](https://en.wikipedia.org/wiki/Object_\(computer_science\) "Object (computer science)").
+
+[Object-oriented imperative languages](https://en.wikipedia.org/wiki/Object-oriented_programming "Object-oriented programming") developed by combining the need for classes and the need for safe [functional programming](https://en.wikipedia.org/wiki/Functional_programming "Functional programming"). A function, in an object-oriented language, is assigned to a class. An assigned function is then referred to as a [method](https://en.wikipedia.org/wiki/Method_\(computer_programming\) "Method (computer programming)"), [member function](https://en.wikipedia.org/wiki/Member_function "Member function"), or [operation](https://en.wikipedia.org/wiki/Operation_\(mathematics\) "Operation (mathematics)"). _Object-oriented programming_ is executing _operations_ on _objects_.
+
+_Object-oriented languages_ support a syntax to model [subset/superset](https://en.wikipedia.org/wiki/Subset "Subset") relationships. In [set theory](https://en.wikipedia.org/wiki/Set_theory "Set theory"), an [element](https://en.wikipedia.org/wiki/Element_\(mathematics\) "Element (mathematics)") of a subset inherits all the attributes contained in the superset. For example, a student is a person. Therefore, the set of students is a subset of the set of persons. As a result, students inherit all the attributes common to all persons. Additionally, students have unique attributes that other people do not have. _Object-oriented languages_ model _subset/superset_ relationships using [inheritance](https://en.wikipedia.org/wiki/Inheritance_\(object-oriented_programming\) "Inheritance (object-oriented programming)"). _Object-oriented programming_ became the dominant language paradigm by the late 1990s.
+
+[C++](https://en.wikipedia.org/wiki/C%2B%2B "C++") (1985) was originally called "C with Classes". It was designed to expand [C's](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)") capabilities by adding the object-oriented facilities of the language [Simula](https://en.wikipedia.org/wiki/Simula "Simula").
+
+An object-oriented module is composed of two files. The definitions file is called the [header file](https://en.wikipedia.org/wiki/Header_file "Header file"). Here is a C++ _header file_ for the _GRADE class_ in a simple school application:
+
+```C++
+// grade.h
+// -------
+
+// Used to allow multiple source files to include
+// this header file without duplication errors.
+// ----------------------------------------------
+#ifndef GRADE_H
+#define GRADE_H
+
+class GRADE {
+public:
+    // This is the constructor operation.
+    // ----------------------------------
+    GRADE ( const char letter );
+
+    // This is a class variable.
+    // -------------------------
+    char letter;
+
+    // This is a member operation.
+    // ---------------------------
+    int grade_numeric( const char letter );
+
+    // This is a class variable.
+    // -------------------------
+    int numeric;
+};
+#endif
+```
+
+A [constructor](https://en.wikipedia.org/wiki/Constructor_\(object-oriented_programming\) "Constructor (object-oriented programming)") operation is a function with the same name as the class name. It is executed when the calling operation executes the `[new](https://en.wikipedia.org/wiki/New_and_delete_\(C%2B%2B\) "New and delete (C++)")` statement.
+
+A module's other file is the [source file](https://en.wikipedia.org/wiki/Source_file "Source file"). Here is a C++ source file for the _GRADE class_ in a simple school application:
+
+```C++
+// grade.cpp
+// ---------
+#include "grade.h"
+
+GRADE::GRADE( const char letter )
+{
+    // Reference the object using the keyword 'this'.
+    // ----------------------------------------------
+    this->letter = letter;
+
+    // This is Temporal Cohesion
+    // -------------------------
+    this->numeric = grade_numeric( letter );
+}
+
+int GRADE::grade_numeric( const char letter )
+{
+    if ( ( letter == 'A' || letter == 'a' ) )
+        return 4;
+    else
+    if ( ( letter == 'B' || letter == 'b' ) )
+        return 3;
+    else
+    if ( ( letter == 'C' || letter == 'c' ) )
+        return 2;
+    else
+    if ( ( letter == 'D' || letter == 'd' ) )
+        return 1;
+    else
+    if ( ( letter == 'F' || letter == 'f' ) )
+        return 0;
+    else
+        return -1;
+}
+```
+
+Here is a C++ _header file_ for the _PERSON class_ in a simple school application:
+
+```C++
+// person.h
+// --------
+#ifndef PERSON_H
+#define PERSON_H
+
+class PERSON {
+public:
+    PERSON ( const char *name );
+    const char *name;
+};
+#endif
+```
+
+Here is a C++ _source file_ for the _PERSON class_ in a simple school application:
+
+```C++
+// person.cpp
+// ----------
+#include "person.h"
+
+PERSON::PERSON ( const char *name )
+{
+    this->name = name;
+}
+```
+
+Here is a C++ _header file_ for the _STUDENT class_ in a simple school application:
+
+```C++
+// student.h
+// ---------
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include "person.h"
+#include "grade.h"
+
+// A STUDENT is a subset of PERSON.
+// --------------------------------
+class STUDENT : public PERSON{
+public:
+    STUDENT ( const char *name );
+    GRADE *grade;
+};
+#endif
+```
+
+Here is a C++ _source file_ for the _STUDENT class_ in a simple school application:
+
+```C++
+// student.cpp
+// -----------
+#include "student.h"
+#include "person.h"
+
+STUDENT::STUDENT ( const char *name ):
+    // Execute the constructor of the PERSON superclass.
+    // -------------------------------------------------
+    PERSON( name )
+{
+    // Nothing else to do.
+    // -------------------
+}
+```
+
+Here is a driver program for demonstration:
+
+```C++
+// student_dvr.cpp
+// ---------------
+#include <iostream>
+#include "student.h"
+
+int main( void )
+{
+    STUDENT *student = new STUDENT( "The Student" );
+    student->grade = new GRADE( 'a' );
+
+    std::cout
+        // Notice student inherits PERSON's name
+        << student->name
+        << ": Numeric grade = "
+        << student->grade->numeric
+        << "\n";
+	return 0;
+}
+```
+
+Here is a [makefile](https://en.wikipedia.org/wiki/Makefile "Makefile") to compile everything:
+
+```C++
+# makefile
+# --------
+all: student_dvr
+
+clean:
+    rm student_dvr *.o
+
+student_dvr: student_dvr.cpp grade.o student.o person.o
+    c++ student_dvr.cpp grade.o student.o person.o -o student_dvr
+
+grade.o: grade.cpp grade.h
+    c++ -c grade.cpp
+
+student.o: student.cpp student.h
+    c++ -c student.cpp
+
+person.o: person.cpp person.h
+    c++ -c person.cpp
+```
+
+#### Declarative languages
+Main article: [Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming "Declarative programming")
+
+_Imperative languages_ have one major criticism: assigning an expression to a _non-local_ variable may produce an unintended [side effect](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\) "Side effect (computer science)"). [Declarative languages](https://en.wikipedia.org/wiki/Declarative_language "Declarative language") generally omit the assignment statement and the control flow. They describe _what_ computation should be performed and not _how_ to compute it. Two broad categories of declarative languages are [functional languages](https://en.wikipedia.org/wiki/Functional_language "Functional language") and [logical languages](https://en.wikipedia.org/wiki/Logic_programming "Logic programming").
+
+The principle behind a _functional language_ is to use [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus "Lambda calculus") as a guide for a well defined [semantic](https://en.wikipedia.org/wiki/Semantics_\(computer_science\) "Semantics (computer science)"). In mathematics, a function is a rule that maps elements from an _expression_ to a range of _values_. Consider the function:
+
+`times_10(x) = 10 * x`
+
+The _expression_ `10 * x` is mapped by the function `times_10()` to a range of _values_. One _value_ happens to be 20. This occurs when x is 2. So, the application of the function is mathematically written as:
+
+`times_10(2) = 20`
+
+A _functional language_ compiler will not store this value in a variable. Instead, it will _push_ the value onto the computer's [stack](https://en.wikipedia.org/wiki/Call_stack "Call stack") before setting the [program counter](https://en.wikipedia.org/wiki/Program_counter "Program counter") back to the calling function. The calling function will then _pop_ the value from the stack.
+
+_Imperative languages_ do support functions. Therefore, _functional programming_ can be achieved in an imperative language, if the programmer uses discipline. However, a _functional language_ will force this discipline onto the programmer through its syntax. Functional languages have a syntax tailored to emphasize the _what_.
+
+A functional program is developed with a set of primitive functions followed by a single driver function. Consider the [snippet](https://en.wikipedia.org/wiki/Snippet_\(programming\) "Snippet (programming)"):
+
+`function max( a, b ){/* code omitted */}`
+
+`function min( a, b ){/* code omitted */}`
+
+`function range( a, b, c ) {`
+
+`return max( a, max( b, c ) ) - min( a, min( b, c ) );`
+
+`}`
+
+The primitives are `max()` and `min()`. The driver function is `range()`. Executing:
+
+`put( range( 10, 4, 7) );` will output 6.
+
+_Functional languages_ are used in [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science") research to explore new language features. Moreover, their lack of side-effects have made them popular in [parallel programming](https://en.wikipedia.org/wiki/Parallel_programming "Parallel programming") and [concurrent programming](https://en.wikipedia.org/wiki/Concurrent_programming "Concurrent programming"). However, application developers prefer the [object-oriented features](https://en.wikipedia.org/wiki/Object-oriented_programming "Object-oriented programming") of _imperative languages_.
+
+##### Lisp
+[Lisp](https://en.wikipedia.org/wiki/Lisp_\(programming_language\) "Lisp (programming language)") (1958) stands for "LISt Processor". It is tailored to process [lists](https://en.wikipedia.org/wiki/List_\(abstract_data_type\) "List (abstract data type)"). A full structure of the data is formed by building lists of lists. In memory, a [tree data structure](https://en.wikipedia.org/wiki/Tree_data_structure "Tree data structure") is built. Internally, the tree structure lends nicely for [recursive](https://en.wikipedia.org/wiki/Recursion_\(computer_science\) "Recursion (computer science)") functions. The syntax to build a tree is to enclose the space-separated [elements](https://en.wikipedia.org/wiki/Element_\(mathematics\) "Element (mathematics)") within parenthesis. The following is a [list](https://en.wikipedia.org/wiki/List "List") of three elements. The first two elements are themselves lists of two elements:
+
+`((A B) (HELLO WORLD) 94)`
+
+Lisp has functions to extract and reconstruct elements. The function `head()` returns a list containing the first element in the list. The function `tail()` returns a list containing everything but the first element. The function `cons()` returns a list that is the concatenation of other lists. Therefore, the following expression will return the list `x`:
+
+`cons(head(x), tail(x))`
+
+One drawback of Lisp is when many functions are nested, the parentheses may look confusing. Modern Lisp [environments](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated development environment") help ensure parenthesis match. As an aside, Lisp does support the _imperative language_ operations of the assignment statement and goto loops. Also, _Lisp_ is not concerned with the [datatype](https://en.wikipedia.org/wiki/Datatype "Datatype") of the elements at compile time. Instead, it assigns (and may reassign) the datatypes at [runtime](https://en.wikipedia.org/wiki/Runtime_\(program_lifecycle_phase\) "Runtime (program lifecycle phase)"). Assigning the datatype at runtime is called [dynamic binding](https://en.wikipedia.org/wiki/Name_binding#Binding_time "Name binding"). Whereas dynamic binding increases the language's flexibility, programming errors may linger until late in the [software development process](https://en.wikipedia.org/wiki/Software_development_process "Software development process").
+
+Writing large, reliable, and readable Lisp programs requires forethought. If properly planned, the program may be much shorter than an equivalent _imperative language_ program. _Lisp_ is widely used in [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence"). However, its usage has been accepted only because it has _imperative language_ operations, making unintended side-effects possible.
+
+##### ML
+[ML](https://en.wikipedia.org/wiki/ML_\(programming_language\) "ML (programming language)") (1973) stands for "Meta Language". ML checks to make sure only data of the same type are compared with one another. For example, this function has one input parameter (an integer) and returns an integer:
+
+fun times_10(n : int) : int = 10 * n;
+
+_ML_ is not parenthesis-eccentric like _Lisp_. The following is an application of `times_10()`:
+
+times_10 2
+
+It returns "20 : int". (Both the results and the datatype are returned.)
+
+Like _Lisp_, _ML_ is tailored to process lists. Unlike _Lisp_, each element is the same datatype. Moreover, _ML_ assigns the datatype of an element at [compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time"). Assigning the datatype at compile time is called [static binding](https://en.wikipedia.org/wiki/Name_binding#Binding_time "Name binding"). Static binding increases reliability because the compiler checks the context of variables before they are used.
+
+##### Prolog
+[Prolog](https://en.wikipedia.org/wiki/Prolog "Prolog") (1972) stands for "PROgramming in LOGic". It is a [logic programming](https://en.wikipedia.org/wiki/Logic_programming "Logic programming") language, based on formal [logic](https://en.wikipedia.org/wiki/Logic "Logic"). The language was developed by [Alain Colmerauer](https://en.wikipedia.org/wiki/Alain_Colmerauer "Alain Colmerauer") and Philippe Roussel in Marseille, France. It is an implementation of [Selective Linear Definite clause resolution](https://en.wikipedia.org/wiki/SLD_resolution "SLD resolution"), pioneered by [Robert Kowalski](https://en.wikipedia.org/wiki/Robert_Kowalski "Robert Kowalski") and others at the [University of Edinburgh](https://en.wikipedia.org/wiki/University_of_Edinburgh "University of Edinburgh").
+
+The building blocks of a Prolog program are _facts_ and _rules_. Here is a simple example:
+
+```c
+// PROLOG LANGUAGE
+cat(tom).                        % tom is a cat
+mouse(jerry).                    % jerry is a mouse
+
+animal(X) :- cat(X).             % each cat is an animal
+animal(X) :- mouse(X).           % each mouse is an animal
+
+big(X)   :- cat(X).              % each cat is big
+small(X) :- mouse(X).            % each mouse is small
+
+eat(X,Y) :- mouse(X), cheese(Y). % each mouse eats each cheese
+eat(X,Y) :- big(X),   small(Y).  % each big animal eats each small animal
+```
+
+After all the facts and rules are entered, then a question can be asked:
+
+Will Tom eat Jerry?
+
+```C
+?- eat(tom,jerry).
+true
+```
+
+The following example shows how Prolog will convert a letter grade to its numeric value:
+
+```C
+numeric_grade('A', 4).
+numeric_grade('B', 3).
+numeric_grade('C', 2).
+numeric_grade('D', 1).
+numeric_grade('F', 0).
+numeric_grade(X, -1) :- not X = 'A', not X = 'B', not X = 'C', not X = 'D', not X = 'F'.
+grade('The Student', 'A').
+
+?- grade('The Student', X), numeric_grade(X, Y).
+X = 'A',
+Y = 4
+```
+
+Here is a comprehensive example:
+
+1) All dragons billow fire, or equivalently, a thing billows fire if the thing is a dragon:
+```C
+billows_fire(X) :-
+    is_a_dragon(X).
+```
+
+2) A creature billows fire if one of its parents billows fire:
+```C
+billows_fire(X) :-
+    is_a_creature(X),
+    is_a_parent_of(Y,X),
+    billows_fire(Y).
+```
+
+3) A thing X is a parent of a thing Y if X is the mother of Y or X is the father of Y:
+
+```C
+is_a_parent_of(X, Y):- is_the_mother_of(X, Y).
+is_a_parent_of(X, Y):- is_the_father_of(X, Y).
+```
+
+4) A thing is a creature if the thing is a dragon:
+
+```C
+is_a_creature(X) :-
+    is_a_dragon(X).
+```
+
+5) Norberta is a dragon, and Puff is a creature. Norberta is the mother of Puff.
+
+```C
+is_a_dragon(norberta).
+is_a_creature(puff).
+is_the_mother_of(norberta, puff).
+```
+
+Rule (2) is a [recursive](https://en.wikipedia.org/wiki/Recursion_\(computer_science\) "Recursion (computer science)") (inductive) definition. It can be understood declaratively, without the need to understand how it is executed.
+
+Rule (3) shows how [functions](https://en.wikipedia.org/wiki/Function_\(computer_programming\) "Function (computer programming)") are represented by using relations. Here, the mother and father functions ensure that every individual has only one mother and only one father.
+
+Prolog is an untyped language. Nonetheless, [inheritance](https://en.wikipedia.org/wiki/Inheritance_\(object-oriented_programming\) "Inheritance (object-oriented programming)") can be represented by using predicates. Rule (4) asserts that a creature is a superclass of a dragon.
+
+Questions are answered using [backward reasoning](https://en.wikipedia.org/wiki/Backward_reasoning "Backward reasoning"). Given the question:
+
+```C
+ ?- billows_fire(X).
+```
+
+Prolog generates two answers :
+```C
+X = norberta
+X = puff
+```
+
+Practical applications for Prolog are [knowledge representation](https://en.wikipedia.org/wiki/Knowledge_representation "Knowledge representation") and [problem solving](https://en.wikipedia.org/wiki/Problem_solving "Problem solving") in [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence").
+
+#### Object-oriented programming
+
+[Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming "Object-oriented programming") is a programming method to execute [operations](https://en.wikipedia.org/wiki/Method_\(computer_programming\) "Method (computer programming)") ([functions](https://en.wikipedia.org/wiki/Function_\(computer_programming\) "Function (computer programming)")) on [objects](https://en.wikipedia.org/wiki/Object_\(computer_science\) "Object (computer science)"). The basic idea is to group the characteristics of a [phenomenon](https://en.wikipedia.org/wiki/Phenomenon "Phenomenon") into an object [container](https://en.wikipedia.org/wiki/Record_\(computer_science\) "Record (computer science)") and give the container a name. The _operations_ on the phenomenon are also grouped into the container. _Object-oriented programming_ developed by combining the need for containers and the need for safe [functional programming](https://en.wikipedia.org/wiki/Functional_programming "Functional programming"). This programming method need not be confined to an _object-oriented language_. In an object-oriented language, an object container is called a [class](https://en.wikipedia.org/wiki/Class_\(computer_programming\) "Class (computer programming)"). In a non-object-oriented language, a [data structure](https://en.wikipedia.org/wiki/Data_structure "Data structure") (which is also known as a [record](https://en.wikipedia.org/wiki/Record_\(computer_science\) "Record (computer science)")) may become an object container. To turn a data structure into an object container, operations need to be written specifically for the structure. The resulting structure is called an [abstract datatype](https://en.wikipedia.org/wiki/Abstract_datatype "Abstract datatype"). However, [inheritance](https://en.wikipedia.org/wiki/Inheritance_\(object-oriented_programming\) "Inheritance (object-oriented programming)") will be missing. Nonetheless, this shortcoming can be overcome.
+
+Here is a [C programming language](https://en.wikipedia.org/wiki/C_programming_language "C programming language") _header file_ for the _GRADE abstract datatype_ in a simple school application:
+
+```C
+/* grade.h */
+/* ------- */
+
+/* Used to allow multiple source files to include */
+/* this header file without duplication errors.   */
+/* ---------------------------------------------- */
+#ifndef GRADE_H
+#define GRADE_H
+
+typedef struct
+{
+    char letter;
+} GRADE;
+
+/* Constructor */
+/* ----------- */
+GRADE *grade_new( char letter );
+
+int grade_numeric( char letter );
+#endif
+```
+
+The `grade_new()` function performs the same algorithm as the C++ [constructor](https://en.wikipedia.org/wiki/Constructor_\(object-oriented_programming\) "Constructor (object-oriented programming)") operation.
+
+Here is a C programming language _[source file](https://en.wikipedia.org/wiki/Source_file "Source file")_ for the _GRADE abstract datatype_ in a simple school application:
+
+```C
+/* grade.c */
+/* ------- */
+#include "grade.h"
+
+GRADE *grade_new( char letter )
+{
+    GRADE *grade;
+
+    /* Allocate heap memory */
+    /* -------------------- */
+    if ( ! ( grade = calloc( 1, sizeof ( GRADE ) ) ) )
+    {
+        fprintf(stderr,
+                "ERROR in %s/%s/%d: calloc() returned empty.\n",
+                __FILE__,
+                __FUNCTION__,
+                __LINE__ );
+        exit( 1 );
+    }
+
+    grade->letter = letter;
+    return grade;
+}
+
+int grade_numeric( char letter )
+{
+    if ( ( letter == 'A' || letter == 'a' ) )
+        return 4;
+    else
+    if ( ( letter == 'B' || letter == 'b' ) )
+        return 3;
+    else
+    if ( ( letter == 'C' || letter == 'c' ) )
+        return 2;
+    else
+    if ( ( letter == 'D' || letter == 'd' ) )
+        return 1;
+    else
+    if ( ( letter == 'F' || letter == 'f' ) )
+        return 0;
+    else
+        return -1;
+}
+```
+
+In the constructor, the function `calloc()` is used instead of `malloc()` because each memory cell will be set to zero.
+
+Here is a C programming language _header file_ for the _PERSON abstract datatype_ in a simple school application:
+
+```C
+/* person.h */
+/* -------- */
+#ifndef PERSON_H
+#define PERSON_H
+
+typedef struct
+{
+    char *name;
+} PERSON;
+
+/* Constructor */
+/* ----------- */
+PERSON *person_new( char *name );
+#endif
+```
+
+Here is a C programming language _source file_ for the _PERSON abstract datatype_ in a simple school application:
+
+```C
+/* person.c */
+/* -------- */
+#include "person.h"
+
+PERSON *person_new( char *name )
+{
+    PERSON *person;
+
+    if ( ! ( person = calloc( 1, sizeof ( PERSON ) ) ) )
+    {
+        fprintf(stderr,
+                "ERROR in %s/%s/%d: calloc() returned empty.\n",
+                __FILE__,
+                __FUNCTION__,
+                __LINE__ );
+        exit( 1 );
+    }
+
+    person->name = name;
+    return person;
+}
+```
+
+Here is a C programming language _header file_ for the _STUDENT abstract datatype_ in a simple school application:
+
+```C
+/* student.h */
+/* --------- */
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include "person.h"
+#include "grade.h"
+
+typedef struct
+{
+    /* A STUDENT is a subset of PERSON. */
+    /* -------------------------------- */
+    PERSON *person;
+
+    GRADE *grade;
+} STUDENT;
+
+/* Constructor */
+/* ----------- */
+STUDENT *student_new( char *name );
+#endif
+```
+
+Here is a C programming language _source file_ for the _STUDENT abstract datatype_ in a simple school application:
+
+```C
+/* student.c */
+/* --------- */
+#include "student.h"
+#include "person.h"
+
+STUDENT *student_new( char *name )
+{
+    STUDENT *student;
+
+    if ( ! ( student = calloc( 1, sizeof ( STUDENT ) ) ) )
+    {
+        fprintf(stderr,
+                "ERROR in %s/%s/%d: calloc() returned empty.\n",
+                __FILE__,
+                __FUNCTION__,
+                __LINE__ );
+        exit( 1 );
+    }
+
+    /* Execute the constructor of the PERSON superclass. */
+    /* ------------------------------------------------- */
+    student->person = person_new( name );
+    return student;
+}
+```
+
+Here is a driver program for demonstration:
+
+```C
+/* student_dvr.c */
+/* ------------- */
+#include <stdio.h>
+#include "student.h"
+
+int main( void )
+{
+    STUDENT *student = student_new( "The Student" );
+    student->grade = grade_new( 'a' );
+
+    printf( "%s: Numeric grade = %d\n",
+            /* Whereas a subset exists, inheritance does not. */
+            student->person->name,
+            /* Functional programming is executing functions just-in-time (JIT) */
+            grade_numeric( student->grade->letter ) );
+
+	return 0;
+}
+```
+
+Here is a [makefile](https://en.wikipedia.org/wiki/Makefile "Makefile") to compile everything:
+
+```C
+# makefile
+# --------
+all: student_dvr
+
+clean:
+    rm student_dvr *.o
+
+student_dvr: student_dvr.c grade.o student.o person.o
+    gcc student_dvr.c grade.o student.o person.o -o student_dvr
+
+grade.o: grade.c grade.h
+    gcc -c grade.c
+
+student.o: student.c student.h
+    gcc -c student.c
+
+person.o: person.c person.h
+    gcc -c person.c
+```
+
+The formal strategy to build object-oriented objects is to:
+
+- Identify the objects. Most likely these will be nouns.
+- Identify each object's attributes. What helps to describe the object?
+- Identify each object's actions. Most likely these will be verbs.
+- Identify the relationships from object to object. Most likely these will be verbs.
+
+For example:
+
+- A person is a human identified by a name.
+- A grade is an achievement identified by a letter.
+- A student is a person who earns a grade.
+
+#### Syntax and semantics
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Terminal_and_non-terminal_symbols_example.png/330px-Terminal_and_non-terminal_symbols_example.png)](https://en.wikipedia.org/wiki/File:Terminal_and_non-terminal_symbols_example.png)
+
+Production rules consist of a set of terminals and non-terminals.
+
+The [syntax](https://en.wikipedia.org/wiki/Syntax_\(programming_languages\) "Syntax (programming languages)") of a _computer program_ is a [list](https://en.wikipedia.org/wiki/List "List") of [production rules](https://en.wikipedia.org/wiki/Production_\(computer_science\) "Production (computer science)") which form its [grammar](https://en.wikipedia.org/wiki/Formal_grammar "Formal grammar"). A programming language's grammar correctly places its [declarations](https://en.wikipedia.org/wiki/Declaration_\(computer_programming\) "Declaration (computer programming)"), [expressions](https://en.wikipedia.org/wiki/Expression_\(computer_science\) "Expression (computer science)"), and [statements](https://en.wikipedia.org/wiki/Statement_\(computer_science\) "Statement (computer science)"). Complementing the _syntax_ of a language are its [semantics](https://en.wikipedia.org/wiki/Semantics_\(computer_science\) "Semantics (computer science)"). The _semantics_ describe the meanings attached to various syntactic constructs. A syntactic construct may need a semantic description because a production rule may have an invalid interpretation. Also, different languages might have the same syntax; however, their behaviors may be different.
+
+The syntax of a language is formally described by listing the production rules. Whereas the syntax of a [natural language](https://en.wikipedia.org/wiki/Natural_language "Natural language") is extremely complicated, a subset of the English language can have this production rule listing:
+
+1. a **sentence** is made up of a **noun-phrase** followed by a **verb-phrase**;
+2. a **noun-phrase** is made up of an **article** followed by an **adjective** followed by a **noun**;
+3. a **verb-phrase** is made up of a **verb** followed by a **noun-phrase**;
+4. an **article** is 'the';
+5. an **adjective** is 'big' or
+6. an **adjective** is 'small';
+7. a **noun** is 'cat' or
+8. a **noun** is 'mouse';
+9. a **verb** is 'eats';
+
+The words in **bold-face** are known as _non-terminals_. The words in 'single quotes' are known as _terminals_.
+
+From this production rule listing, complete sentences may be formed using a series of replacements. The process is to replace _non-terminals_ with either a valid _non-terminal_ or a valid _terminal_. The replacement process repeats until only _terminals_ remain. One valid sentence is:
+
+- **sentence**
+- **noun-phrase** **verb-phrase**
+- **article** **adjective** **noun** **verb-phrase**
+- _the_ **adjective** **noun** **verb-phrase**
+- _the_ _big_ **noun** **verb-phrase**
+- _the_ _big_ _cat_ **verb-phrase**
+- _the_ _big_ _cat_ **verb** **noun-phrase**
+- _the_ _big_ _cat_ _eats_ **noun-phrase**
+- _the_ _big_ _cat_ _eats_ **article** **adjective** **noun**
+- _the_ _big_ _cat_ _eats_ _the_ **adjective** **noun**
+- _the_ _big_ _cat_ _eats_ _the_ _small_ **noun**
+- _the_ _big_ _cat_ _eats_ _the_ _small_ _mouse_
+
+However, another combination results in an invalid sentence:
+
+- _the_ _small_ _mouse_ _eats_ _the_ _big_ _cat_
+
+Therefore, a _semantic_ is necessary to correctly describe the meaning of an _eat_ activity.
+
+One _production rule_ listing method is called the [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form "Backus–Naur form") (BNF). BNF describes the syntax of a language and itself has a _syntax_. This recursive definition is an example of a [metalanguage](https://en.wikipedia.org/wiki/Metalanguage "Metalanguage"). The _syntax_ of BNF includes:
+
+- `::=` which translates to _is made up of a[n]_ when a non-terminal is to its right. It translates to _is_ when a terminal is to its right.
+- `|` which translates to _or_.
+- `<` and `>` which surround **non-terminals**.
+
+Using BNF, a subset of the English language can have this _production rule_ listing:
+```bnf
+<sentence> ::= <noun-phrase><verb-phrase>
+<noun-phrase> ::= <article><adjective><noun>
+<verb-phrase> ::= <verb><noun-phrase>
+<article> ::= the
+<adjective> ::= big | small
+<noun> ::= cat | mouse
+<verb> ::= eats
+```
+
+Using BNF, a signed-[integer](https://en.wikipedia.org/wiki/Integer_\(computer_science\) "Integer (computer science)") has the _production rule_ listing:
+```bnf
+<signed-integer> ::= <sign><integer>
+<sign> ::= + | -
+<integer> ::= <digit> | <digit><integer>
+<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+```
+Notice the recursive production rule:
+
+```bnf
+<integer> ::= <digit> | <digit><integer>
+```
+
+This allows for an infinite number of possibilities. Therefore, a _semantic_ is necessary to describe a limitation of the number of digits.
+
+Notice the leading zero possibility in the production rules:
+
+```bnf
+<integer> ::= <digit> | <digit><integer>
+<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+```
+
+Therefore, a _semantic_ is necessary to describe that leading zeros need to be ignored.
+
+Two formal methods are available to describe _semantics_. They are [denotational semantics](https://en.wikipedia.org/wiki/Denotational_semantics "Denotational semantics") and [axiomatic semantics](https://en.wikipedia.org/wiki/Axiomatic_semantics "Axiomatic semantics").
+
+### Software engineering and computer programming
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Two_women_operating_ENIAC_%28full_resolution%29.jpg/250px-Two_women_operating_ENIAC_%28full_resolution%29.jpg)](https://en.wikipedia.org/wiki/File:Two_women_operating_ENIAC_\(full_resolution\).jpg)
+
+Prior to programming languages, [Betty Jennings](https://en.wikipedia.org/wiki/Jean_Bartik "Jean Bartik") and [Fran Bilas](https://en.wikipedia.org/wiki/Fran_Bilas "Fran Bilas") programmed the [ENIAC](https://en.wikipedia.org/wiki/ENIAC "ENIAC") by moving cables and setting switches.
+
+[Software engineering](https://en.wikipedia.org/wiki/Software_engineering "Software engineering") is a variety of techniques to produce [quality](https://en.wikipedia.org/wiki/Software_quality "Software quality") _computer programs_. [Computer programming](https://en.wikipedia.org/wiki/Computer_programming "Computer programming") is the process of writing or editing [source code](https://en.wikipedia.org/wiki/Source_code "Source code"). In a formal environment, a [systems analyst](https://en.wikipedia.org/wiki/Systems_analyst "Systems analyst") will gather information from managers about all the organization's processes to automate. This professional then prepares a [detailed plan](https://en.wikipedia.org/wiki/Functional_requirement "Functional requirement") for the new or modified system. The plan is analogous to an architect's blueprint.
+
+#### Performance objectives
+The systems analyst has the objective to deliver the right information to the right person at the right time. The critical factors to achieve this objective are:
+
+1. The quality of the output. Is the output useful for decision-making?
+2. The accuracy of the output. Does it reflect the true situation?
+3. The format of the output. Is the output easily understood?
+4. The speed of the output. Time-sensitive information is important when communicating with the customer in real time.
+
+#### Cost objectives
+Achieving performance objectives should be balanced with all of the costs, including:
+
+1. Development costs.
+2. Uniqueness costs. A reusable system may be expensive. However, it might be preferred over a limited-use system.
+3. Hardware costs.
+4. Operating costs.
+
+Applying a [systems development process](https://en.wikipedia.org/wiki/Systems_development_life_cycle "Systems development life cycle") will mitigate the axiom: the later in the process an error is detected, the more expensive it is to correct.
+
+#### Waterfall model
+The [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model "Waterfall model") is an implementation of a _systems development process_. As the _waterfall_ label implies, the basic phases overlap each other:
+
+1. The _investigation phase_ is to understand the underlying problem.
+2. The _analysis phase_ is to understand the possible solutions.
+3. The _design phase_ is to [plan](https://en.wikipedia.org/wiki/Software_design "Software design") the best solution.
+4. The _implementation phase_ is to program the best solution.
+5. The _maintenance phase_ lasts throughout the life of the system. Changes to the system after it is deployed may be necessary. Faults may exist, including specification faults, design faults, or coding faults. Improvements may be necessary. Adaption may be necessary to react to a changing environment.
+
+#### Computer programmer
+A [computer programmer](https://en.wikipedia.org/wiki/Computer_programmer "Computer programmer") is a specialist responsible for writing or modifying the source code to implement the detailed plan. A programming team is likely to be needed because most systems are too large to be completed by a single programmer. However, adding programmers to a project may not shorten the completion time. Instead, it may lower the quality of the system. To be effective, program modules need to be defined and distributed to team members. Also, team members must interact with one another in a meaningful and effective way.
+
+Computer programmers may be [programming in the small](https://en.wikipedia.org/wiki/Programming_in_the_large_and_programming_in_the_small#Programming_in_the_small "Programming in the large and programming in the small"): programming within a single module. Chances are a module will execute modules located in other source code files. Therefore, computer programmers may be [programming in the large](https://en.wikipedia.org/wiki/Programming_in_the_large "Programming in the large"): programming modules so they will effectively couple with each other. Programming-in-the-large includes contributing to the [application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface") (API).
+
+#### Program modules
+[Modular programming](https://en.wikipedia.org/wiki/Modular_programming "Modular programming") is a technique to refine _imperative language_ programs. Refined programs may reduce the software size, separate responsibilities, and thereby mitigate [software aging](https://en.wikipedia.org/wiki/Software_aging "Software aging"). A _program module_ is a sequence of statements that are bounded within a [block](https://en.wikipedia.org/wiki/Block_\(programming\) "Block (programming)") and together identified by a name. Modules have a _function_, _context_, and _logic_:
+
+- The _function_ of a module is what it does.
+- The _context_ of a module are the elements being performed upon.
+- The _logic_ of a module is how it performs the function.
+
+The module's name should be derived first by its _function_, then by its _context_. Its _logic_ should not be part of the name. For example, `function compute_square_root( x )` or `function compute_square_root_integer( i : integer )` are appropriate module names. However, `function compute_square_root_by_division( x )` is not.
+
+The degree of interaction _within_ a module is its level of [cohesion](https://en.wikipedia.org/wiki/Cohesion_\(computer_science\) "Cohesion (computer science)"). _Cohesion_ is a judgment of the relationship between a module's name and its _function_. The degree of interaction _between_ modules is the level of [coupling](https://en.wikipedia.org/wiki/Coupling_\(computer_science\) "Coupling (computer science)"). _Coupling_ is a judgement of the relationship between a module's _context_ and the elements being performed upon.
+
+#### Cohesion
+The levels of cohesion from worst to best are:
+- _Coincidental Cohesion_: A module has coincidental cohesion if it performs multiple functions, and the functions are completely unrelated. For example, `function read_sales_record_print_next_line_convert_to_float()`. Coincidental cohesion occurs in practice if management enforces silly rules. For example, "Every module will have between 35 and 50 executable statements."
+- Logical Cohesion: A module has logical cohesion if it has available a series of functions, but only one of them is executed. For example, `function perform_arithmetic( perform_addition, a, b )`.
+- _Temporal Cohesion_: A module has temporal cohesion if it performs functions related to time. One example, `function initialize_variables_and_open_files()`. Another example, `stage_one()`, `stage_two()`, ...
+- _Procedural Cohesion_: A module has procedural cohesion if it performs multiple loosely related functions. For example, `function read_part_number_update_employee_record()`.
+- _Communicational Cohesion_: A module has communicational cohesion if it performs multiple closely related functions. For example, `function read_part_number_update_sales_record()`.
+- _Informational Cohesion_: A module has informational cohesion if it performs multiple functions, but each function has its own entry and exit points. Moreover, the functions share the same data structure. Object-oriented classes work at this level.
+- _Functional Cohesion_: a module has functional cohesion if it achieves a single goal working only on local variables. Moreover, it may be reusable in other contexts.
+
+#### Coupling
+The levels of coupling from worst to best are:
+- _Content Coupling_: A module has content coupling if it modifies a [local variable](https://en.wikipedia.org/wiki/Local_variable "Local variable") of another function. COBOL used to do this with the _alter_ verb.
+- _Common Coupling_: A module has common coupling if it modifies a global variable.
+- _Control Coupling_: A module has control coupling if another module can modify its [control flow](https://en.wikipedia.org/wiki/Control_flow "Control flow"). For example, `perform_arithmetic( perform_addition, a, b )`. Instead, control should be on the makeup of the returned object.
+- _Stamp Coupling_: A module has stamp coupling if an element of a data structure passed as a parameter is modified. Object-oriented classes work at this level.
+- _Data Coupling_: A module has data coupling if all of its input parameters are needed and none of them are modified. Moreover, the result of the function is returned as a single object.
+
+#### Data flow analysis
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sandwich_data_flow_diagram.pdf/page1-250px-Sandwich_data_flow_diagram.pdf.jpg)](https://en.wikipedia.org/wiki/File:Sandwich_data_flow_diagram.pdf)
+
+A sample function-level data-flow diagram
+
+_Data flow analysis_ is a design method used to achieve modules of _functional cohesion_ and _data coupling_. The input to the method is a [data-flow diagram](https://en.wikipedia.org/wiki/Data-flow_diagram "Data-flow diagram"). A data-flow diagram is a set of ovals representing modules. Each module's name is displayed inside its oval. Modules may be at the executable level or the function level.
+
+The diagram also has arrows connecting modules to each other. Arrows pointing into modules represent a set of inputs. Each module should have only one arrow pointing out from it to represent its single output object. (Optionally, an additional exception arrow points out.) A [daisy chain](https://en.wikipedia.org/wiki/Daisy_chain_\(electrical_engineering\) "Daisy chain (electrical engineering)") of ovals will convey an entire [algorithm](https://en.wikipedia.org/wiki/Algorithm "Algorithm"). The input modules should start the diagram. The input modules should connect to the transform modules. The transform modules should connect to the output modules.
+
+### Functional categories
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Operating_system_placement_%28software%29.svg/250px-Operating_system_placement_%28software%29.svg.png)](https://en.wikipedia.org/wiki/File:Operating_system_placement_\(software\).svg)
+
+A diagram showing that the [user](https://en.wikipedia.org/wiki/User_\(computing\) "User (computing)") interacts with the [application software](https://en.wikipedia.org/wiki/Application_software "Application software"). The application software interacts with the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system"), which interacts with the [hardware](https://en.wikipedia.org/wiki/Computer_hardware "Computer hardware").
+
+_Computer programs_ may be categorized along functional lines. The main functional categories are [application software](https://en.wikipedia.org/wiki/Application_software "Application software") and [system software](https://en.wikipedia.org/wiki/System_software "System software"). System software includes the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system"), which couples [computer hardware](https://en.wikipedia.org/wiki/Computer_hardware "Computer hardware") with application software. The purpose of the operating system is to provide an environment where application software executes in a convenient and efficient manner. Both application software and system software execute [utility programs](https://en.wikipedia.org/wiki/Utility_software "Utility software"). At the hardware level, a [microcode program](https://en.wikipedia.org/wiki/Microcode "Microcode") controls the circuits throughout the [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit").
+
+#### Application software
+Main article: [Application software](https://en.wikipedia.org/wiki/Application_software "Application software")
+
+Application software is the key to unlocking the potential of the computer system. [Enterprise application software](https://en.wikipedia.org/wiki/Enterprise_application_software "Enterprise application software") bundles accounting, personnel, customer, and vendor applications. Examples include [enterprise resource planning](https://en.wikipedia.org/wiki/Enterprise_resource_planning "Enterprise resource planning"), [customer relationship management](https://en.wikipedia.org/wiki/Customer_relationship_management "Customer relationship management"), and [supply chain management software](https://en.wikipedia.org/wiki/Supply_chain_management_software "Supply chain management software").
+
+Enterprise applications may be developed in-house as a one-of-a-kind [proprietary software](https://en.wikipedia.org/wiki/Proprietary_software "Proprietary software"). Alternatively, they may be purchased as [off-the-shelf software](https://en.wikipedia.org/wiki/Off-the-shelf_software "Off-the-shelf software"). Purchased software may be modified to provide [custom software](https://en.wikipedia.org/wiki/Custom_software "Custom software"). If the application is customized, then either the company's resources are used or the resources are outsourced. Outsourced software development may be from the original software vendor or a third-party developer.
+
+The potential advantages of in-house software are features and reports may be developed exactly to specification. Management may also be involved in the development process and offer a level of control. Management may decide to counteract a competitor's new initiative or implement a customer or vendor requirement. A merger or acquisition may necessitate enterprise software changes. The potential disadvantages of in-house software are time and resource costs may be extensive. Furthermore, risks concerning features and performance may be looming.
+
+The potential advantages of off-the-shelf software are upfront costs are identifiable, the basic needs should be fulfilled, and its performance and reliability have a track record. The potential disadvantages of off-the-shelf software are it may have unnecessary features that confuse end users, it may lack features the enterprise needs, and the data flow may not match the enterprise's work processes.
+
+##### Application service provider
+One approach to economically obtaining a customized enterprise application is through an [application service provider](https://en.wikipedia.org/wiki/Application_service_provider "Application service provider"). Specialty companies provide hardware, custom software, and end-user support. They may speed the development of new applications because they possess skilled information system staff. The biggest advantage is it frees in-house resources from staffing and managing complex computer projects. Many application service providers target small, fast-growing companies with limited information system resources. On the other hand, larger companies with major systems will likely have their technical infrastructure in place. One risk is having to trust an external organization with sensitive information. Another risk is having to trust the provider's infrastructure reliability.
+
+#### Operating system
+See also: [Operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Concepts-_Program_vs._Process_vs._Thread.jpg/500px-Concepts-_Program_vs._Process_vs._Thread.jpg)](https://en.wikipedia.org/wiki/File:Concepts-_Program_vs._Process_vs._Thread.jpg)
+
+Program vs. [Process](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)") vs. [Thread](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)")  
+[Scheduling](https://en.wikipedia.org/wiki/Scheduling_\(computing\) "Scheduling (computing)"), [Preemption](https://en.wikipedia.org/wiki/Preemption_\(computing\) "Preemption (computing)"), [Context Switching](https://en.wikipedia.org/wiki/Context_switch "Context switch")
+
+An [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") is the low-level software that supports a computer's basic functions, such as [scheduling](https://en.wikipedia.org/wiki/Scheduling_\(computing\) "Scheduling (computing)") [processes](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)") and controlling [peripherals](https://en.wikipedia.org/wiki/Peripheral "Peripheral").
+
+In the 1950s, the programmer, who was also the operator, would write a program and run it. After the program finished executing, the output may have been printed, or it may have been punched onto paper tape or cards for later processing. More often than not the program did not work. The programmer then looked at the console lights and fiddled with the console switches. If less fortunate, a memory printout was made for further study. In the 1960s, programmers reduced the amount of wasted time by automating the operator's job. A program called an _operating system_ was kept in the computer at all times.
+
+The term _operating system_ may refer to two levels of software. The operating system may refer to the [kernel program](https://en.wikipedia.org/wiki/Kernel_\(operating_system\) "Kernel (operating system)") that manages the [processes](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)"), [memory](https://en.wikipedia.org/wiki/Computer_memory "Computer memory"), and [devices](https://en.wikipedia.org/wiki/Peripheral "Peripheral"). More broadly, the operating system may refer to the entire package of the central software. The package includes a kernel program, [command-line interpreter](https://en.wikipedia.org/wiki/Command-line_interface "Command-line interface"), [graphical user interface](https://en.wikipedia.org/wiki/Graphical_user_interface "Graphical user interface"), [utility programs](https://en.wikipedia.org/wiki/Utility_software "Utility software"), and [editor](https://en.wikipedia.org/wiki/Source-code_editor "Source-code editor").
+
+##### Kernel Program
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/250px-Kernel_Layout.svg.png)](https://en.wikipedia.org/wiki/File:Kernel_Layout.svg)
+
+A kernel connects the application software to the hardware of a computer.
+
+The kernel's main purpose is to manage the limited resources of a computer:
+
+- The kernel program should perform [process scheduling](https://en.wikipedia.org/wiki/Process_scheduling "Process scheduling"), which is also known as a [context switch](https://en.wikipedia.org/wiki/Context_switch "Context switch"). The kernel creates a [process control block](https://en.wikipedia.org/wiki/Process_control_block "Process control block") when a _computer program_ is [selected for execution](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)"). However, an executing program gets exclusive access to the [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") only for a [time slice](https://en.wikipedia.org/wiki/Preemption_\(computing\)#Time_slice "Preemption (computing)"). To provide each user with the [appearance of continuous access](https://en.wikipedia.org/wiki/Time-sharing "Time-sharing"), the kernel quickly [preempts](https://en.wikipedia.org/wiki/Preemption_\(computing\) "Preemption (computing)") each process control block to execute another one. The goal for [system developers](https://en.wikipedia.org/wiki/Systems_programming "Systems programming") is to minimize [dispatch latency](https://en.wikipedia.org/wiki/Dispatch_latency "Dispatch latency").
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/250px-Virtual_memory.svg.png)](https://en.wikipedia.org/wiki/File:Virtual_memory.svg)
+
+Physical memory is scattered around RAM and the hard disk. Virtual memory is one continuous block.
+
+- The kernel program should perform [memory management](https://en.wikipedia.org/wiki/Memory_management "Memory management").
+
+- When the kernel initially [loads](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)") an executable into memory, it divides the address space logically into [regions](https://en.wikipedia.org/wiki/Region-based_memory_management "Region-based memory management"). The kernel maintains a master-region table and many per-process-region (pregion) tables—one for each running [process](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)"). These tables constitute the [virtual address space](https://en.wikipedia.org/wiki/Virtual_address_space "Virtual address space"). The master-region table is used to determine where its contents are located in [physical memory](https://en.wikipedia.org/wiki/Physical_memory "Physical memory"). The pregion tables allow each process to have its own program (text) pregion, data pregion, and stack pregion.
+- The program pregion stores machine instructions. Since machine instructions do not change, the program pregion may be shared by many processes of the same executable.
+- To save time and memory, the kernel may load only blocks of execution instructions from the disk drive, not the entire execution file completely.
+- The kernel is responsible for translating virtual addresses into [physical addresses](https://en.wikipedia.org/wiki/Physical_address "Physical address"). The kernel may request data from the [memory controller](https://en.wikipedia.org/wiki/Memory_controller "Memory controller") and, instead, receive a [page fault](https://en.wikipedia.org/wiki/Page_fault "Page fault"). If so, the kernel accesses the [memory management unit](https://en.wikipedia.org/wiki/Memory_management_unit "Memory management unit") to populate the physical data region and translate the address.
+- The kernel allocates memory from the _heap_ upon request by a process. When the process is finished with the memory, the process may request for it to be [freed](https://en.wikipedia.org/wiki/Manual_memory_management "Manual memory management"). If the process exits without requesting all allocated memory to be freed, then the kernel performs [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_\(computer_science\) "Garbage collection (computer science)") to free the memory.
+- The kernel also ensures that a process only accesses its own memory, and not that of the kernel or other processes.
+- The kernel program should perform [file system management](https://en.wikipedia.org/wiki/File_system "File system"). The kernel has instructions to create, retrieve, update, and delete files.
+- The kernel program should perform [device management](https://en.wikipedia.org/wiki/Peripheral "Peripheral"). The kernel provides programs to standardize and simplify the interface to the mouse, keyboard, disk drives, printers, and other devices. Moreover, the kernel should arbitrate access to a device if two processes request it at the same time.
+- The kernel program should perform [network management](https://en.wikipedia.org/wiki/Network_management "Network management"). The kernel transmits and receives [packets](https://en.wikipedia.org/wiki/Network_packet "Network packet") on behalf of processes. One key service is to find an efficient [route](https://en.wikipedia.org/wiki/Routing_table "Routing table") to the target system.
+- The kernel program should provide [system level functions](https://en.wikipedia.org/wiki/System_calls "System calls") for programmers to use.
+    - Programmers access files through a relatively simple interface that in turn executes a relatively complicated low-level I/O interface. The low-level interface includes file creation, [file descriptors](https://en.wikipedia.org/wiki/File_descriptor "File descriptor"), file seeking, physical reading, and physical writing.
+    - Programmers create processes through a relatively simple interface that in turn executes a relatively complicated low-level interface.
+    - Programmers perform date/time arithmetic through a relatively simple interface that in turn executes a relatively complicated low-level time interface.
+- The kernel program should provide a [communication channel](https://en.wikipedia.org/wiki/Inter-process_communication "Inter-process communication") between executing processes. For a large software system, it may be desirable to [engineer](https://en.wikipedia.org/wiki/Software_engineering "Software engineering") the system into smaller processes. Processes may communicate with one another by sending and receiving [signals](https://en.wikipedia.org/wiki/Signal_\(IPC\) "Signal (IPC)").
+
+Originally, operating systems were programmed in [assembly](https://en.wikipedia.org/wiki/Assembly_language "Assembly language"); however, modern operating systems are typically written in higher-level languages like [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"), [Objective-C](https://en.wikipedia.org/wiki/Objective-C "Objective-C"), and [Swift](https://en.wikipedia.org/wiki/Swift_\(programming_language\) "Swift (programming language)").
+
+#### Utility program
+A [utility program](https://en.wikipedia.org/wiki/Utility_program "Utility program") is designed to aid system administration and software execution. Operating systems execute hardware utility programs to check the status of disk drives, memory, speakers, and printers. A utility program may optimize the placement of a file on a crowded disk. System utility programs monitor hardware and network performance. When a metric is outside an acceptable range, a trigger alert is generated.
+
+Utility programs include compression programs so data files are stored on less disk space. Compressed programs also save time when data files are transmitted over the network. Utility programs can sort and merge data sets. Utility programs detect [computer viruses](https://en.wikipedia.org/wiki/Computer_virus "Computer virus").
+
+#### Microcode program
+Main article: [Microcode](https://en.wikipedia.org/wiki/Microcode "Microcode")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Not-gate-en.svg/120px-Not-gate-en.svg.png)](https://en.wikipedia.org/wiki/File:Not-gate-en.svg)
+
+NOT gate
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NAND_ANSI_Labelled.svg/120px-NAND_ANSI_Labelled.svg.png)](https://en.wikipedia.org/wiki/File:NAND_ANSI_Labelled.svg)
+
+NAND gate
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NOR_ANSI_Labelled.svg/120px-NOR_ANSI_Labelled.svg.png)](https://en.wikipedia.org/wiki/File:NOR_ANSI_Labelled.svg)
+
+NOR gate
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AND_ANSI_Labelled.svg/120px-AND_ANSI_Labelled.svg.png)](https://en.wikipedia.org/wiki/File:AND_ANSI_Labelled.svg)
+
+AND gate
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/OR_ANSI_Labelled.svg/120px-OR_ANSI_Labelled.svg.png)](https://en.wikipedia.org/wiki/File:OR_ANSI_Labelled.svg)
+
+OR gate
+
+A [microcode program](https://en.wikipedia.org/wiki/Microcode "Microcode") is the bottom-level interpreter that controls the [data path](https://en.wikipedia.org/wiki/Data_path "Data path") of software-driven computers. (Advances in [hardware](https://en.wikipedia.org/wiki/Random_logic "Random logic") have migrated these operations to [hardware execution circuits](https://en.wikipedia.org/wiki/Control_unit#Hardwired_control_unit "Control unit"). Microcode instructions allow the programmer to more easily implement the [digital logic level](https://en.wikipedia.org/wiki/Logic_level "Logic level") the computer's real hardware. The digital logic level is the boundary between [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science") and [computer engineering](https://en.wikipedia.org/wiki/Computer_engineering "Computer engineering").
+
+A [logic gate](https://en.wikipedia.org/wiki/Logic_gate "Logic gate") is a tiny [transistor](https://en.wikipedia.org/wiki/Field-effect_transistor "Field-effect transistor") that can return one of two signals: on or off.
+
+- Having one transistor forms the [NOT gate](https://en.wikipedia.org/wiki/NOT_gate "NOT gate").
+- Connecting two transistors in series forms the [NAND gate](https://en.wikipedia.org/wiki/NAND_gate "NAND gate").
+- Connecting two transistors in parallel forms the [NOR gate](https://en.wikipedia.org/wiki/NOR_gate "NOR gate").
+- Connecting a NOT gate to a NAND gate forms the [AND gate](https://en.wikipedia.org/wiki/AND_gate "AND gate").
+- Connecting a NOT gate to a NOR gate forms the [OR gate](https://en.wikipedia.org/wiki/OR_gate "OR gate").
+
+These five gates form the building blocks of [binary algebra](https://en.wikipedia.org/wiki/Boolean_algebra "Boolean algebra")—the digital logic functions of the computer.
+
+Microcode instructions are [mnemonics](https://en.wikipedia.org/wiki/Assembly_language#Mnemonics "Assembly language") programmers may use to execute digital logic functions instead of forming them in binary algebra. They are stored in a [central processing unit's](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPU) [control store](https://en.wikipedia.org/wiki/Control_store "Control store"). These hardware-level instructions move data throughout the [data path](https://en.wikipedia.org/wiki/Data_path "Data path").
+
+The micro-instruction cycle begins when the [microsequencer](https://en.wikipedia.org/wiki/Microsequencer "Microsequencer") uses its microprogram counter to _fetch_ the next [machine instruction](https://en.wikipedia.org/wiki/Machine_instruction "Machine instruction") from [random-access memory](https://en.wikipedia.org/wiki/Random-access_memory "Random-access memory"). The next step is to _decode_ the machine instruction by selecting the proper output line to the hardware module. The final step is to _execute_ the instruction using the hardware module's set of gates.
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/250px-ALU_block.gif)](https://en.wikipedia.org/wiki/File:ALU_block.gif)
+
+A symbolic representation of an ALU
+
+Instructions to perform arithmetic are passed through an [arithmetic logic unit](https://en.wikipedia.org/wiki/Arithmetic_logic_unit "Arithmetic logic unit") (ALU). The ALU has circuits to perform elementary operations to add, shift, and compare integers. By combining and looping the elementary operations through the ALU, the CPU performs its complex arithmetic.
+
+Microcode instructions move data between the CPU and the [memory controller](https://en.wikipedia.org/wiki/Memory_controller "Memory controller"). Memory controller microcode instructions manipulate two [registers](https://en.wikipedia.org/wiki/Processor_register "Processor register"). The [memory address register](https://en.wikipedia.org/wiki/Memory_address_register "Memory address register") is used to access each memory cell's address. The [memory data register](https://en.wikipedia.org/wiki/Memory_data_register "Memory data register") is used to set and read each cell's contents.
+
+## Source Code
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), **source code**, or simply **code** or **source**, is [human readable](https://en.wikipedia.org/wiki/Human_readable "Human readable") [plain text](https://en.wikipedia.org/wiki/Plain_text "Plain text") that can eventually result in controlling the behavior of a [computer](https://en.wikipedia.org/wiki/Computer "Computer"). In order to control a computer, it must be processed by a [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program") – either executed directly via an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") or [translated](https://en.wikipedia.org/wiki/Translator_\(computing\) "Translator (computing)") into a more computer-consumable form such as via a [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler"). Sometimes, code is compiled directly to [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") so that it can be run in the native language of the computer without further processing. But, many modern environments involve compiling to an [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") such as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode") that can either run via an interpreter or be compiled on-demand to machine code via [just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation").
+
+### Background
+The first programmable computers, which appeared at the end of the 1940s, were programmed in [machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language") (simple instructions that could be directly executed by the processor). Machine language was difficult to debug and was not [portable](https://en.wikipedia.org/wiki/Portability_\(computing\) "Portability (computing)") between different computer systems. Initially, hardware resources were scarce and expensive, while [human resources](https://en.wikipedia.org/wiki/Human_resources "Human resources") were cheaper. As programs grew more complex, [programmer productivity](https://en.wikipedia.org/wiki/Programmer_productivity "Programmer productivity") became a bottleneck. This led to the introduction of [high-level programming languages](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language") such as [Fortran](https://en.wikipedia.org/wiki/Fortran "Fortran") in the mid-1950s. These languages [abstracted](https://en.wikipedia.org/wiki/Abstraction_\(computing\) "Abstraction (computing)") away the details of the hardware, instead being designed to express algorithms that could be understood more easily by humans. As instructions distinct from the underlying [computer hardware](https://en.wikipedia.org/wiki/Computer_hardware "Computer hardware"), software is therefore relatively recent, dating to these early high-level [programming languages](https://en.wikipedia.org/wiki/Programming_languages "Programming languages") such as [Fortran](https://en.wikipedia.org/wiki/Fortran "Fortran"), [Lisp](https://en.wikipedia.org/wiki/Lisp_\(programming_language\) "Lisp (programming language)"), and [Cobol](https://en.wikipedia.org/wiki/Cobol "Cobol"). The invention of high-level programming languages was simultaneous with the [compilers](https://en.wikipedia.org/wiki/Compiler "Compiler") needed to translate the source code automatically into machine code that can be directly executed on the [computer hardware](https://en.wikipedia.org/wiki/Computer_hardware "Computer hardware").
+
+Source code is the form of code that is modified directly by humans, typically in a high-level programming language. [Object code](https://en.wikipedia.org/wiki/Object_code "Object code") can be directly executed by the machine and is generated automatically from the source code, often via an intermediate step, [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language"). While object code will only work on a specific platform, source code can be ported to a different machine and recompiled there. For the same source code, object code can vary significantly—not only based on the machine for which it is compiled, but also based on performance optimization from the compiler.
+
+### Organization
+
+Further information: [Software configuration management](https://en.wikipedia.org/wiki/Software_configuration_management "Software configuration management")
+Most programs do not contain all the resources needed to run them and rely on external [libraries](https://en.wikipedia.org/wiki/Software_library "Software library"). Part of the compiler's function is to link these files in such a way that the program can be executed by the hardware.
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/CodeCmmt002.svg/250px-CodeCmmt002.svg.png)](https://en.wikipedia.org/wiki/File:CodeCmmt002.svg)
+
+A more complex [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)") source code example. Written in [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming "Object-oriented programming") style, it demonstrates [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code "Boilerplate code"). With prologue comments indicated in red, inline comments indicated in green, and program statements indicated in blue.
+
+Software developers often use [configuration management](https://en.wikipedia.org/wiki/Software_configuration_management "Software configuration management") to track changes to source code files ([version control](https://en.wikipedia.org/wiki/Version_control "Version control")). The configuration management system also keeps track of which object code file corresponds to which version of the source code file.
+
+### Purposes
+#### Estimation
+The number of [source lines of code](https://en.wikipedia.org/wiki/Source_lines_of_code "Source lines of code") (SLOC) is often used as a metric when evaluating the productivity of computer programmers, the economic value of a code base, [effort estimation](https://en.wikipedia.org/wiki/Software_development_effort_estimation "Software development effort estimation") for projects in development, and the ongoing cost of [software maintenance](https://en.wikipedia.org/wiki/Software_maintenance "Software maintenance") after release.
+
+#### Communication
+Source code is also used to communicate [algorithms](https://en.wikipedia.org/wiki/Algorithm "Algorithm") between parties, e.g., [code snippets](https://en.wikipedia.org/wiki/Snippet_\(programming\) "Snippet (programming)") online or in books.
+
+Computer [programmers](https://en.wikipedia.org/wiki/Programmer "Programmer") can find it helpful to review extant source code to learn about programming techniques. The sharing of source code between developers is often cited as a contributing factor to the maturing of their programming skills. Some consider source code an expressive [artistic medium](https://en.wikipedia.org/wiki/Media_\(arts\) "Media (arts)").
+
+Source code often contains [comments](https://en.wikipedia.org/wiki/Comment_\(programming\) "Comment (programming)")—blocks of text marked for the compiler to ignore. This content is not part of the program logic, but is instead intended to help readers understand the program.
+
+Companies often keep the source code confidential in order to hide algorithms considered a [trade secret](https://en.wikipedia.org/wiki/Trade_secret "Trade secret"). Proprietary, secret source code and algorithms are widely used for sensitive government applications such as [criminal justice](https://en.wikipedia.org/wiki/Criminal_justice "Criminal justice"), which results in [black box](https://en.wikipedia.org/wiki/Black_box "Black box") behavior with a lack of [transparency](https://en.wikipedia.org/wiki/Transparency_\(behavior\) "Transparency (behavior)") into the algorithm's methodology. The result is avoidance of public scrutiny of issues such as bias.
+
+#### Modification
+See also: [Software development](https://en.wikipedia.org/wiki/Software_development "Software development") and [Software maintenance](https://en.wikipedia.org/wiki/Software_maintenance "Software maintenance")
+
+Access to the source code (not just the [object code](https://en.wikipedia.org/wiki/Object_code "Object code")) is essential to modifying it. Understanding extant code is necessary to understand how it works and before modifying it. The rate of understanding depends both on the code base as well as the skill of the programmer. Experienced programmers have an easier time understanding what the code does at a high level. [Software visualization](https://en.wikipedia.org/wiki/Software_visualization "Software visualization") is sometimes used to speed up this process.
+
+Many software programmers use an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated development environment") (IDE) to improve their productivity. IDEs typically have several features built in, including a [source-code editor](https://en.wikipedia.org/wiki/Source-code_editor "Source-code editor") that can alert the programmer to common errors. Modification often includes [code refactoring](https://en.wikipedia.org/wiki/Code_refactoring "Code refactoring") (improving structure without changing function) and restructuring (improving structure and function simultaneously). Nearly every change to code introduces new bugs or unexpected [ripple effects](https://en.wikipedia.org/wiki/Ripple_effect "Ripple effect"), which require another round of fixes.
+
+[Code reviews](https://en.wikipedia.org/wiki/Code_review "Code review") by other developers are often used to scrutinize new code added to a project. The purpose of this phase is often to verify that the code meets style and [maintainability](https://en.wikipedia.org/wiki/Maintainability "Maintainability") standards and that it is a correct implementation of the [software design](https://en.wikipedia.org/wiki/Software_design "Software design"). According to some estimates, code review dramatically reduce the number of bugs persisting after [software testing](https://en.wikipedia.org/wiki/Software_testing "Software testing") is complete. Along with software testing that works by executing the code, [static program analysis](https://en.wikipedia.org/wiki/Static_program_analysis "Static program analysis") uses automated tools to detect problems with the source code. Many IDEs support code analysis tools, which might provide metrics on the clarity and maintainability of the code. [Debuggers](https://en.wikipedia.org/wiki/Debuggers "Debuggers") are tools that often enable programmers to step through execution while keeping track of which source code corresponds to each change of state.
+
+#### Compilation and execution
+Source code files in a high-level programming language must go through a stage of preprocessing into [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") before the instructions can be carried out. After being compiled, the program can be saved as an [object file](https://en.wikipedia.org/wiki/Object_file "Object file") and the [loader](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)") (part of the operating system) can take this saved file and [execute](https://en.wikipedia.org/wiki/Execution_\(computing\) "Execution (computing)") it as a [process](https://en.wikipedia.org/wiki/Process "Process") on the computer hardware. Some programming languages use an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") instead of a compiler. An interpreter converts the program into machine code at [run time](https://en.wikipedia.org/wiki/Execution_\(computing\) "Execution (computing)"), which makes them 10 to 100 times slower than compiled programming languages.
+
+#### Portability
+Further information: [software portability](https://en.wikipedia.org/wiki/Software_portability "Software portability")
+
+Another reason many programs are distributed in source code form, instead of as executable [binary files](https://en.wikipedia.org/wiki/Binary_file "Binary file"), is that (often) a single source code file can be written once and will run on a variety of different end-user machines (each with their own localized compiler or interpreter), unlike an executable code file which generally only works on nearly-identical machines. Source code was used this way to distribute the Unix operating system early in the [history of Unix](https://en.wikipedia.org/wiki/History_of_Unix "History of Unix"), and later to allow programs written in [scripting languages](https://en.wikipedia.org/wiki/Scripting_language "Scripting language") (in particular the [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") [client-side scripting](https://en.wikipedia.org/wiki/Client-side_scripting "Client-side scripting") language) to run on a wide variety of machines.
+
+For this goal, _minified_, _obfuscated_, or _decompiled_ source code files (all of which eliminate the comments in the original code) are generally just as portable as the original source code files (which nearly always include commments), even though they are far less useful for modification, and therefore don't meet the definition of source code in the [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License "GNU General Public License"), version 2 (GPL2).
+
+### Quality
+Further information: [Software quality](https://en.wikipedia.org/wiki/Software_quality "Software quality")
+
+[Software quality](https://en.wikipedia.org/wiki/Software_quality "Software quality") is an overarching term that can refer to a code's correct and efficient behavior, its reusability and [portability](https://en.wikipedia.org/wiki/Porting "Porting"), or the ease of modification. It is usually more cost-effective to build quality into a product from the start rather than try to add it later in a development process. Higher quality code reduces lifetime cost to both suppliers and customers as via higher reliability and [maintainability](https://en.wikipedia.org/wiki/Maintainability "Maintainability").
+
+Maintainability is the quality of software enabling it to be easily modified without breaking extant functions. Following coding conventions such as using clear function and variable names that correspond to their purpose makes maintenance easier. Use of [conditional loop](https://en.wikipedia.org/wiki/Conditional_loop "Conditional loop") statements only if the code could execute more than once, and eliminating code that will never execute can also increase understandability. Many software development organizations neglect maintainability during the development phase, even though it will increase long-term costs. [Technical debt](https://en.wikipedia.org/wiki/Technical_debt "Technical debt") is incurred when programmers, often out of laziness or urgency to meet a deadline, choose quick and dirty solutions rather than build maintainability into their code. A common cause is underestimates in [software development effort estimation](https://en.wikipedia.org/wiki/Software_development_effort_estimation "Software development effort estimation"), leading to insufficient resources allocated to development. A challenge with maintainability is that many [software engineering](https://en.wikipedia.org/wiki/Software_engineering "Software engineering") courses do not emphasize it. Development engineers who know that they will not be responsible for maintaining the software do not have an incentive to build in maintainability.
+
+## Interpreter (Computing)
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), an **interpreter** is [software](https://en.wikipedia.org/wiki/Software "Software") that [executes](https://en.wikipedia.org/wiki/Execution_\(computers\) "Execution (computers)") [source code](https://en.wikipedia.org/wiki/Source_code "Source code") without first [compiling](https://en.wikipedia.org/wiki/Compiling "Compiling") it to [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code"). **Interpreted languages** differ from [compiled languages](https://en.wikipedia.org/wiki/Compiled_languages "Compiled languages"), which involve the translation of source code into [CPU](https://en.wikipedia.org/wiki/CPU "CPU")-native [executable code](https://en.wikipedia.org/wiki/Executable_code "Executable code"). Depending on the [runtime environment](https://en.wikipedia.org/wiki/Runtime_environment "Runtime environment"), interpreters may first translate the source code to an intermediate format, such as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode"). Hybrid runtime environments may also translate the bytecode into machine code via [just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation"), as in the case of [.NET](https://en.wikipedia.org/wiki/.NET ".NET") and [Java](https://en.wikipedia.org/wiki/Java "Java"), instead of interpreting the bytecode directly.
+
+Before the widespread adoption of interpreters, the execution of [computer programs](https://en.wikipedia.org/wiki/Computer_programs "Computer programs") often relied on [compilers](https://en.wikipedia.org/wiki/Compilers "Compilers"), which translate and compile source code into machine code. Early runtime environments for [Lisp](https://en.wikipedia.org/wiki/Lisp_programming_language "Lisp programming language") and [BASIC](https://en.wikipedia.org/wiki/BASIC_interpreter "BASIC interpreter") could parse source code directly. Thereafter, runtime environments were developed for languages (such as [Perl](https://en.wikipedia.org/wiki/Perl "Perl"), [Raku](https://en.wikipedia.org/wiki/Raku_\(programming_language\) "Raku (programming language)"), [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)"), [MATLAB](https://en.wikipedia.org/wiki/MATLAB "MATLAB"), and [Ruby](https://en.wikipedia.org/wiki/Ruby_\(programming_language\) "Ruby (programming language)")), which translated source code into an intermediate format before executing to enhance [runtime performance](https://en.wikipedia.org/wiki/Runtime_performance "Runtime performance").
+
+Code that runs in an interpreter can be run on any platform that has a [compatible](https://en.wikipedia.org/wiki/Software_compatibility "Software compatibility") interpreter. The same code can be distributed to any such platform, instead of an [executable](https://en.wikipedia.org/wiki/Executable "Executable") having to be built for each platform. Although each programming language is usually associated with a particular runtime environment, a language can be used in different environments. Interpreters have been constructed for languages traditionally associated with [compilation](https://en.wikipedia.org/wiki/Compiler "Compiler"), such as [ALGOL](https://en.wikipedia.org/wiki/ALGOL "ALGOL"), [Fortran](https://en.wikipedia.org/wiki/Fortran "Fortran"), [COBOL](https://en.wikipedia.org/wiki/COBOL "COBOL"), [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)") and [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++").
+
+### Use
+Notable uses for interpreters include:
+
+Commands and scripts
+
+Interpreters are frequently used to execute [commands](https://en.wikipedia.org/wiki/Command-line_interface "Command-line interface") and [scripts](https://en.wikipedia.org/wiki/Script_language "Script language")
+
+[Virtualization](https://en.wikipedia.org/wiki/Virtualization "Virtualization")
+
+An interpreter acts as a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") to execute machine code for a hardware architecture different from the one running the interpreter.
+
+Emulation
+
+An interpreter (virtual machine) can [emulate](https://en.wikipedia.org/wiki/Emulator "Emulator") another computer system in order to run code written for that system.
+
+[Sandboxing](https://en.wikipedia.org/wiki/Sandbox_\(computer_security\) "Sandbox (computer security)")
+
+While some types of sandboxes rely on operating system protections, an interpreter (virtual machine) can offer additional control such as blocking code that violates [security](https://en.wikipedia.org/wiki/Computer_security "Computer security") rules.
+Self-modifying code
+
+[Self-modifying code](https://en.wikipedia.org/wiki/Self-modifying_code "Self-modifying code") can be implemented in an interpreted language. This relates to the origins of interpretation in Lisp and [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence") research.
+
+### Efficiency
+Interpretive overhead is the runtime cost of executing code via an interpreter instead of as native (compiled) code. Interpreting is slower because the interpreter executes multiple machine-code instructions for the equivalent functionality in the native code. In particular, access to variables is slower in an interpreter because the mapping of identifiers to storage locations must be done repeatedly at run-time rather than at [compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time"). But faster development (due to factors such as shorter edit-build-run cycle) can outweigh the value of faster execution speed; especially when prototyping and testing when the edit-build-run cycle is frequent.
+
+An interpreter may generate an [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") (IR) of the program from source code in order to achieve goals such as fast runtime performance. A compiler may also generate an IR, but the compiler generates machine code for later execution whereas the interpreter prepares to execute the program. These differing goals lead to differing IR design. Many [BASIC](https://en.wikipedia.org/wiki/BASIC "BASIC") interpreters replace [keywords](https://en.wikipedia.org/wiki/Keyword_\(computer_programming\) "Keyword (computer programming)") with single [byte](https://en.wikipedia.org/wiki/Byte "Byte") [tokens](https://en.wikipedia.org/wiki/Token_threading "Token threading") which can be used to find the instruction in a [jump table](https://en.wikipedia.org/wiki/Jump_table "Jump table"). A few interpreters, such as the [PBASIC](https://en.wikipedia.org/wiki/PBASIC "PBASIC") interpreter, achieve even higher levels of program compaction by using a bit-oriented rather than a byte-oriented program memory structure, where commands tokens occupy perhaps 5 bits, nominally "16-bit" constants are stored in a [variable-length code](https://en.wikipedia.org/wiki/Variable-length_code "Variable-length code") requiring 3, 6, 10, or 18 bits, and address operands include a "bit offset". Many BASIC interpreters can store and read back their own tokenized internal representation.
+
+There are various compromises between the development speed when using an interpreter and the execution speed when using a compiler. Some systems (such as some [Lisps](https://en.wikipedia.org/wiki/Lisp_\(programming_language\) "Lisp (programming language)")) allow interpreted and compiled code to call each other and to share variables. This means that once a routine has been tested and debugged under the interpreter it can be compiled and thus benefit from faster execution while other routines are being developed.
+
+### Implementation
+Since the early stages of interpreting and compiling are similar, an interpreter might use the same [lexical analyzer](https://en.wikipedia.org/wiki/Lexical_analysis "Lexical analysis") and [parser](https://en.wikipedia.org/wiki/Parser "Parser") as a compiler and then interpret the resulting [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree "Abstract syntax tree").
+
+
+An expression interpreter written in [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++").
+
+```C++
+import std;
+
+using std::runtime_error;
+using std::unique_ptr;
+using std::variant;
+
+// data types for abstract syntax tree
+enum class Kind: char { 
+    VAR, 
+    CONST, 
+    SUM, 
+    DIFF, 
+    MULT, 
+    DIV, 
+    PLUS, 
+    MINUS, 
+    NOT 
+};
+
+// forward declaration
+class Node;
+
+class Variable { 
+public:
+    int* memory; 
+};
+
+class Constant {
+public:
+    int value; 
+};
+
+class UnaryOperation {
+public:
+    unique_ptr<Node> right; 
+};
+
+class BinaryOperation { 
+public:
+    unique_ptr<Node> left;
+    unique_ptr<Node> right;
+};
+
+using Expression = variant<Variable, Constant, BinaryOperation, UnaryOperation>;
+
+class Node {
+public:
+    Kind kind;
+    Expression e;
+};
+
+// interpreter procedure
+[[nodiscard]]
+int executeIntExpression(const Node& n) {
+    int leftValue;
+    int rightValue;
+    switch (n->kind) {
+        case Kind::VAR:
+            return std::get<Variable>(n.e).memory;
+        case Kind::CONST:
+            return std::get<Constant>(n.e).value;
+        case Kind::SUM:
+        case Kind::DIFF:
+        case Kind::MULT:
+        case Kind::DIV:
+            const BinaryOperation& bin = std::get<BinaryOperation>(n.e);
+            leftValue = executeIntExpression(bin.left.get());
+            rightValue = executeIntExpression(bin.right.get());
+            switch (n.kind) {
+                case Kind::SUM: 
+                    return leftValue + rightValue;
+                case Kind::DIFF: 
+                    return leftValue - rightValue;
+                case Kind::MULT: 
+                    return leftValue * rightValue;
+                case Kind::DIV: 
+                    if (rightValue == 0) {
+                        throw runtime_error("Division by zero");
+                    }
+                    return leftValue / rightValue;
+            }
+        case Kind::PLUS: 
+        case Kind::MINUS: 
+        case Kind::NOT:
+            const UnaryOperation& un = std::get<UnaryOperation>(n.e);
+            rightValue = executeIntExpression(un.right.get());
+            switch (n.kind) {
+                case Kind::PLUS:
+                    return +rightValue;
+                case Kind::MINUS:
+                    return -rightValue;
+                case Kind::NOT: 
+                    return !rightValue;
+            }
+        default: 
+            std::unreachable();
+    }
+}
+```
+
+### Just-in-time compilation
+[Just-in-time (JIT) compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation") is the process of converting an intermediate format (i.e. bytecode) to native code at runtime. As this results in native code execution, it is a method of avoiding the runtime cost of using an interpreter while maintaining some of the benefits that lead to the development of interpreters.
+
+### Variations
+[Control table](https://en.wikipedia.org/wiki/Control_table "Control table") interpreter
+
+Logic is specified as data formatted as a table.
+
+**Bytecode interpreter**
+ Some interpreters process [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode") which is an intermediate format of logic compiled from a high-level language. For example, [Emacs Lisp](https://en.wikipedia.org/wiki/Emacs_Lisp "Emacs Lisp") is compiled to bytecode which is interpreted by an interpreter. One might say that this compiled code is machine code for a virtual machine – implemented by the interpreter. Such an interpreter is sometimes called a _compreter_.
+
+**Threaded code interpreter**
+ A [threaded code](https://en.wikipedia.org/wiki/Threaded_code "Threaded code") interpreter is similar to bytecode interpreter but instead of bytes, uses pointers. Each instruction is a word that points to a function or an instruction sequence, possibly followed by a parameter. The threaded code interpreter either loops fetching instructions and calling the functions they point to, or fetches the first instruction and jumps to it, and every instruction sequence ends with a fetch and jump to the next instruction. One example of threaded code is the [Forth](https://en.wikipedia.org/wiki/Forth_\(programming_language\) "Forth (programming language)") code used in [Open Firmware](https://en.wikipedia.org/wiki/Open_Firmware "Open Firmware") systems. The source language is compiled into "F code" (a bytecode), which is then interpreted by a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine").
+
+**Abstract syntax tree interpreter**
+ An abstract syntax tree interpreter transforms source code into an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree "Abstract syntax tree") (AST), then interprets it directly, or uses it to generate native code via JIT compilation. In this approach, each sentence needs to be parsed just once. As an advantage over bytecode, AST keeps the global program structure and relations between statements (which is lost in a bytecode representation), and when compressed provides a more compact representation. Thus, using AST has been proposed as a better intermediate format than bytecode. However, for interpreters, AST results in more overhead than a bytecode interpreter, because of nodes related to syntax performing no useful work, of a less sequential representation (requiring traversal of more pointers) and of overhead visiting the tree.
+
+**Template interpreter**
+ Rather than implement the execution of code by virtue of a large switch statement containing every possible bytecode, while operating on a software stack or a tree walk, a template interpreter maintains a large array of bytecode (or any efficient intermediate representation) mapped directly to corresponding native machine instructions that can be executed on the host hardware as key value pairs (or in more efficient designs, direct addresses to the native instructions), known as a "Template". When the particular code segment is executed the interpreter simply loads or jumps to the opcode mapping in the template and directly runs it on the hardware. Due to its design, the template interpreter very strongly resembles a JIT compiler rather than a traditional interpreter, however it is technically not a JIT due to the fact that it merely translates code from the language into native calls one opcode at a time rather than creating optimized sequences of CPU executable instructions from the entire code segment. Due to the interpreter's simple design of simply passing calls directly to the hardware rather than implementing them directly, it is much faster than every other type, even bytecode interpreters, and to an extent less prone to bugs, but as a tradeoff is more difficult to maintain due to the interpreter having to support translation to multiple different architectures instead of a platform independent virtual machine/stack. To date, the only template interpreter implementations of widely known languages to exist are the interpreter within Java's official reference implementation, the Sun HotSpot Java Virtual Machine, and the Ignition Interpreter in the Google [V8](https://en.wikipedia.org/wiki/V8_\(JavaScript_engine\) "V8 (JavaScript engine)") JavaScript execution engine.
+
+**Microcode**
+ [Microcode](https://en.wikipedia.org/wiki/Microcode "Microcode") provides an abstraction layer as a hardware interpreter that implements machine code in a lower-level machine code. It separates the high-level machine instructions from the underlying [electronics](https://en.wikipedia.org/wiki/Electronics "Electronics") so that the high-level instructions can be designed and altered more freely. It also facilitates providing complex multi-step instructions, while reducing the complexity of computer circuits.
+
+
+## Intermediate Representation
+An **intermediate representation** (**IR**) is the [data structure](https://en.wikipedia.org/wiki/Data_structure "Data structure") or code used internally by a [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") or [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") to represent [source code](https://en.wikipedia.org/wiki/Source_code "Source code"). An IR is designed to be conducive to further processing, such as [optimization](https://en.wikipedia.org/wiki/Compiler_optimization "Compiler optimization") and [translation](https://en.wikipedia.org/wiki/Program_transformation "Program transformation"). A "good" IR must be _accurate_ – capable of representing the source code without loss of information – and _independent_ of any particular source or target language. An IR may take one of several forms: an in-memory [data structure](https://en.wikipedia.org/wiki/Data_structure "Data structure"), or a special [tuple](https://en.wikipedia.org/wiki/Tuple "Tuple")- or [stack](https://en.wikipedia.org/wiki/Stack_\(abstract_data_type\) "Stack (abstract data type)")-based [code](https://en.wikipedia.org/wiki/Bytecode "Bytecode") readable by the program. In the latter case it is also called an _intermediate language_.
+
+A canonical example is found in most modern compilers. For example, the [CPython interpreter](https://en.wikipedia.org/wiki/CPython "CPython") transforms the linear human-readable text representing a program into an intermediate [graph structure](https://en.wikipedia.org/wiki/Graph_\(data_structure\) "Graph (data structure)") that allows [flow analysis](https://en.wikipedia.org/wiki/Flow_analysis "Flow analysis") and re-arrangement before execution. Use of an intermediate representation such as this allows compiler systems like the [GNU Compiler Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection "GNU Compiler Collection") and [LLVM](https://en.wikipedia.org/wiki/LLVM "LLVM") to be used by many different source languages to [generate code](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)") for many different target [architectures](https://en.wikipedia.org/wiki/Instruction_set "Instruction set").
+
+### Intermediate language
+An **intermediate language** is the language of an [abstract machine](https://en.wikipedia.org/wiki/Abstract_machine "Abstract machine") designed to aid in the analysis of [computer programs](https://en.wikipedia.org/wiki/Computer_program "Computer program"). The term comes from their use in [compilers](https://en.wikipedia.org/wiki/Compiler "Compiler"), where the source code of a program is translated into a form more suitable for code-improving transformations before being used to generate [object](https://en.wikipedia.org/wiki/Object_file "Object file") or [machine](https://en.wikipedia.org/wiki/Machine_language "Machine language") code for a target machine. The design of an intermediate language typically differs from that of a practical [machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language") in three fundamental ways:
+
+- Each instruction represents exactly one fundamental operation; e.g. "shift-add" [addressing modes](https://en.wikipedia.org/wiki/Addressing_mode "Addressing mode") common in [microprocessors](https://en.wikipedia.org/wiki/Microprocessors "Microprocessors") are not present.
+- [Control flow](https://en.wikipedia.org/wiki/Control_flow "Control flow") information may not be included in the instruction set.
+- The number of [processor registers](https://en.wikipedia.org/wiki/Processor_register "Processor register") available may be large, even limitless.
+
+A popular format for intermediate languages is [three-address code](https://en.wikipedia.org/wiki/Three-address_code "Three-address code").
+
+The term is also used to refer to languages used as intermediates by some [high-level programming languages](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language") which do not output object or machine code themselves, but output the intermediate language only. This intermediate language is submitted to a compiler for such language, which then outputs finished object or machine code. This is usually done to ease the process of [optimization](https://en.wikipedia.org/wiki/Optimization_\(computer_science\) "Optimization (computer science)") or to increase [portability](https://en.wikipedia.org/wiki/Porting "Porting") by using an intermediate language that has compilers for many [processors](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") and [operating systems](https://en.wikipedia.org/wiki/Operating_systems "Operating systems"), such as [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"). Languages used for this fall in complexity between high-level languages and [low-level](https://en.wikipedia.org/wiki/Low-level_programming_language "Low-level programming language") languages, such as [assembly languages](https://en.wikipedia.org/wiki/Assembly_language "Assembly language").
+
+## Bytecode
+**Bytecode** (also called **portable code** or **p-code**) is a form of [instruction set](https://en.wikipedia.org/wiki/Instruction_set "Instruction set") designed for efficient execution by a software [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)"). Unlike [human-readable](https://en.wikipedia.org/wiki/Human-readable_code "Human-readable code")  [source code](https://en.wikipedia.org/wiki/Source_code "Source code"), bytecodes are compact numeric codes, constants, and references (normally numeric addresses) that encode the result of [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") parsing and performing [semantic analysis](https://en.wikipedia.org/wiki/Semantic_analysis_\(compilers\) "Semantic analysis (compilers)") of things like type, scope, and nesting depths of program objects.
+
+The name _bytecode_ stems from instruction sets that have one-[byte](https://en.wikipedia.org/wiki/Byte "Byte") [opcodes](https://en.wikipedia.org/wiki/Opcode "Opcode") followed by optional parameters. [Intermediate representations](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") such as bytecode may be output by [programming language](https://en.wikipedia.org/wiki/Programming_language "Programming language") implementations to ease [interpretation](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)"), or it may be used to reduce hardware and [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") dependence by allowing the same code to run [cross-platform](https://en.wikipedia.org/wiki/Cross-platform "Cross-platform"), on different devices. Bytecode may often be either directly executed on a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") (a [p-code machine](https://en.wikipedia.org/wiki/P-code_machine "P-code machine"), i.e., interpreter), or it may be further compiled into [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") for better performance.
+
+Since bytecode instructions are processed by software, they may be arbitrarily complex, but are nonetheless often akin to traditional hardware instructions: virtual [stack machines](https://en.wikipedia.org/wiki/Stack_machine "Stack machine") are the most common, but virtual [register machines](https://en.wikipedia.org/wiki/Register_machine "Register machine") have been built also. Different parts may often be stored in separate files, similar to [object modules](https://en.wikipedia.org/wiki/Object_file "Object file"), but dynamically loaded during execution.
+
+### Execution
+A bytecode program may be executed by parsing and _directly_ executing the instructions, one at a time. This kind of _bytecode interpreter_ is very portable. Some systems, called dynamic translators, or _[just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation")_ (JIT) compilers, translate bytecode into [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") as necessary at [runtime](https://en.wikipedia.org/wiki/Run_time_\(program_lifecycle_phase\) "Run time (program lifecycle phase)"). This makes the virtual machine hardware-specific but does not lose the portability of the bytecode. For example, [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)") and [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk "Smalltalk") code is typically stored in bytecode format, which is typically then JIT compiled to translate the bytecode to machine code before execution. This introduces a delay before a program is run, when the bytecode is compiled to native machine code, but improves execution speed considerably compared to interpreting source code directly, normally by around an order of magnitude (10x).
+
+Because of its performance advantage, today many language implementations execute a program in two phases, first compiling the source code into bytecode, and then passing the bytecode to the virtual machine. There are bytecode based virtual machines of this sort for [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)"), [Raku](https://en.wikipedia.org/wiki/Raku_\(programming_language\) "Raku (programming language)"), [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)"), [PHP](https://en.wikipedia.org/wiki/PHP "PHP"), [Tcl](https://en.wikipedia.org/wiki/Tcl "Tcl"), [mawk](https://en.wikipedia.org/wiki/AWK "AWK") and [Forth](https://en.wikipedia.org/wiki/Forth_\(programming_language\) "Forth (programming language)") (however, Forth is seldom compiled via bytecodes in this way, and its virtual machine is more generic instead). The implementation of [Perl](https://en.wikipedia.org/wiki/Perl "Perl") and [Ruby](https://en.wikipedia.org/wiki/Ruby_\(programming_language\) "Ruby (programming language)") 1.8 instead work by walking an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree "Abstract syntax tree") representation derived from the source code.
+
+More recently, the authors of [V8](https://en.wikipedia.org/wiki/V8_\(JavaScript_engine\) "V8 (JavaScript engine)") and [Dart](https://en.wikipedia.org/wiki/Dart_\(programming_language\) "Dart (programming language)") have challenged the notion that intermediate bytecode is needed for fast and efficient VM implementation. Both of these language implementations currently do direct JIT compiling from source code to machine code with no bytecode intermediary.
+
+## Just-In-Time Compilation (JIT)
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), **just-in-time** (**JIT**) **compilation** (also **dynamic translation** or **run-time compilations**) is [compilation](https://en.wikipedia.org/wiki/Compiler "Compiler") (of [computer code](https://en.wikipedia.org/wiki/Source_code "Source code")) during execution of a program (at [run time](https://en.wikipedia.org/wiki/Run_time_\(program_lifecycle_phase\) "Run time (program lifecycle phase)")) rather than before execution. This may consist of [source code translation](https://en.wikipedia.org/wiki/Source_code_translation "Source code translation") but is more commonly [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode") translation to [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code"), which is then executed directly. A system implementing a JIT compiler typically continuously analyses the code being executed and identifies parts of the code where the speedup gained from compilation or recompilation would outweigh the overhead of compiling that code.
+
+JIT compilation is a combination of the two traditional approaches to translation to machine code: [ahead-of-time compilation](https://en.wikipedia.org/wiki/Ahead-of-time_compilation "Ahead-of-time compilation") (AOT), and [interpretation](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)"), which combines some advantages and drawbacks of both. Roughly, JIT compilation combines the speed of compiled code with the flexibility of interpretation, with the overhead of an interpreter and the additional overhead of compiling and [linking](https://en.wikipedia.org/wiki/Linker_\(computing\) "Linker (computing)") (not just interpreting). JIT compilation is a form of [dynamic compilation](https://en.wikipedia.org/wiki/Dynamic_compilation "Dynamic compilation"), and allows [adaptive optimization](https://en.wikipedia.org/wiki/Adaptive_optimization "Adaptive optimization") such as [dynamic recompilation](https://en.wikipedia.org/wiki/Dynamic_recompilation "Dynamic recompilation") and [microarchitecture](https://en.wikipedia.org/wiki/Microarchitecture "Microarchitecture")-specific speedups. Interpretation and JIT compilation are particularly suited for [dynamic programming languages](https://en.wikipedia.org/wiki/Dynamic_programming_language "Dynamic programming language"), as the runtime system can handle [late-bound](https://en.wikipedia.org/wiki/Late_binding "Late binding") data types and enforce security guarantees.
+
+### Design
+In a bytecode-compiled system, [source code](https://en.wikipedia.org/wiki/Source_code "Source code") is translated to an [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") known as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode"). Bytecode is not the machine code for any particular computer, and may be [portable](https://en.wikipedia.org/wiki/Software_portability "Software portability") among computer architectures. The bytecode may then be interpreted by, or run on a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine"). The JIT compiler reads the bytecodes in many sections (or in full, rarely) and compiles them dynamically into machine code so the program can run faster. This can be done per-file, per-function or even on any arbitrary code fragment; the code can be compiled when it is about to be executed (hence the name "just-in-time"), and then cached and reused later without needing to be recompiled.
+
+By contrast, a traditional _interpreted virtual machine_ will simply interpret the bytecode, generally with much lower performance. Some _interpreter_s even interpret source code, without the step of first compiling to bytecode, with even worse performance. _Statically-compiled code_ or _native code_ is compiled prior to deployment. A _dynamic compilation environment_ is one in which the compiler can be used during execution. A common goal of using JIT techniques is to reach or surpass the performance of [static compilation](https://en.wikipedia.org/wiki/Static_compilation "Static compilation"), while maintaining the advantages of bytecode interpretation: Much of the "heavy lifting" of parsing the original source code and performing basic optimization is often handled at compile time, prior to deployment: compilation from bytecode to machine code is much faster than compiling from source. The deployed bytecode is portable, unlike native code. Since the runtime has control over the compilation, like interpreted bytecode, it can run in a secure sandbox. Compilers from bytecode to machine code are easier to write, because the portable bytecode compiler has already done much of the work.
+
+JIT code generally offers far better performance than interpreters. In addition, it can in some cases offer better performance than static compilation, as many optimizations are only feasible at run-time:
+1. The compilation can be optimized to the targeted CPU and the operating system model where the application runs. For example, JIT can choose [SSE2](https://en.wikipedia.org/wiki/SSE2 "SSE2") vector CPU instructions when it detects that the CPU supports them. To obtain this level of optimization specificity with a static compiler, one must either compile a binary for each intended platform/architecture, or else include multiple versions of portions of the code within a single binary.
+2. The system is able to collect statistics about how the program is actually running in the environment it is in, and it can rearrange and recompile for optimum performance. However, some static compilers can also take profile information as input.
+3. The system can do global code optimizations (e.g. [inlining](https://en.wikipedia.org/wiki/Inline_expansion "Inline expansion") of [library](https://en.wikipedia.org/wiki/Library_\(computing\) "Library (computing)") functions) without losing the advantages of dynamic linking and without the overheads inherent to static compilers and linkers. Specifically, when doing global inline substitutions, a static compilation process may need run-time checks and ensure that a virtual call would occur if the actual class of the object overrides the inlined method, and boundary condition checks on array accesses may need to be processed within loops. With just-in-time compilation in many cases this processing can be moved out of loops, often giving large increases of speed.
+4. Although this is possible with statically compiled garbage collected languages, a bytecode system can more easily rearrange executed code for better cache utilization.
+
+Because a JIT must render and execute a native binary image at runtime, true machine-code JITs necessitate platforms that allow for data to be executed at runtime, making using such JITs on a [Harvard architecture](https://en.wikipedia.org/wiki/Harvard_architecture "Harvard architecture")-based machine impossible; the same can be said for certain operating systems and virtual machines as well. However, a special type of "JIT" may potentially _not_ target the physical machine's CPU architecture, but rather an optimized VM bytecode where limitations on raw machine code prevail, especially where that bytecode's VM eventually leverages a JIT to native code.
+
+### Performance
+JIT causes a slight to noticeable delay in the initial execution of an application, due to the time taken to load and compile the input code. Sometimes this delay is called "startup time delay" or "warm-up time". In general, the more optimization JIT performs, the better the code it will generate, but the initial delay will also increase. A JIT compiler therefore has to make a trade-off between the compilation time and the quality of the code it hopes to generate. Startup time can include increased IO-bound operations in addition to JIT compilation: for example, the _rt.jar_ class data file for the [Java virtual machine](https://en.wikipedia.org/wiki/Java_virtual_machine "Java virtual machine") (JVM) is 40 MB and the JVM must seek a lot of data in this contextually huge file.
+
+One possible optimization, used by Sun's [HotSpot](https://en.wikipedia.org/wiki/HotSpot_\(virtual_machine\) "HotSpot (virtual machine)") Java virtual machine, is to combine interpretation and JIT compilation. The application code is initially interpreted, but the JVM monitors which sequences of [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode") are frequently executed and translates them to machine code for direct execution on the hardware. For bytecode which is executed only a few times, this saves the compilation time and reduces the initial latency; for frequently executed bytecode, JIT compilation is used to run at high speed, after an initial phase of slow interpretation. Further, since a program spends most time executing a minority of its code, the reduced compilation time is significant. Finally, during the initial code interpretation, execution statistics can be collected before compilation, which helps to perform better optimization.
+
+The correct tradeoff can vary due to circumstances. For example, Sun's Java virtual machine has two major modes—client and server. In client mode, minimal compilation and optimization is performed, to reduce startup time. In server mode, extensive compilation and optimization is performed, to maximize performance once the application is running by sacrificing startup time. Other Java just-in-time compilers have used a runtime measurement of the number of times a method has executed combined with the bytecode size of a method as a heuristic to decide when to compile. Still another uses the number of times executed combined with the detection of loops. In general, it is much harder to accurately predict which methods to optimize in short-running applications than in long-running ones.
+
+[Native Image Generator](https://en.wikipedia.org/wiki/Native_Image_Generator "Native Image Generator") (Ngen) by [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft") is another approach at reducing the initial delay. Ngen pre-compiles (or "pre-JITs") bytecode in a [Common Intermediate Language](https://en.wikipedia.org/wiki/Common_Intermediate_Language "Common Intermediate Language") image into machine native code. As a result, no runtime compilation is needed. [.NET Framework](https://en.wikipedia.org/wiki/.NET_Framework ".NET Framework") 2.0 shipped with [Visual Studio 2005](https://en.wikipedia.org/wiki/Visual_Studio_2005 "Visual Studio 2005") runs Ngen on all of the Microsoft [dynamic-link library](https://en.wikipedia.org/wiki/Dynamic-link_library "Dynamic-link library") (DLL) files right after installing. Pre-jitting provides a way to reduce startup time. However, the quality of code it generates may be lower than the one that is JITed, for the same reasons why code compiled statically, without [profile-guided optimization](https://en.wikipedia.org/wiki/Profile-guided_optimization "Profile-guided optimization"), cannot be as good as JIT compiled code in the extreme case: the lack of profiling data to drive, for instance, inline caching.
+
+There also exist Java implementations that combine an [AOT (ahead-of-time) compiler](https://en.wikipedia.org/wiki/Ahead-of-time_compilation "Ahead-of-time compilation") with either a JIT compiler ([Excelsior JET](https://en.wikipedia.org/wiki/Excelsior_JET "Excelsior JET")) or interpreter ([GNU Compiler for Java](https://en.wikipedia.org/wiki/GNU_Compiler_for_Java "GNU Compiler for Java")).
+
+JIT compilation may not reliably achieve its goal, namely entering a steady state of improved performance after a short initial warmup period. Across eight different virtual machines, [Barrett et al. (2017)](https://en.wikipedia.org/wiki/Just-in-time_compilation#CITEREFBarrettBolz-TereickKillickMount2017) measured six widely used [microbenchmarks](https://en.wikipedia.org/w/index.php?title=Microbenchmarks&action=edit&redlink=1 "Microbenchmarks (page does not exist)") which are commonly used by virtual machine implementors as optimisation targets, running them repeatedly within a single process execution. On [Linux](https://en.wikipedia.org/wiki/Linux "Linux"), they found that 8.7% to 9.6% of process executions failed to reach a steady state of performance, 16.7% to 17.9% entered a steady state of _reduced_ performance after a warmup period, and 56.5% pairings of a specific virtual machine running a specific benchmark failed to consistently see a steady-state non-degradation of performance across multiple executions (i.e., at least one execution failed to reach a steady state or saw reduced performance in the steady state). Even where an improved steady-state was reached, it sometimes took many hundreds of iterations. [Traini et al. (2022)](https://en.wikipedia.org/wiki/Just-in-time_compilation#CITEREFTrainiCortellessaDi_PompeoTucci2022) instead focused on the HotSpot virtual machine but with a much wider array of benchmarks, finding that 10.9% of process executions failed to reach a steady state of performance, and 43.5% of benchmarks did not consistently attain a steady state across multiple executions.
+
+### Security
+JIT compilation fundamentally uses executable data, and thus poses security challenges and possible exploits.
+
+Implementation of JIT compilation consists of compiling source code or byte code to machine code and executing it. This is generally done directly in memory: the JIT compiler outputs the machine code directly into memory and immediately executes it, rather than outputting it to disk and then invoking the code as a separate program, as in usual ahead of time compilation. In modern architectures this runs into a problem due to [executable space protection](https://en.wikipedia.org/wiki/Executable_space_protection "Executable space protection"): arbitrary memory cannot be executed, as otherwise there is a potential security hole. Thus memory must be marked as executable; for security reasons this should be done _after_ the code has been written to memory, and marked read-only, as writable/executable memory is a security hole (see [W^X](https://en.wikipedia.org/wiki/W%5EX "W^X")). For instance Firefox's JIT compiler for [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") introduced this protection in a release version with Firefox 46.
+[JIT spraying](https://en.wikipedia.org/wiki/JIT_spraying "JIT spraying") is a class of [computer security exploits](https://en.wikipedia.org/wiki/Computer_security_exploit "Computer security exploit") that use JIT compilation for [heap spraying](https://en.wikipedia.org/wiki/Heap_spraying "Heap spraying"): the resulting memory is then executable, which allows an exploit if execution can be moved into the heap.
+
+### Uses
+JIT compilation can be applied to some programs, or can be used for certain capacities, particularly dynamic capacities such as [regular expressions](https://en.wikipedia.org/wiki/Regular_expression "Regular expression"). For example, a text editor may compile a regular expression provided at runtime to machine code to allow faster matching: this cannot be done ahead of time, as the pattern is only provided at runtime. Several modern [runtime environments](https://en.wikipedia.org/wiki/Runtime_environment "Runtime environment") rely on JIT compilation for high-speed code execution, including most implementations of [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)"), together with [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft")'s [.NET](https://en.wikipedia.org/wiki/.NET ".NET"). Similarly, many regular-expression libraries feature JIT compilation of regular expressions, either to bytecode or to machine code. JIT compilation is also used in some emulators, in order to translate machine code from one CPU architecture to another.
+
+A common implementation of JIT compilation is to first have AOT compilation to bytecode ([virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") code), known as _bytecode compilation_, and then have JIT compilation to machine code (dynamic compilation), rather than interpretation of the bytecode. This improves the runtime performance compared to interpretation, at the cost of lag due to compilation. JIT compilers translate continuously, as with interpreters, but caching of compiled code minimizes lag on future execution of the same code during a given run. Since only part of the program is compiled, there is significantly less lag than if the entire program were compiled prior to execution.
+
+## Sequence
+In [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), a **sequence** is an enumerated collection of [objects](https://en.wikipedia.org/wiki/Mathematical_object "Mathematical object") in which repetitions are allowed and [order](https://en.wikipedia.org/wiki/Order_theory "Order theory") matters. Like a [set](https://en.wikipedia.org/wiki/Set_\(mathematics\) "Set (mathematics)"), it contains [members](https://en.wikipedia.org/wiki/Element_\(mathematics\) "Element (mathematics)") (also called _elements_, or _terms_). The number of elements (possibly [infinite](https://en.wikipedia.org/wiki/Infinite_number "Infinite number")) is called the _length_ of the sequence. Unlike a set, the same elements can appear multiple times at different positions in a sequence, and unlike a set, the order does matter. Formally, a sequence can be defined as a [function](https://en.wikipedia.org/wiki/Function_\(mathematics\) "Function (mathematics)") from [natural numbers](https://en.wikipedia.org/wiki/Natural_number "Natural number") (the positions of elements in the sequence) to the elements at each position. The notion of a sequence can be generalized to an [indexed family](https://en.wikipedia.org/wiki/Indexed_family "Indexed family"), defined as a function from an _arbitrary_ index set.
+
+For example, (M, A, R, Y) is a sequence of letters with the letter "M" first and "Y" last. This sequence differs from (A, R, M, Y). Also, the sequence (1, 1, 2, 3, 5, 8), which contains the number 1 at two different positions, is a valid sequence. Sequences can be _[finite](https://en.wikipedia.org/wiki/Finite_set "Finite set")_, as in these examples, or _[infinite](https://en.wikipedia.org/wiki/Infinite_set "Infinite set")_, such as the sequence of all [even](https://en.wikipedia.org/wiki/Even_and_odd_numbers "Even and odd numbers") [positive integers](https://en.wikipedia.org/wiki/Positive_integer "Positive integer") (2, 4, 6, ...).
+
+The position of an element in a sequence is its _rank_ or _index_; it is the natural number for which the element is the [image](https://en.wikipedia.org/wiki/Image_\(mathematics\) "Image (mathematics)"). The first element has index 0 or 1, depending on the context or a specific convention. In [mathematical analysis](https://en.wikipedia.org/wiki/Mathematical_analysis "Mathematical analysis"), a sequence is often denoted by letters in the form of an![{\displaystyle a_{n}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/790f9209748c2dca7ed7b81932c37c02af1dbc31), bn![{\displaystyle b_{n}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/28e2d72f6dd9375c8f1f59f1effd9b4e5492ac97) and cn![{\displaystyle c_{n}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9b7e944bcb1be88e9a6a940638f2adce0ec4211a), where the subscript _n_ refers to the _n_th element of the sequence; for example, the _n_th element of the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence "Fibonacci sequence") _F![{\displaystyle F}](https://wikimedia.org/api/rest_v1/media/math/render/svg/545fd099af8541605f7ee55f08225526be88ce57)_ is generally denoted as _Fn![{\displaystyle F_{n}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/76cdf519c21deec43f984815e57e15d2dd3575d7)_.
+
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing") and [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), finite sequences are usually called _[strings](https://en.wikipedia.org/wiki/String_\(computer_science\) "String (computer science)")_, _[words](https://en.wikipedia.org/wiki/Word_\(formal_language_theory\) "Word (formal language theory)")_ or _[lists](https://en.wikipedia.org/wiki/List_\(computer_science\) "List (computer science)"),_ with the specific technical term chosen depending on the type of object the sequence enumerates and the different ways to represent the sequence in [computer memory](https://en.wikipedia.org/wiki/Computer_memory "Computer memory"). Infinite sequences are called _[streams](https://en.wikipedia.org/wiki/Stream_\(computing\) "Stream (computing)")_.
+
+The empty sequence ( ) is included in most notions of sequence. It may be excluded depending on the context.
+
+## Compiler
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **compiler** is [software](https://en.wikipedia.org/wiki/Software "Software") that [translates](https://en.wikipedia.org/wiki/Translator_\(computing\) "Translator (computing)") computer code written in one [programming language](https://en.wikipedia.org/wiki/Programming_language "Programming language") (the _source_ language) into another language (the _target_ language). The name "compiler" is primarily used for programs that translate [source code](https://en.wikipedia.org/wiki/Source_code "Source code") from a [high-level programming language](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language") to a [low-level programming language](https://en.wikipedia.org/wiki/Lower_level_language "Lower level language") (e.g. [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language"), [object code](https://en.wikipedia.org/wiki/Object_code "Object code"), or [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code")) to create an [executable](https://en.wikipedia.org/wiki/Executable "Executable") program.
+
+There are many different types of compilers which produce output in different useful forms. A _[cross-compiler](https://en.wikipedia.org/wiki/Cross-compiler "Cross-compiler")_ produces code for a different [CPU](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") or [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") than the one on which the cross-compiler itself runs. A _[bootstrap compiler](https://en.wikipedia.org/wiki/Bootstrap_compiler "Bootstrap compiler")_ is often a temporary compiler, used for compiling a more permanent or better optimized compiler for a language.
+
+Related software include _[decompilers](https://en.wikipedia.org/wiki/Decompiler "Decompiler")_, programs that translate from low-level languages to higher level ones; programs that translate between high-level languages, usually called _[source-to-source compilers](https://en.wikipedia.org/wiki/Source-to-source_compiler "Source-to-source compiler")_ or _transpilers_; language _[rewriters](https://en.wikipedia.org/wiki/Rewriting "Rewriting")_, usually programs that translate the form of [expressions](https://en.wikipedia.org/wiki/Expression_\(computer_science\) "Expression (computer science)") without a change of language; and _[compiler-compilers](https://en.wikipedia.org/wiki/Compiler-compiler "Compiler-compiler")_, compilers that produce compilers (or parts of them), often in a generic and reusable way so as to be able to produce many differing compilers.
+
+A compiler is likely to perform some or all of the following operations, often called phases: [preprocessing](https://en.wikipedia.org/wiki/Preprocessor "Preprocessor"), [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis "Lexical analysis"), [parsing](https://en.wikipedia.org/wiki/Parser "Parser"), [semantic analysis](https://en.wikipedia.org/wiki/Semantic_analysis_\(compilers\) "Semantic analysis (compilers)") ([syntax-directed translation](https://en.wikipedia.org/wiki/Syntax-directed_translation "Syntax-directed translation")), conversion of input programs to an [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation"), [code optimization](https://en.wikipedia.org/wiki/Code_optimization "Code optimization") and [machine specific code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)"). Compilers generally implement these phases as modular components, promoting efficient design and correctness of [transformations](https://en.wikipedia.org/wiki/Program_transformation "Program transformation") of source input to target output. Program faults caused by incorrect compiler behavior can be very difficult to track down and work around; therefore, compiler implementers invest significant effort to ensure [compiler correctness](https://en.wikipedia.org/wiki/Compiler_correctness "Compiler correctness").
+
+### Comparison with interpreter
+With respect to making source code runnable, an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") provides a similar function as a compiler, but via a different mechanism. An interpreter executes code without converting it to machine code.[[2]](https://en.wikipedia.org/wiki/Compiler#cite_note-dragon-2): p2  Therefore, some interpreters execute source code while others execute an intermediate form such as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode").
+
+Hence a program compiled to native code tends to run faster than when interpreted. Environments with a bytecode-intermediate-form tends toward intermediate-speed. While [Just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation") allows for native execution speed with a one-time startup processing time cost.
+
+For [Low-level programming languages](https://en.wikipedia.org/wiki/Low-level_programming_language "Low-level programming language"), such as [assembly](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") and [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"), it is typical that they are compiled, especially when speed is a significant concern, rather than being [cross-platform](https://en.wikipedia.org/wiki/Cross-platform "Cross-platform") supported. So that for such languages, there are more one-to-one correspondences between the source code and the resulting [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code"), making it easier for programmers to control the use of hardware.
+
+In theory; a programming language can be used via either a compiler or an interpreter, but in practice, each language tends to be used with only one or the other. Nonetheless, it is possible to write a compiler for a language that is commonly interpreted. For example, [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp "Common Lisp") can be compiled to Java bytecode (and then interpreted by the [Java virtual machine](https://en.wikipedia.org/wiki/Java_virtual_machine "Java virtual machine")), as well as C code (then compiled to native machine code), or directly to native code.
+
+### Compiler construction
+A compiler implements a formal transformation from a high-level source program to a low-level target program. Compiler design can define an end-to-end solution or tackle a defined subset that interfaces with other compilation tools e.g. preprocessors, assemblers, linkers. Design requirements include rigorously defined interfaces both internally between compiler components and externally between supporting toolsets.
+
+In the early days, the approach taken to compiler design was directly affected by the complexity of the computer language to be processed, the experience of the person(s) designing it, and the resources available. Resource limitations led to the need to pass through the source code more than once.
+
+A compiler for a relatively simple language written by one person might be a single, monolithic piece of software. However, as the source language grows in complexity the design may be split into a number of interdependent phases. Separate phases provide design improvements that focus development on the functions in the compilation process.
+
+#### One-pass vis-à-vis multi-pass compilers
+Classifying compilers by number of passes has its background in the hardware resource limitations of computers. Compiling involves performing much work and early computers did not have enough memory to contain one program that did all of this work. As a result, compilers were split up into smaller programs which each made a pass over the source (or some representation of it) performing some of the required analysis and translations.
+
+The ability to compile in a [single pass](https://en.wikipedia.org/wiki/One-pass_compiler "One-pass compiler") has classically been seen as a benefit because it simplifies the job of writing a compiler and one-pass compilers generally perform compilations faster than [multi-pass compilers](https://en.wikipedia.org/wiki/Multi-pass_compiler "Multi-pass compiler"). Thus, partly driven by the resource limitations of early systems, many early languages were specifically designed so that they could be compiled in a single pass (e.g., [Pascal](https://en.wikipedia.org/wiki/Pascal_\(programming_language\) "Pascal (programming language)")).
+
+In some cases, the design of a language feature may require a compiler to perform more than one pass over the source. For instance, consider a declaration appearing on line 20 of the source which affects the translation of a statement appearing on line 10. In this case, the first pass needs to gather information about declarations appearing after statements that they affect, with the actual translation happening during a subsequent pass.
+
+The disadvantage of compiling in a single pass is that it is not possible to perform many of the sophisticated [optimizations](https://en.wikipedia.org/wiki/Compiler_optimization "Compiler optimization") needed to generate high quality code. It can be difficult to count exactly how many passes an optimizing compiler makes. For instance, different phases of optimization may analyse one expression many times but only analyse another expression once.
+
+Splitting a compiler up into small programs is a technique used by researchers interested in producing provably correct compilers. Proving the correctness of a set of small programs often requires less effort than proving the correctness of a larger, single, equivalent program.
+
+#### Three-stage compiler structure
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Compiler_design.svg/960px-Compiler_design.svg.png)](https://en.wikipedia.org/wiki/File:Compiler_design.svg)
+
+Compiler design
+
+Regardless of the exact number of phases in the compiler design, the phases can be assigned to one of three stages. The stages include a front end, a middle end, and a back end.
+
+- The _front end_ scans the input and verifies syntax and semantics according to a specific source language. For [statically typed languages](https://en.wikipedia.org/wiki/Type_system "Type system") it performs [type checking](https://en.wikipedia.org/wiki/Type_checking "Type checking") by collecting type information. If the input program is syntactically incorrect or has a type error, it generates error and/or warning messages, usually identifying the location in the source code where the problem was detected; in some cases the actual error may be (much) earlier in the program. Aspects of the front end include lexical analysis, syntax analysis, and semantic analysis. The front end transforms the input program into an [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") (IR) for further processing by the middle end. This IR is usually a lower-level representation of the program with respect to the source code.
+- The _middle end_ performs optimizations on the IR that are independent of the CPU architecture being targeted. This source code/machine code independence is intended to enable generic optimizations to be shared between versions of the compiler supporting different languages and target processors. Examples of middle end optimizations are removal of useless ([dead-code elimination](https://en.wikipedia.org/wiki/Dead-code_elimination "Dead-code elimination")) or unreachable code ([reachability analysis](https://en.wikipedia.org/wiki/Reachability_analysis "Reachability analysis")), discovery and propagation of constant values ([constant propagation](https://en.wikipedia.org/wiki/Constant_propagation "Constant propagation")), relocation of computation to a less frequently executed place (e.g., out of a loop), or specialization of computation based on the context, eventually producing the "optimized" IR that is used by the back end.
+- The _back end_ takes the optimized IR from the middle end. It may perform more analysis, transformations and optimizations that are specific for the target CPU architecture. The back end generates the target-dependent assembly code, performing [register allocation](https://en.wikipedia.org/wiki/Register_allocation "Register allocation") in the process. The back end performs [instruction scheduling](https://en.wikipedia.org/wiki/Instruction_scheduling "Instruction scheduling"), which re-orders instructions to keep parallel [execution units](https://en.wikipedia.org/wiki/Execution_unit "Execution unit") busy by filling [delay slots](https://en.wikipedia.org/wiki/Delay_slot "Delay slot"). Although most optimization problems are [NP-hard](https://en.wikipedia.org/wiki/NP-hardness "NP-hardness"), [heuristic](https://en.wikipedia.org/wiki/Heuristic_\(computer_science\) "Heuristic (computer science)") techniques for solving them are well-developed and implemented in production-quality compilers. Typically the output of a back end is machine code specialized for a particular processor and operating system.
+
+This front/middle/back-end approach makes it possible to combine front ends for different languages with back ends for different [CPUs](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") while sharing the optimizations of the middle end. Practical examples of this approach are the [GNU Compiler Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection "GNU Compiler Collection"), [Clang](https://en.wikipedia.org/wiki/Clang "Clang") ([LLVM](https://en.wikipedia.org/wiki/LLVM "LLVM")-based C/C++ compiler), and the [Amsterdam Compiler Kit](https://en.wikipedia.org/wiki/Amsterdam_Compiler_Kit "Amsterdam Compiler Kit"), which have multiple front-ends, shared optimizations and multiple back-ends.
+
+##### Front end
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Xxx_Scanner_and_parser_example_for_C.gif/250px-Xxx_Scanner_and_parser_example_for_C.gif)](https://en.wikipedia.org/wiki/File:Xxx_Scanner_and_parser_example_for_C.gif)
+
+[Lexer](https://en.wikipedia.org/wiki/Lexical_analysis "Lexical analysis") and [parser](https://en.wikipedia.org/wiki/Parsing "Parsing") example for [C](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)"). Starting from the sequence of characters "`if(net>0.0)total+=net*(1.0+tax/100.0);`", the scanner composes a sequence of [tokens](https://en.wikipedia.org/wiki/Lexical_analysis#token "Lexical analysis"), and categorizes each of them, for example as identifier, reserved word, number literal, or operator. The latter sequence is transformed by the parser into a [syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree "Abstract syntax tree"), which is then treated by the remaining compiler phases. The scanner and parser handles the [regular](https://en.wikipedia.org/wiki/Regular_grammar "Regular grammar") and properly [context-free](https://en.wikipedia.org/wiki/Context-free_grammar "Context-free grammar") parts of the [grammar for C](https://en.wikipedia.org/wiki/C_syntax "C syntax"), respectively.
+
+The front end analyzes the source code to build an internal representation of the program, called the [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") (IR). It also manages the [symbol table](https://en.wikipedia.org/wiki/Symbol_table "Symbol table"), a data structure mapping each symbol in the source code to associated information such as location, type and scope.
+
+While the frontend can be a single monolithic function or program, as in a [scannerless parser](https://en.wikipedia.org/wiki/Scannerless_parser "Scannerless parser"), it was traditionally implemented and analyzed as several phases, which may execute sequentially or concurrently. This method is favored due to its modularity and [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns "Separation of concerns"). Most commonly, the frontend is broken into three phases: [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis "Lexical analysis") (also known as lexing or scanning), [syntax analysis](https://en.wikipedia.org/wiki/Syntax_analysis "Syntax analysis") (also known as scanning or parsing), and [semantic analysis](https://en.wikipedia.org/wiki/Semantic_analysis_\(compilers\) "Semantic analysis (compilers)"). Lexing and parsing comprise the syntactic analysis (word syntax and phrase syntax, respectively), and in simple cases, these modules (the lexer and parser) can be automatically generated from a grammar for the language, though in more complex cases these require manual modification. The lexical grammar and phrase grammar are usually [context-free grammars](https://en.wikipedia.org/wiki/Context-free_grammar "Context-free grammar"), which simplifies analysis significantly, with context-sensitivity handled at the semantic analysis phase. The semantic analysis phase is generally more complex and written by hand, but can be partially or fully automated using [attribute grammars](https://en.wikipedia.org/wiki/Attribute_grammar "Attribute grammar"). These phases themselves can be further broken down: lexing as scanning and evaluating, and parsing as building a [concrete syntax tree](https://en.wikipedia.org/wiki/Parse_tree "Parse tree") (CST, parse tree) and then transforming it into an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree "Abstract syntax tree") (AST, syntax tree). In some cases additional phases are used, notably _line reconstruction_ and _preprocessing,_ but these are rare.
+
+The main phases of the front end include the following:
+
+- _Line reconstruction_ converts the input character sequence to a canonical form ready for the parser. Languages which [strop](https://en.wikipedia.org/wiki/Stropping_\(syntax\) "Stropping (syntax)") their keywords or allow arbitrary spaces within identifiers require this phase. The [top-down](https://en.wikipedia.org/wiki/Top-down_parsing "Top-down parsing"), [recursive-descent](https://en.wikipedia.org/wiki/Recursive_descent_parser "Recursive descent parser"), table-driven parsers used in the 1960s typically read the source one character at a time and did not require a separate tokenizing phase. [Atlas Autocode](https://en.wikipedia.org/wiki/Atlas_Autocode "Atlas Autocode") and [Imp](https://en.wikipedia.org/wiki/Edinburgh_IMP "Edinburgh IMP") (and some implementations of [ALGOL](https://en.wikipedia.org/wiki/ALGOL "ALGOL") and [Coral 66](https://en.wikipedia.org/wiki/Coral_66 "Coral 66")) are examples of stropped languages whose compilers would have a _Line Reconstruction_ phase.
+- _[Preprocessing](https://en.wikipedia.org/wiki/Preprocessor "Preprocessor")_ supports [macro](https://en.wikipedia.org/wiki/Macro_\(computer_science\) "Macro (computer science)") substitution and [conditional compilation](https://en.wikipedia.org/wiki/Conditional_compilation "Conditional compilation"). Typically the preprocessing phase occurs before syntactic or semantic analysis; e.g. in the case of C, the preprocessor manipulates lexical tokens rather than syntactic forms. However, some languages such as [Scheme](https://en.wikipedia.org/wiki/Scheme_\(programming_language\) "Scheme (programming language)") support macro substitutions based on syntactic forms.
+- _[Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis "Lexical analysis")_ (also known as _lexing_ or _tokenization_) breaks the source code text into a sequence of small pieces called _lexical tokens_. This phase can be divided into two stages: the _scanning_, which segments the input text into syntactic units called _lexemes_ and assigns them a category; and the _evaluating_, which converts lexemes into a processed value. A token is a pair consisting of a _token name_ and an optional _token value_. Common token categories may include identifiers, keywords, separators, operators, literals and comments, although the set of token categories varies in different [programming languages](https://en.wikipedia.org/wiki/Programming_language "Programming language"). The lexeme syntax is typically a [regular language](https://en.wikipedia.org/wiki/Regular_language "Regular language"), so a [finite-state automaton](https://en.wikipedia.org/wiki/Finite-state_automaton "Finite-state automaton") constructed from a [regular expression](https://en.wikipedia.org/wiki/Regular_expression "Regular expression") can be used to recognize it. The software doing lexical analysis is called a [lexical analyzer](https://en.wikipedia.org/wiki/Lexical_analyzer "Lexical analyzer"). This may not be a separate step—it can be combined with the parsing step in [scannerless parsing](https://en.wikipedia.org/wiki/Scannerless_parsing "Scannerless parsing"), in which case parsing is done at the character level, not the token level.
+- _[Syntax analysis](https://en.wikipedia.org/wiki/Syntax_analysis "Syntax analysis")_ (also known as _parsing_) involves [parsing](https://en.wikipedia.org/wiki/Parsing "Parsing") the token sequence to identify the syntactic structure of the program. This phase typically builds a [parse tree](https://en.wikipedia.org/wiki/Parse_tree "Parse tree"), which replaces the linear sequence of tokens with a tree structure built according to the rules of a [formal grammar](https://en.wikipedia.org/wiki/Formal_grammar "Formal grammar") which define the language's syntax. The parse tree is often analyzed, augmented, and transformed by later phases in the compiler.
+- _[Semantic analysis](https://en.wikipedia.org/wiki/Semantic_analysis_\(compilers\) "Semantic analysis (compilers)")_ adds semantic information to the [parse tree](https://en.wikipedia.org/wiki/Parse_tree "Parse tree") and builds the [symbol table](https://en.wikipedia.org/wiki/Symbol_table "Symbol table"). This phase performs semantic checks such as [type checking](https://en.wikipedia.org/wiki/Type_checking "Type checking") (checking for type errors), or [object binding](https://en.wikipedia.org/wiki/Object_binding "Object binding") (associating variable and function references with their definitions), or [definite assignment](https://en.wikipedia.org/wiki/Definite_assignment_analysis "Definite assignment analysis") (requiring all local variables to be initialized before use), rejecting incorrect programs or issuing warnings. Semantic analysis usually requires a complete parse tree, meaning that this phase logically follows the [parsing](https://en.wikipedia.org/wiki/Parsing "Parsing") phase, and logically precedes the [code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)") phase, though it is often possible to fold multiple phases into one pass over the code in a compiler implementation.
+
+##### Middle end
+The middle end, also known as _optimizer,_ performs optimizations on the intermediate representation in order to improve the performance and the quality of the produced machine code. The middle end contains those optimizations that are independent of the CPU architecture being targeted.
+
+The main phases of the middle end include the following:
+
+- [Analysis](https://en.wikipedia.org/wiki/Compiler_analysis "Compiler analysis"): This is the gathering of program information from the intermediate representation derived from the input; [data-flow analysis](https://en.wikipedia.org/wiki/Data-flow_analysis "Data-flow analysis") is used to build [use-define chains](https://en.wikipedia.org/wiki/Use-define_chain "Use-define chain"), together with [dependence analysis](https://en.wikipedia.org/wiki/Dependence_analysis "Dependence analysis"), [alias analysis](https://en.wikipedia.org/wiki/Alias_analysis "Alias analysis"), [pointer analysis](https://en.wikipedia.org/wiki/Pointer_analysis "Pointer analysis"), [escape analysis](https://en.wikipedia.org/wiki/Escape_analysis "Escape analysis"), etc. Accurate analysis is the basis for any compiler optimization. The [control-flow graph](https://en.wikipedia.org/wiki/Control-flow_graph "Control-flow graph") of every compiled function and the [call graph](https://en.wikipedia.org/wiki/Call_graph "Call graph") of the program are usually also built during the analysis phase.
+- [Optimization](https://en.wikipedia.org/wiki/Compiler_optimization "Compiler optimization"): the intermediate language representation is transformed into functionally equivalent but faster (or smaller) forms. Popular optimizations are [inline expansion](https://en.wikipedia.org/wiki/Inline_expansion "Inline expansion"), [dead-code elimination](https://en.wikipedia.org/wiki/Dead-code_elimination "Dead-code elimination"), [constant propagation](https://en.wikipedia.org/wiki/Constant_propagation "Constant propagation"), [loop transformation](https://en.wikipedia.org/wiki/Loop_transformation "Loop transformation") and even [automatic parallelization](https://en.wikipedia.org/wiki/Automatic_parallelization "Automatic parallelization").
+
+Compiler analysis is the prerequisite for any compiler optimization, and they tightly work together. For example, [dependence analysis](https://en.wikipedia.org/wiki/Dependence_analysis "Dependence analysis") is crucial for [loop transformation](https://en.wikipedia.org/wiki/Loop_transformation "Loop transformation").
+
+The scope of compiler analysis and optimizations vary greatly; their scope may range from operating within a [basic block](https://en.wikipedia.org/wiki/Basic_block "Basic block"), to whole procedures, or even the whole program. There is a trade-off between the granularity of the optimizations and the cost of compilation. For example, [peephole optimizations](https://en.wikipedia.org/wiki/Peephole_optimization "Peephole optimization") are fast to perform during compilation but only affect a small local fragment of the code, and can be performed independently of the context in which the code fragment appears. In contrast, [interprocedural optimization](https://en.wikipedia.org/wiki/Interprocedural_optimization "Interprocedural optimization") requires more compilation time and memory space, but enable optimizations that are only possible by considering the behavior of multiple functions simultaneously.
+
+Interprocedural analysis and optimizations are common in modern commercial compilers from [HP](https://en.wikipedia.org/wiki/Hewlett-Packard "Hewlett-Packard"), [IBM](https://en.wikipedia.org/wiki/IBM "IBM"), [SGI](https://en.wikipedia.org/wiki/Silicon_Graphics "Silicon Graphics"), [Intel](https://en.wikipedia.org/wiki/Intel "Intel"), [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft"), and [Sun Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems "Sun Microsystems"). The [free software](https://en.wikipedia.org/wiki/Free_software "Free software") [GCC](https://en.wikipedia.org/wiki/GNU_Compiler_Collection "GNU Compiler Collection") was criticized for a long time for lacking powerful interprocedural optimizations, but it is changing in this respect. Another open source compiler with full analysis and optimization infrastructure is [Open64](https://en.wikipedia.org/wiki/Open64 "Open64"), which is used by many organizations for research and commercial purposes.
+
+Due to the extra time and space needed for compiler analysis and optimizations, some compilers skip them by default. Users have to use compilation options to explicitly tell the compiler which optimizations should be enabled.
+
+##### Back end
+The back end is responsible for the CPU architecture specific optimizations and for [code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)").
+
+The main phases of the back end include the following:
+
+- _Machine dependent optimizations_: optimizations that depend on the details of the CPU architecture that the compiler targets. A prominent example is [peephole optimizations](https://en.wikipedia.org/wiki/Peephole_optimization "Peephole optimization"), which rewrites short sequences of assembler instructions into more efficient instructions.
+- _[Code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)")_: the transformed intermediate language is translated into the output language, usually the native [machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language") of the system. This involves resource and storage decisions, such as deciding which variables to fit into [registers](https://en.wikipedia.org/wiki/Register_allocation "Register allocation") and memory and the [selection](https://en.wikipedia.org/wiki/Instruction_selection "Instruction selection") and [scheduling](https://en.wikipedia.org/wiki/Instruction_scheduling "Instruction scheduling") of appropriate machine instructions along with their associated [addressing modes](https://en.wikipedia.org/wiki/Addressing_mode "Addressing mode") (see also [Sethi–Ullman algorithm](https://en.wikipedia.org/wiki/Sethi%E2%80%93Ullman_algorithm "Sethi–Ullman algorithm")). Debug data may also need to be generated to facilitate [debugging](https://en.wikipedia.org/wiki/Debugging "Debugging").
+
+#### Compiler correctness
+Main article: [Compiler correctness](https://en.wikipedia.org/wiki/Compiler_correctness "Compiler correctness")
+
+[Compiler correctness](https://en.wikipedia.org/wiki/Compiler_correctness "Compiler correctness") is the branch of software engineering that deals with trying to show that a compiler behaves according to its [language specification](https://en.wikipedia.org/wiki/Programming_language "Programming language"). Techniques include developing the compiler using [formal methods](https://en.wikipedia.org/wiki/Formal_methods "Formal methods") and using rigorous testing (often called compiler validation) on an existing compiler.
+
+### Compiled vis-à-vis interpreted languages
+Higher-level programming languages usually appear with a type of [translation](https://en.wikipedia.org/wiki/Translator_\(computing\) "Translator (computing)") in mind: either designed as [compiled language](https://en.wikipedia.org/wiki/Compiled_language "Compiled language") or [interpreted language](https://en.wikipedia.org/wiki/Interpreted_language "Interpreted language"). However, in practice there is rarely anything about a language that _requires_ it to be exclusively compiled or exclusively interpreted, although it is possible to design languages that rely on re-interpretation at run time. The categorization usually reflects the most popular or widespread implementations of a language – for instance, [BASIC](https://en.wikipedia.org/wiki/BASIC "BASIC") is sometimes called an interpreted language, and C a compiled one, despite the existence of BASIC compilers and C interpreters.
+
+Interpretation does not replace compilation completely. It only hides it from the user and makes it gradual. Even though an interpreter can itself be interpreted, a set of directly executed machine instructions is needed somewhere at the bottom of the execution stack (see [machine language](https://en.wikipedia.org/wiki/Machine_language "Machine language")).
+
+Furthermore, for optimization compilers can contain interpreter functionality, and interpreters may include ahead of time compilation techniques. For example, where an expression can be executed during compilation and the results inserted into the output program, then it prevents it having to be recalculated each time the program runs, which can greatly speed up the final program. Modern trends toward [just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation") and [bytecode interpretation](https://en.wikipedia.org/wiki/Bytecode "Bytecode") at times blur the traditional categorizations of compilers and interpreters even further.
+
+Some language specifications spell out that implementations _must_ include a compilation facility; for example, [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp "Common Lisp"). However, there is nothing inherent in the definition of Common Lisp that stops it from being interpreted. Other languages have features that are very easy to implement in an interpreter, but make writing a compiler much harder; for example, [APL](https://en.wikipedia.org/wiki/APL_\(programming_language\) "APL (programming language)"), [SNOBOL4](https://en.wikipedia.org/wiki/SNOBOL4 "SNOBOL4"), and many scripting languages allow programs to construct arbitrary source code at runtime with regular string operations, and then execute that code by passing it to a special [evaluation function](https://en.wikipedia.org/wiki/Eval "Eval"). To implement these features in a compiled language, programs must usually be shipped with a [runtime library](https://en.wikipedia.org/wiki/Runtime_library "Runtime library") that includes a version of the compiler itself.
+
+### Types
+One classification of compilers is by the [platform](https://en.wikipedia.org/wiki/Computing_platform "Computing platform") on which their generated code executes. This is known as the _target platform._
+
+A _native_ or _hosted_ compiler is one whose output is intended to directly run on the same type of computer and operating system that the compiler itself runs on. The output of a [cross compiler](https://en.wikipedia.org/wiki/Cross_compiler "Cross compiler") is designed to run on a different platform. Cross compilers are often used when developing software for [embedded systems](https://en.wikipedia.org/wiki/Embedded_system "Embedded system") that are not intended to support a software development environment.
+
+The output of a compiler that produces code for a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") (VM) may or may not be executed on the same platform as the compiler that produced it. For this reason, such compilers are not usually classified as native or cross compilers.
+
+The lower level language that is the target of a compiler may itself be a [high-level programming language](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language"). C, viewed by some as a sort of portable assembly language, is frequently the target language of such compilers. For example, [Cfront](https://en.wikipedia.org/wiki/Cfront "Cfront"), the original compiler for [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++"), used C as its target language. The C code generated by such a compiler is usually not intended to be readable and maintained by humans, so [indent style](https://en.wikipedia.org/wiki/Indent_style "Indent style") and creating pretty C intermediate code are ignored. Some of the features of C that make it a good target language include the [`#line`](https://en.wikipedia.org/wiki/C_preprocessor#Special_macros_and_directives "C preprocessor") directive, which can be generated by the compiler to support [debugging](https://en.wikipedia.org/wiki/Debugging "Debugging") of the original source, and the wide platform support available with C compilers.
+
+While a common compiler type outputs machine code, there are many other types:
+
+- [Source-to-source compilers](https://en.wikipedia.org/wiki/Source-to-source_compiler "Source-to-source compiler") are a type of compiler that takes a high-level language as its input and outputs a high-level language. For example, an [automatic parallelizing](https://en.wikipedia.org/wiki/Automatic_parallelization "Automatic parallelization") compiler will frequently take in a high-level language program as an input and then transform the code and annotate it with parallel code annotations (e.g. [OpenMP](https://en.wikipedia.org/wiki/OpenMP "OpenMP")) or language constructs (e.g. Fortran's `DOALL` statements). Other terms for a source-to-source compiler are transcompiler or transpiler.
+- [Bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode") compilers compile to assembly language of a theoretical machine, like some [Prolog](https://en.wikipedia.org/wiki/Prolog "Prolog") implementations
+    - This Prolog machine is also known as the [Warren Abstract Machine](https://en.wikipedia.org/wiki/Warren_Abstract_Machine "Warren Abstract Machine") (or WAM).
+    - Bytecode compilers for [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)"), [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)") are also examples of this category.
+- [Just-in-time compilers](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation") (JIT compiler) defer compilation until runtime. JIT compilers exist for many modern languages including [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)"), [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript"), [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk "Smalltalk"), [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)"), Microsoft [.NET](https://en.wikipedia.org/wiki/.NET_Framework ".NET Framework")'s [Common Intermediate Language](https://en.wikipedia.org/wiki/Common_Intermediate_Language "Common Intermediate Language") (CIL) and others. A JIT compiler generally runs inside an interpreter. When the interpreter detects that a code path is "hot", meaning it is executed frequently, the JIT compiler will be invoked and compile the "hot" code for increased performance.
+    - For some languages, such as Java, applications are first compiled using a bytecode compiler and delivered in a machine-independent [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation"). A bytecode interpreter executes the bytecode, but the JIT compiler will translate the bytecode to machine code when increased performance is necessary.
+- [Hardware compilers](https://en.wikipedia.org/wiki/Silicon_compiler "Silicon compiler") (also known as synthesis tools) are compilers whose input is a [hardware description language](https://en.wikipedia.org/wiki/Hardware_description_language "Hardware description language") and whose output is a description, in the form of a [netlist](https://en.wikipedia.org/wiki/Netlist "Netlist") or otherwise, of a hardware configuration.
+    - The output of these compilers target [computer hardware](https://en.wikipedia.org/wiki/Computer_hardware "Computer hardware") at a very low level, for example a [field-programmable gate array](https://en.wikipedia.org/wiki/Field-programmable_gate_array "Field-programmable gate array") (FPGA) or structured [application-specific integrated circuit](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit "Application-specific integrated circuit") (ASIC). Such compilers are said to be hardware compilers, because the source code they compile effectively controls the final configuration of the hardware and how it operates. The output of the compilation is only an interconnection of [transistors](https://en.wikipedia.org/wiki/Transistor "Transistor") or [lookup tables](https://en.wikipedia.org/wiki/Lookup_table "Lookup table").
+    - An example of hardware compiler is XST, the Xilinx Synthesis Tool used for configuring FPGAs.
+    - Research systems compile subsets of high level serial languages, such as Python or C++, directly into parallelized digital logic. This is typically easier to do for functional languages or functional subsets of multi-paradigm languages.
+- A program that translates from a low-level language to a higher level one is a [decompiler](https://en.wikipedia.org/wiki/Decompiler "Decompiler"). - A program that translates into an object code format that is not supported on the compilation machine is called a [cross compiler](https://en.wikipedia.org/wiki/Cross_compiler "Cross compiler") and is commonly used to prepare code for execution on embedded software applications.
+- A program that rewrites object code back into the same type of object code while applying optimisations and transformations is a [binary recompiler](https://en.wikipedia.org/wiki/Binary_recompiler "Binary recompiler").
+
+_Assemblers,_ which translate human readable [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") to the [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") instructions executed by hardware, are not considered compilers. (The inverse program that translates machine code to assembly language is called a [disassembler](https://en.wikipedia.org/wiki/Disassembler "Disassembler").)
+
+
+## Machine Code
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), **machine code** is [data](https://en.wikipedia.org/wiki/Data "Data") [encoded](https://en.wikipedia.org/wiki/Encoded "Encoded") and structured to control a [computer](https://en.wikipedia.org/wiki/Computer "Computer")'s [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPU) via its programmable [interface](https://en.wikipedia.org/wiki/Interface_\(computing\) "Interface (computing)"). A [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program") consists primarily of sequences of machine-code instructions. Machine code is classified as [native](https://en.wikipedia.org/wiki/Native_\(computing\) "Native (computing)") with respect to its host CPU since it is the language that CPU interprets directly. A [software interpreter](https://en.wikipedia.org/wiki/Interpreter_\(software\) "Interpreter (software)") is a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") that processes virtual machine code.
+
+A machine-code instruction causes the CPU to perform a specific task such as:
+
+- Load a [word](https://en.wikipedia.org/wiki/Word_\(computer_architecture\) "Word (computer architecture)") from [memory](https://en.wikipedia.org/wiki/Random-access_memory "Random-access memory") to a [CPU register](https://en.wikipedia.org/wiki/Processor_register "Processor register")
+- Execute an [arithmetic logic unit](https://en.wikipedia.org/wiki/Arithmetic_logic_unit "Arithmetic logic unit") (ALU) operation on one or more registers or memory locations
+- [Jump](https://en.wikipedia.org/wiki/Jump_instruction "Jump instruction") or [skip](https://en.wikipedia.org/wiki/Addressing_mode#Skip "Addressing mode") to an instruction that is not the next one
+
+An [instruction set architecture](https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction set architecture") (ISA) defines the interface to a CPU and varies by groupings or families of CPU design such as [x86](https://en.wikipedia.org/wiki/X86 "X86") and [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family "ARM architecture family"). Generally, machine code compatible with one family is not with others, but there are exceptions. The [VAX](https://en.wikipedia.org/wiki/VAX "VAX") architecture includes optional support of the [PDP-11](https://en.wikipedia.org/wiki/PDP-11 "PDP-11") instruction set. The [IA-64](https://en.wikipedia.org/wiki/IA-64 "IA-64") architecture includes optional support of the [IA-32](https://en.wikipedia.org/wiki/IA-32 "IA-32") instruction set. And, the [PowerPC 615](https://en.wikipedia.org/wiki/PowerPC_600#PowerPC_615 "PowerPC 600") can natively process both [PowerPC](https://en.wikipedia.org/wiki/PowerPC "PowerPC") and x86 instructions.
+
+### Assembly language
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Machine_language_and_assembly_language.jpg/330px-Machine_language_and_assembly_language.jpg)](https://en.wikipedia.org/wiki/File:Machine_language_and_assembly_language.jpg)
+
+Translation of assembly into machine code
+
+[Assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") provides a relatively direct mapping from a [human-readable](https://en.wikipedia.org/wiki/Human-readable "Human-readable") [source code](https://en.wikipedia.org/wiki/Source_code "Source code") to machine code. The source code represents numerical codes as mnemonics and labels. For example, `[NOP](https://en.wikipedia.org/wiki/NOP_\(code\) "NOP (code)")` represents the [x86](https://en.wikipedia.org/wiki/X86 "X86") architecture [opcode](https://en.wikipedia.org/wiki/Opcode "Opcode") 0x90. While it is possible to write a program in machine code, doing so is tedious and error-prone. Therefore, programs are usually written in assembly or, more commonly, in a [high-level programming language](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language").
+
+### Instruction set
+A machine instruction encodes an operation as a pattern of [bits](https://en.wikipedia.org/wiki/Bit "Bit") based on the specified format for the machine's instruction set.
+
+Instruction sets differ in various ways. Instructions of a set might all be the same length or different instructions might have different lengths; they might be smaller than, the same size as, or larger than the [word](https://en.wikipedia.org/wiki/Word_\(computer_architecture\) "Word (computer architecture)") size of the architecture. The number of instructions may be relatively small or large. Instructions may or may not have to be aligned on particular memory boundaries, such as the architecture's word boundary.
+
+An instruction set needs to execute the circuits of a computer's [digital logic level](https://en.wikipedia.org/wiki/Logic_level "Logic level"). At the digital level, the program needs to control the computer's registers, bus, memory, ALU, and other hardware components. To control a computer's [architectural](https://en.wikipedia.org/wiki/Computer_architecture "Computer architecture") features, machine instructions are created. Examples of features that are controlled using machine instructions:
+
+- [segment registers](https://en.wikipedia.org/wiki/Memory_segmentation "Memory segmentation")
+- [protected address mode](https://en.wikipedia.org/wiki/Protected_mode "Protected mode")
+- [binary-coded decimal](https://en.wikipedia.org/wiki/Binary-coded_decimal "Binary-coded decimal") (BCD) arithmetic
+
+The criteria for instruction formats include:
+
+- Instructions most commonly used should be shorter than instructions rarely used.
+- The [memory transfer rate](https://en.wikipedia.org/wiki/High_Bandwidth_Memory "High Bandwidth Memory") of the underlying hardware determines the flexibility of the memory fetch instructions.
+- The number of bits in the [address field](https://en.wikipedia.org/wiki/Random-access_memory#Addressing "Random-access memory") requires special consideration.
+- 
+Determining the size of the address field is a choice between space and speed. On some computers, the number of bits in the address field may be too small to access all of the physical memory. Also, [virtual address space](https://en.wikipedia.org/wiki/Virtual_address_space "Virtual address space") needs to be considered. Another constraint may be a limitation on the size of registers used to construct the address. Whereas a shorter address field allows the instructions to execute more quickly, other physical properties need to be considered when designing the instruction format.
+
+Instructions can be separated into two types: general-purpose and special-purpose. Special-purpose instructions exploit architectural features that are unique to a computer. General-purpose instructions control architectural features common to all computers.
+
+General-purpose instructions control:
+
+- Data movement from one place to another
+- Monadic operations that have one [operand](https://en.wikipedia.org/wiki/Operand "Operand") to produce a result
+- Dyadic operations that have two operands to produce a result
+- Comparisons and conditional jumps
+- Procedure calls
+- Loop control
+- Input/output
+
+#### Overlapping instruction
+On processor architectures with [variable-length instruction sets](https://en.wikipedia.org/wiki/Variable-length_instruction_set "Variable-length instruction set") (such as [Intel](https://en.wikipedia.org/wiki/Intel "Intel")'s [x86](https://en.wikipedia.org/wiki/X86 "X86") processor family) it is, within the limits of the control-flow [resynchronizing](https://en.wikipedia.org/wiki/Self-synchronizing_code "Self-synchronizing code") phenomenon known as the [Kruskal count](https://en.wikipedia.org/wiki/Kruskal_count "Kruskal count"), sometimes possible through opcode-level programming to deliberately arrange the resulting code so that two code paths share a common fragment of opcode sequences. These are called _overlapping instructions_, _overlapping opcodes_, _overlapping code_, _overlapped code_, _instruction scission_, or _jump into the middle of an instruction_.
+
+In the 1970s and 1980s, overlapping instructions were sometimes used to preserve memory space. One example were in the implementation of error tables in [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft")'s [Altair BASIC](https://en.wikipedia.org/wiki/Altair_BASIC "Altair BASIC"), where _interleaved instructions_ mutually shared their instruction bytes. The technique is rarely used today, but might still be necessary to resort to in areas where extreme optimization for size is necessary on byte-level such as in the implementation of [boot loaders](https://en.wikipedia.org/wiki/Boot_loader "Boot loader") which have to fit into [boot sectors](https://en.wikipedia.org/wiki/Boot_sector "Boot sector").
+
+It is also sometimes used as a [code obfuscation](https://en.wikipedia.org/wiki/Code_obfuscation "Code obfuscation") technique as a measure against [disassembly](https://en.wikipedia.org/wiki/Disassembly "Disassembly") and tampering.
+
+The principle is also used in shared code sequences of [fat binaries](https://en.wikipedia.org/wiki/Fat_binaries "Fat binaries") which must run on multiple instruction-set-incompatible processor platforms.
+
+This property is also used to find [unintended instructions](https://en.wikipedia.org/wiki/Unintended_instruction "Unintended instruction") called [gadgets](https://en.wikipedia.org/wiki/Gadget_\(machine_instruction_sequence\) "Gadget (machine instruction sequence)") in existing code repositories and is used in [return-oriented programming](https://en.wikipedia.org/wiki/Return-oriented_programming "Return-oriented programming") as alternative to [code injection](https://en.wikipedia.org/wiki/Code_injection "Code injection") for exploits such as [return-to-libc attacks](https://en.wikipedia.org/wiki/Return-to-libc_attack "Return-to-libc attack").
+
+#### Microcode
+In some computers, the machine code of the [architecture](https://en.wikipedia.org/wiki/Computer_architecture "Computer architecture") is implemented by an even more fundamental underlying layer called [microcode](https://en.wikipedia.org/wiki/Microcode "Microcode"), providing a common machine language interface across a line or family of different models of computer with widely different underlying [dataflows](https://en.wikipedia.org/wiki/Dataflow "Dataflow"). This is done to facilitate [porting](https://en.wikipedia.org/wiki/Porting "Porting") of machine language programs between different models. An example of this use is the IBM [System/360](https://en.wikipedia.org/wiki/System/360 "System/360") family of computers and their successors.
+
+### Bytecode
+Machine code is similar to yet fundamentally different from [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode"). Like machine code, bytecode is typically generated (i.e. by a compiler) from source code. But, unlike machine code, bytecode is not directly executable by a CPU. An exception is if a processor is designed to use bytecode as its machine code, such as the [Java processor](https://en.wikipedia.org/wiki/Java_processor "Java processor"). If bytecode is processed by an software interpreter, then that interpreter is a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") for which the bytecode is its machine code.
+
+### Storage
+During execution, machine code is generally stored in RAM although running from ROM is supported by some devices. Regardless, the code may also be cached in more specialized memory to enhance performance. There may be different caches for instructions and data, depending on the architecture.
+
+From the point of view of a [process](https://en.wikipedia.org/wiki/Process_\(computing\) "Process (computing)"), the machine code lives in _code space_, a designated part of its [address space](https://en.wikipedia.org/wiki/Virtual_address_space "Virtual address space"). In a [multi-threading](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)") environment, different threads of one process share code space along with data space, which reduces the overhead of [context switching](https://en.wikipedia.org/wiki/Context_switching "Context switching") considerably as compared to process switching.
+
+### Readability
+Machine code is generally considered to be not human readable, with [Douglas Hofstadter](https://en.wikipedia.org/wiki/Douglas_Hofstadter "Douglas Hofstadter") comparing it to examining the atoms of a [DNA](https://en.wikipedia.org/wiki/DNA "DNA") molecule. However, various tools and methods support understanding machine code.
+
+[Disassembly](https://en.wikipedia.org/wiki/Disassembly "Disassembly") decodes machine code to assembly language which is possible since assembly instructions can often be mapped one-to-one to machine instructions.
+
+A [decompiler](https://en.wikipedia.org/wiki/Decompiler "Decompiler") converts machine code to a [high-level language](https://en.wikipedia.org/wiki/High-level_programming_language "High-level programming language"), but the result can be relatively [obfuscated](https://en.wikipedia.org/wiki/Obfuscation_\(software\) "Obfuscation (software)"); hard to understand.
+
+A program can be associated with [debug symbols](https://en.wikipedia.org/wiki/Debug_symbol "Debug symbol") (either embedded in the [native executable](https://en.wikipedia.org/wiki/Executable#native_executable "Executable") or in a separate file) that allow it to be mapped to external source code. A [debugger](https://en.wikipedia.org/wiki/Debugger "Debugger") reads the symbols to help a programmer interactively [debug](https://en.wikipedia.org/wiki/Debugging "Debugging") the program. Example include:
+
+- The [SHARE Operating System](https://en.wikipedia.org/wiki/SHARE_Operating_System "SHARE Operating System") (1959) for the [IBM 709](https://en.wikipedia.org/wiki/IBM_709 "IBM 709"), [IBM 7090](https://en.wikipedia.org/wiki/IBM_7090 "IBM 7090"), and [IBM 7094](https://en.wikipedia.org/wiki/IBM_7094 "IBM 7094") computers allowed for an loadable code format named [SQUOZE](https://en.wikipedia.org/wiki/SQUOZE "SQUOZE"). SQUOZE was a compressed binary form of [assembly language](https://en.wikipedia.org/wiki/Assembly_language "Assembly language") code and included a symbol table.
+- Modern IBM mainframe [operating systems](https://en.wikipedia.org/wiki/Operating_system "Operating system"), such as [z/OS](https://en.wikipedia.org/wiki/Z/OS "Z/OS"), have available a symbol table named _Associated data_ (ADATA). The table is stored in a file that can be produced by the [IBM High-Level Assembler](https://en.wikipedia.org/wiki/IBM_High-Level_Assembler "IBM High-Level Assembler") (HLASM), IBM's [COBOL](https://en.wikipedia.org/wiki/COBOL "COBOL") compiler, and IBM's [PL/I](https://en.wikipedia.org/wiki/PL/I "PL/I") compiler, either as a separate SYSADATA file or as ADATA records in a [Generalized object output file](https://en.wikipedia.org/wiki/Generalized_object_output_file "Generalized object output file") (GOFF). This obsoletes the TEST records from [OS/360](https://en.wikipedia.org/wiki/OS/360 "OS/360"), although it is still possible to request them and to use them in the [TSO](https://en.wikipedia.org/wiki/Time_Sharing_Option "Time Sharing Option") TEST command.
+- [Windows](https://en.wikipedia.org/wiki/Windows "Windows") uses a symbol table that is stored in a [program database](https://en.wikipedia.org/wiki/Program_database "Program database") (.pdb) file.
+- Most [Unix-like](https://en.wikipedia.org/wiki/Unix-like "Unix-like") operating systems have available symbol table formats named [stabs](https://en.wikipedia.org/wiki/Stabs "Stabs") and [DWARF](https://en.wikipedia.org/wiki/DWARF "DWARF"). In [macOS](https://en.wikipedia.org/wiki/MacOS "MacOS") and other [Darwin](https://en.wikipedia.org/wiki/Darwin_\(operating_system\) "Darwin (operating system)")-based operating systems, the debug symbols are stored in DWARF format in a separate .dSYM file.
+
+## Execution (Computing)
+**Execution** in [computer](https://en.wikipedia.org/wiki/Computer_engineering "Computer engineering") and software engineering is the process by which a [computer](https://en.wikipedia.org/wiki/Computer "Computer") or [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine") interprets and acts on the instructions of a [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program"). Each instruction of a program is a description of a particular action which must be carried out, in order for a specific problem to be solved. Execution involves repeatedly following a "[fetch–decode–execute](https://en.wikipedia.org/wiki/Instruction_cycle "Instruction cycle")" cycle for each instruction done by the [control unit](https://en.wikipedia.org/wiki/Control_unit "Control unit"). As the executing machine follows the instructions, specific effects are produced in accordance with the [semantics](https://en.wikipedia.org/wiki/Formal_semantics_of_programming_languages "Formal semantics of programming languages") of those instructions.
+
+Programs for a computer may be executed in a [batch process](https://en.wikipedia.org/wiki/Batch_processing "Batch processing") without human interaction or a [user](https://en.wikipedia.org/wiki/User_\(computing\) "User (computing)") may type [commands](https://en.wikipedia.org/wiki/Command_\(computing\) "Command (computing)") in an [interactive session](https://en.wikipedia.org/wiki/Session_\(computer_science\) "Session (computer science)") of an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)"). In this case, the "commands" are simply program instructions, whose execution is chained together.
+
+The term **run** is used almost synonymously. A related meaning of both "to run" and "to execute" refers to the specific action of a user starting (or _launching_ or _invoking_) a program, as in "Please run the application."
+
+### Process
+Further information: [Program lifecycle phase](https://en.wikipedia.org/wiki/Program_lifecycle_phase "Program lifecycle phase")
+
+Prior to execution, a program must first be written. This is generally done in [source code](https://en.wikipedia.org/wiki/Source_code "Source code"), which is then compiled at [compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time") (and statically linked at [link time](https://en.wikipedia.org/wiki/Link_time "Link time")) to produce an executable. This executable is then invoked, most often by an operating system, which loads the program into memory ([load time](https://en.wikipedia.org/wiki/Load_time "Load time")), possibly performs [dynamic linking](https://en.wikipedia.org/wiki/Dynamic_linking "Dynamic linking"), and then begins execution by moving control to the [entry point](https://en.wikipedia.org/wiki/Entry_point "Entry point") of the program; all these steps depend on the [Application Binary Interface](https://en.wikipedia.org/wiki/Application_Binary_Interface "Application Binary Interface") of the operating system. At this point execution begins and the program enters [run time](https://en.wikipedia.org/wiki/Run_time_\(program_lifecycle_phase\) "Run time (program lifecycle phase)"). The program then runs until it ends, either in a normal [termination](https://en.wikipedia.org/wiki/Termination_\(computer_science\) "Termination (computer science)") or a [crash](https://en.wikipedia.org/wiki/Crash_\(computing\) "Crash (computing)").
+
+### Executable
+Main article: [Executable](https://en.wikipedia.org/wiki/Executable "Executable")
+
+_Executable code_, an _executable file_, or an _executable program_, sometimes simply referred to as an _executable_ or _binary_, is a list of instructions and data to cause a computer "to perform indicated tasks according to encoded [instructions](https://en.wikipedia.org/wiki/Instruction_\(computer_science\) "Instruction (computer science)")", as opposed to a [data file](https://en.wikipedia.org/wiki/Data_\(computing\) "Data (computing)") that must be interpreted ([parsed](https://en.wikipedia.org/wiki/Parser "Parser")) by a program to be meaningful.
+
+The exact interpretation depends upon the use. "Instructions" is traditionally taken to mean [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") instructions for a physical [CPU](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit"). In some contexts, a file containing scripting instructions (such as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode")) may also be considered executable.
+
+### Context of execution
+The context in which execution takes place is crucial. Very few programs execute on a [bare machine](https://en.wikipedia.org/wiki/Bare_machine "Bare machine"). Programs usually contain implicit and explicit assumptions about resources available at the time of execution. Most programs execute within [multitasking](https://en.wikipedia.org/wiki/Computer_multitasking "Computer multitasking") [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") and [run-time libraries](https://en.wikipedia.org/wiki/Runtime_library "Runtime library") specific to the source language that provide crucial services not supplied directly by the computer itself. This supportive environment, for instance, usually decouples a program from direct manipulation of the computer peripherals, providing more general, abstract services instead.
+
+#### Context switching
+Main article: [Context switch](https://en.wikipedia.org/wiki/Context_switch "Context switch")
+
+In order for programs and [interrupt handlers](https://en.wikipedia.org/wiki/Interrupt_handler "Interrupt handler") to work without interference and share the same hardware memory and access to the I/O system, in a [multitasking operating system](https://en.wikipedia.org/wiki/Computer_multitasking "Computer multitasking") running on a digital system with a single CPU/MCU, it is required to have some sort of software and hardware facilities to keep track of an executing process's data (memory page addresses, registers etc.) and to save and recover them back to the state they were in before they were suspended. This is achieved by a context switching. The running programs are often assigned a [Process Context Identifiers](https://en.wikipedia.org/wiki/Process-context_identifier "Process-context identifier") (PCID).
+
+In Linux-based operating systems, a set of data stored in [registers](https://en.wikipedia.org/wiki/Processor_register "Processor register") is usually saved into a process descriptor in memory to implement switching of context. PCIDs are also used.
+
+### Runtime
+**Runtime**, **run time**, or **execution time** is the final phase of a [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program")'s [life cycle](https://en.wikipedia.org/wiki/Program_lifecycle_phase "Program lifecycle phase"), in which the code is being executed on the computer's [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPU) as [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code"). In other words, "runtime" is the running phase of a program.
+
+A [runtime error is detected](https://en.wikipedia.org/wiki/Runtime_error_detection "Runtime error detection") after or during the execution (running state) of a program, whereas a [compile-time](https://en.wikipedia.org/wiki/Compile_time "Compile time") error is detected by the [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") before the program is ever executed. [Type checking](https://en.wikipedia.org/wiki/Type_checking "Type checking"), [register allocation](https://en.wikipedia.org/wiki/Register_allocation "Register allocation"), [code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)"), and code optimization are typically done at compile time, but may be done at runtime depending on the particular language and compiler. Many other runtime errors exist and are handled differently by different [programming languages](https://en.wikipedia.org/wiki/Programming_language "Programming language"), such as [division by zero](https://en.wikipedia.org/wiki/Division_by_zero "Division by zero") errors, domain errors, [array subscript out of bounds](https://en.wikipedia.org/wiki/Bounds_checking "Bounds checking") errors, [arithmetic underflow](https://en.wikipedia.org/wiki/Arithmetic_underflow "Arithmetic underflow") errors, several types of underflow and [overflow](https://en.wikipedia.org/wiki/Overflow_\(disambiguation\) "Overflow (disambiguation)") errors, and many other runtime errors generally considered as software bugs which may or may not be caught and handled by any particular computer language.
+
+#### Implementation details
+When a program is to be executed, a [loader](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)") first performs the necessary [memory](https://en.wikipedia.org/wiki/Memory_\(computers\) "Memory (computers)") setup and links the program with any [dynamically linked](https://en.wikipedia.org/wiki/Dynamic_linking "Dynamic linking") [libraries](https://en.wikipedia.org/wiki/Software_library "Software library") it needs, and then the execution begins starting from the program's [entry point](https://en.wikipedia.org/wiki/Entry_point "Entry point"). In some cases, a language or implementation will have these tasks done by the language runtime instead, though this is unusual in mainstream languages on common consumer operating systems.
+
+Some program debugging can only be performed (or is more efficient or accurate when performed) at runtime. [Logic errors](https://en.wikipedia.org/wiki/Logic_error "Logic error") and [array](https://en.wikipedia.org/wiki/Array_data_structure "Array data structure") bounds checking are examples. For this reason, some programming [bugs](https://en.wikipedia.org/wiki/Software_bug "Software bug") are not discovered until the program is tested in a [production environment](https://en.wikipedia.org/wiki/Production_environment "Production environment") with real data, despite sophisticated compile-time checking and pre-release testing. In this case, the end-user may encounter a "runtime error" message.
+
+#### Application errors (exceptions)
+[Exception handling](https://en.wikipedia.org/wiki/Exception_handling "Exception handling") is one language feature designed to handle runtime errors, providing a structured way to catch completely unexpected situations as well as predictable errors or unusual results without the amount of inline error checking required of languages without it. More recent advancements in runtime engines enable [automated exception handling](https://en.wikipedia.org/wiki/Automated_exception_handling "Automated exception handling") which provides "root-cause" debug information for every exception of interest and is implemented independent of the source code, by attaching a special software product to the runtime engine.
+
+### Runtime system
+Main article: [Runtime system](https://en.wikipedia.org/wiki/Runtime_system "Runtime system")
+
+A _runtime system_, also called _runtime environment_, primarily implements portions of an [execution model](https://en.wikipedia.org/wiki/Execution_model "Execution model"). This is not to be confused with the [runtime](https://en.wikipedia.org/wiki/Run_time_\(program_lifecycle_phase\) "Run time (program lifecycle phase)") lifecycle phase of a program, during which the runtime system is in operation. When treating the _runtime system_ as distinct from the _runtime environment_ (RTE), the first may be defined as a specific part of the [application software (IDE) used for programming](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated development environment"), a piece of software that provides the programmer a more convenient environment for running programs during their production ([testing](https://en.wikipedia.org/wiki/Software_testing "Software testing") and similar), while the second (RTE) would be the very [instance](https://en.wikipedia.org/wiki/Instance_\(computer_science\) "Instance (computer science)") of an execution model being applied to the developed program which is itself then run in the aforementioned _runtime system_.
+
+Most [programming languages](https://en.wikipedia.org/wiki/Programming_language "Programming language") have some form of runtime system that provides an environment in which programs run. This environment may address a number of issues including the [management](https://en.wikipedia.org/wiki/Memory_management "Memory management") of application [memory](https://en.wikipedia.org/wiki/Computer_memory "Computer memory"), how the program accesses [variables](https://en.wikipedia.org/wiki/Variable_\(computer_science\) "Variable (computer science)"), mechanisms for passing parameters between [procedures](https://en.wikipedia.org/wiki/Subroutine "Subroutine"), interfacing with the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system"), and otherwise. The [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") makes assumptions depending on the specific runtime system to generate correct code. Typically the runtime system will have some responsibility for setting up and managing the [stack](https://en.wikipedia.org/wiki/Stack_\(abstract_data_type\) "Stack (abstract data type)") and [heap](https://en.wikipedia.org/wiki/Heap_\(data_structure\) "Heap (data structure)"), and may include features such as [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_\(computer_science\) "Garbage collection (computer science)"), [threads](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)") or other [dynamic](https://en.wikipedia.org/wiki/Dynamic_programming_language "Dynamic programming language") features built into the language.
+
+### Instruction cycle
+Main article: [Instruction cycle](https://en.wikipedia.org/wiki/Instruction_cycle "Instruction cycle")
+
+The _instruction cycle_ (also known as the _fetch–decode–execute cycle_, or simply the _fetch-execute cycle_) is the cycle that the [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPU) follows from [boot-up](https://en.wikipedia.org/wiki/Booting "Booting") until the computer has shut down in order to process instructions. It is composed of three main stages: the fetch stage, the decode stage, and the execute stage.
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fetch-Decode-Execute_Cycle.png/250px-Fetch-Decode-Execute_Cycle.png)](https://en.wikipedia.org/wiki/File:Fetch-Decode-Execute_Cycle.png)
+
+This is a simple diagram illustrating the individual stages of the fetch-decode-execute cycle.
+
+In simpler CPUs, the instruction cycle is executed sequentially, each instruction being processed before the next one is started. In most modern CPUs, the instruction cycles are instead executed [concurrently](https://en.wikipedia.org/wiki/Concurrent_computing "Concurrent computing"), and often in [parallel](https://en.wikipedia.org/wiki/Parallel_computing "Parallel computing"), through an [instruction pipeline](https://en.wikipedia.org/wiki/Instruction_pipeline "Instruction pipeline"): the next instruction starts being processed before the previous instruction has finished, which is possible because the cycle is broken up into separate steps.
+
+### Interpreter
+Main article: [Interpreter (computing)](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)")
+
+A system that executes a program is called an [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\) "Interpreter (computing)") of the program. Loosely speaking, an interpreter directly executes a program. This contrasts with a language [translator](https://en.wikipedia.org/wiki/Translator_\(computing\) "Translator (computing)") that converts a program from one language to another before it is executed.
+
+### Virtual machine
+Main article: [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine")
+
+A _virtual machine_ (_VM_) is the [virtualization](https://en.wikipedia.org/wiki/Virtualization "Virtualization")/[emulation](https://en.wikipedia.org/wiki/Emulator "Emulator") of a [computer system](https://en.wikipedia.org/wiki/Computer_system "Computer system"). Virtual machines are based on [computer architectures](https://en.wikipedia.org/wiki/Computer_architecture "Computer architecture") and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.
+
+Virtual machines differ and are organized by their function, shown here:
+
+- **[System virtual machines](https://en.wikipedia.org/wiki/System_virtual_machine "System virtual machine")** (also termed [full virtualization](https://en.wikipedia.org/wiki/Full_virtualization "Full virtualization") VMs) provide a substitute for a real machine. They provide functionality needed to execute entire [operating systems](https://en.wikipedia.org/wiki/Operating_system "Operating system"). A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor "Hypervisor") uses [native execution](https://en.wikipedia.org/wiki/Native_code "Native code") to share and manage hardware, allowing for multiple environments which are isolated from one another, yet exist on the same physical machine. Modern hypervisors use [hardware-assisted virtualization](https://en.wikipedia.org/wiki/Hardware-assisted_virtualization "Hardware-assisted virtualization"), virtualization-specific hardware, primarily from the host CPUs.
+- **Process virtual machines** are designed to execute computer programs in a platform-independent environment.
+
+Some virtual machine emulators, such as [QEMU](https://en.wikipedia.org/wiki/QEMU "QEMU") and [video game console emulators](https://en.wikipedia.org/wiki/Video_game_console_emulator "Video game console emulator"), are designed to also emulate (or "virtually imitate") different system architectures thus allowing execution of software applications and operating systems written for another [CPU](https://en.wikipedia.org/wiki/CPU "CPU") or architecture. [OS-level virtualization](https://en.wikipedia.org/wiki/OS-level_virtualization "OS-level virtualization") allows the resources of a computer to be partitioned via the [kernel](https://en.wikipedia.org/wiki/Kernel_\(operating_system\) "Kernel (operating system)"). The terms are not universally interchangeable.
+
+## Runtime System
+In [computer programming](https://en.wikipedia.org/wiki/Computer_programming "Computer programming"), a **runtime system** or **runtime environment** is a sub-system that exists in the computer where a program is created, as well as in the computers where the program is intended to be run. The name comes from the [compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time") and [runtime](https://en.wikipedia.org/wiki/Runtime_\(program_lifecycle_phase\) "Runtime (program lifecycle phase)") division from [compiled languages](https://en.wikipedia.org/wiki/Compiled_language "Compiled language"), which similarly distinguishes the computer processes involved in the creation of a program (compilation) and its execution in the target machine (the runtime).
+
+Most [programming languages](https://en.wikipedia.org/wiki/Programming_language "Programming language") have some form of runtime system that provides an environment in which programs run. This environment may address a number of issues including the [management](https://en.wikipedia.org/wiki/Memory_management "Memory management") of application [memory](https://en.wikipedia.org/wiki/Computer_memory "Computer memory"), how the program accesses [variables](https://en.wikipedia.org/wiki/Variable_\(computer_science\) "Variable (computer science)"), mechanisms for passing parameters between [procedures](https://en.wikipedia.org/wiki/Subroutine "Subroutine"), interfacing with the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") (OS), among others. The [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler") makes assumptions depending on the specific runtime system to generate correct code. Typically the runtime system will have some responsibility for setting up and managing the [stack](https://en.wikipedia.org/wiki/Call_stack "Call stack") and [heap](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation "C dynamic memory allocation"), and may include features such as [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_\(computer_science\) "Garbage collection (computer science)"), [threads](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)") or other [dynamic](https://en.wikipedia.org/wiki/Dynamic_programming_language "Dynamic programming language") features built into the language.
+
+### Overview
+Every programming language specifies an [execution model](https://en.wikipedia.org/wiki/Execution_model "Execution model"), and many implement at least part of that model in a runtime system. One possible definition of runtime system behavior, among others, is "any behavior not directly attributable to the program itself". This definition includes putting parameters onto the stack before function calls, parallel execution of related behaviors, and disk [I/O](https://en.wikipedia.org/wiki/Input/Output "Input/Output").
+
+By this definition, essentially every language has a runtime system, including [compiled languages](https://en.wikipedia.org/wiki/Compiled_language "Compiled language"), [interpreted languages](https://en.wikipedia.org/wiki/Interpreted_language "Interpreted language"), and [embedded domain-specific languages](https://en.wikipedia.org/wiki/Embedded_domain-specific_language "Embedded domain-specific language"). Even [API](https://en.wikipedia.org/wiki/Application_Program_Interface "Application Program Interface")-invoked standalone execution models, such as [Pthreads](https://en.wikipedia.org/wiki/Pthreads "Pthreads") ([POSIX](https://en.wikipedia.org/wiki/POSIX "POSIX") [threads](https://en.wikipedia.org/wiki/Thread_\(computing\) "Thread (computing)")), have a runtime system that implements the execution model's behavior.
+
+Most scholarly papers on runtime systems focus on the implementation details of parallel runtime systems. A notable example of a parallel runtime system is [Cilk](https://en.wikipedia.org/wiki/Cilk "Cilk"), a popular parallel programming model. The proto-runtime toolkit was created to simplify the creation of parallel runtime systems.
+
+In addition to execution model behavior, a runtime system may also perform support services such as [type checking](https://en.wikipedia.org/wiki/Type_checking "Type checking"), [debugging](https://en.wikipedia.org/wiki/Debugging "Debugging"), or [code generation](https://en.wikipedia.org/wiki/Code_generation_\(compiler\) "Code generation (compiler)") and [optimization](https://en.wikipedia.org/wiki/Code_optimization "Code optimization").
+
+#### Relation to runtime environments
+The runtime system is also the gateway through which a running program interacts with the **runtime environment**. The runtime environment includes not only accessible state values, but also active entities with which the program can interact during execution. For example, [environment variables](https://en.wikipedia.org/wiki/Environment_variable "Environment variable") are features of many operating systems, and are part of the runtime environment; a running program can access them via the runtime system. Likewise, hardware devices such as disks or DVD drives are active entities that a program can interact with via a runtime system.
+
+One unique application of a runtime environment is its use within an operating system that _only_ allows it to run. In other words, from boot until power-down, the entire OS is dedicated to only the application(s) running within that runtime environment. Any other code that tries to run, or any failures in the application(s), will break the runtime environment. Breaking the runtime environment in turn breaks the OS, stopping all processing and requiring a reboot. If the boot is from read-only memory, a secure, single-mission system is created.
+
+Examples of such directly bundled runtime systems include:
+
+- Between 1983 and 1984, [Digital Research](https://en.wikipedia.org/wiki/Digital_Research "Digital Research") offered several of their business and education applications for the IBM PC on bootable floppy diskettes bundled with [SpeedStart CP/M-86](https://en.wikipedia.org/wiki/SpeedStart_CP/M-86 "SpeedStart CP/M-86"), a reduced version of CP/M-86 as runtime environment.
+- Some stand-alone versions of [Ventura Publisher](https://en.wikipedia.org/wiki/Ventura_Publisher "Ventura Publisher") (1986–1993), [Artline](https://en.wikipedia.org/wiki/Artline_\(illustration_program\) "Artline (illustration program)") (1988–1991), [Timeworks Publisher](https://en.wikipedia.org/wiki/Timeworks_Publisher "Timeworks Publisher") (1988–1991) and [ViewMAX](https://en.wikipedia.org/wiki/ViewMAX "ViewMAX") (1990–1992) contained special runtime versions of Digital Research's [GEM](https://en.wikipedia.org/wiki/GEM_\(desktop_environment\) "GEM (desktop environment)") as their runtime environment.
+- In the late 1990s, [JP Software](https://en.wikipedia.org/wiki/JP_Software "JP Software")'s command line processor [4DOS](https://en.wikipedia.org/wiki/4DOS "4DOS") was optionally available in a special runtime version to be linked with [BATCOMP](https://en.wikipedia.org/wiki/BATCOMP "BATCOMP") pre-compiled and encrypted [batch jobs](https://en.wikipedia.org/wiki/Batch_job "Batch job") in order to create unmodifiable [executables](https://en.wikipedia.org/wiki/Executable "Executable") from batch scripts and run them on systems without 4DOS installed.
+
+### Examples
+The runtime system of the [C language](https://en.wikipedia.org/wiki/C_\(programming_language\) "C (programming language)") is a particular set of instructions inserted by the compiler into the executable image. Among other things, these instructions manage the process stack, create space for local variables, and copy function call parameters onto the top of the stack.
+
+There are often no clear criteria for determining which language behaviors are part of the runtime system itself and which can be determined by any particular source program. For example, in C, the setup of the stack is part of the runtime system. It is not determined by the semantics of an individual program because the behavior is globally invariant: it holds over all executions. This systematic behavior implements the [execution model](https://en.wikipedia.org/wiki/Execution_model "Execution model") of the language, as opposed to implementing [semantics](https://en.wikipedia.org/wiki/Semantics_\(computer_science\) "Semantics (computer science)") of the particular program (in which text is directly translated into code that computes results).
+
+This separation between the semantics of a particular program and the runtime environment is reflected by the different ways of compiling a program: compiling source code to an [object file](https://en.wikipedia.org/wiki/Object_file "Object file") that contains all the functions versus compiling an entire program to an executable binary. The object file will only contain assembly code relevant to the included functions, while the executable binary will contain additional code that implements the runtime environment. The object file, on one hand, may be missing information from the runtime environment that will be resolved by [linking](https://en.wikipedia.org/wiki/Linking_\(computing\) "Linking (computing)"). On the other hand, the code in the object file still depends on assumptions in the runtime system; for example, a function may read parameters from a particular register or stack location, depending on the [calling convention](https://en.wikipedia.org/wiki/Calling_convention "Calling convention") used by the runtime environment.
+
+Another example is the case of using an [application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface") (API) to interact with a runtime system. The calls to that API look the same as calls to a regular [software library](https://en.wikipedia.org/wiki/Software_library "Software library"), however at some point during the call the execution model changes. The runtime system implements an execution model different from that of the language the library is written in terms of. A person reading the code of a normal library would be able to understand the library's behavior by just knowing the language the library was written in. However, a person reading the code of the API that invokes a runtime system would not be able to understand the behavior of the API call just by knowing the language the call was written in. At some point, via some mechanism, the execution model stops being that of the language the call is written in and switches over to being the execution model implemented by the runtime system. For example, the trap instruction is one method of switching execution models. This difference is what distinguishes an API-invoked execution model, such as Pthreads, from a usual software library. Both Pthreads calls and software library calls are invoked via an API, but Pthreads behavior cannot be understood in terms of the language of the call. Rather, Pthreads calls bring into play an outside execution model, which is implemented by the Pthreads runtime system (this runtime system is often the OS kernel).
+
+As an extreme example, the physical CPU itself can be viewed as an implementation of the runtime system of a specific assembly language. In this view, the execution model is implemented by the physical CPU and memory systems. As an analogy, runtime systems for higher-level languages are themselves implemented using some other languages. This creates a hierarchy of runtime systems, with the CPU itself—or actually its logic at the [microcode](https://en.wikipedia.org/wiki/Microcode "Microcode") layer or below—acting as the lowest-level runtime system.
+
+### Advanced features
+Some compiled or interpreted languages provide an interface that allows application code to interact directly with the runtime system. An example is the `Thread` class in the [Java language](https://en.wikipedia.org/wiki/Java_language "Java language"). The class allows code (that is animated by one thread) to do things such as start and stop other threads. Normally, core aspects of a language's behavior such as [task scheduling](https://en.wikipedia.org/wiki/Scheduling_\(computing\) "Scheduling (computing)") and [resource management](https://en.wikipedia.org/wiki/Resource_\(computer_science\) "Resource (computer science)") are not accessible in this fashion.
+
+Higher-level behaviors implemented by a runtime system may include tasks such as drawing text on the screen or making an Internet connection. It is often the case that [operating systems](https://en.wikipedia.org/wiki/Operating_system "Operating system") provide these kinds of behaviors as well, and when available, the runtime system is implemented as an [abstraction layer](https://en.wikipedia.org/wiki/Abstraction_layer "Abstraction layer") that translates the invocation of the runtime system into an invocation of the operating system. This hides the complexity or variations in the services offered by different operating systems. This also implies that the OS kernel can itself be viewed as a runtime system, and that the set of OS calls that invoke OS behaviors may be viewed as interactions with a runtime system.
+
+In the limit, the runtime system may provide services such as a [P-code machine](https://en.wikipedia.org/wiki/P-code_machine "P-code machine") or [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine "Virtual machine"), that hide even the processor's [instruction set](https://en.wikipedia.org/wiki/Instruction_set "Instruction set"). This is the approach followed by many [interpreted languages](https://en.wikipedia.org/wiki/Interpreted_language "Interpreted language") such as [AWK](https://en.wikipedia.org/wiki/AWK "AWK"), and some languages like [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)"), which are meant to be compiled into some machine-independent [intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation "Intermediate representation") code (such as [bytecode](https://en.wikipedia.org/wiki/Bytecode "Bytecode")). This arrangement simplifies the task of language implementation and its adaptation to different machines, and improves efficiency of sophisticated language features such as [reflective programming](https://en.wikipedia.org/wiki/Reflective_programming "Reflective programming"). It also allows the same program to be executed on any machine without an explicit recompiling step, a feature that has become very important since the proliferation of the [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web "World Wide Web"). To speed up execution, some runtime systems feature [just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation "Just-in-time compilation") to machine code.
+
+A modern aspect of runtime systems is parallel execution behaviors, such as the behaviors exhibited by mutex constructs in [Pthreads](https://en.wikipedia.org/wiki/Pthreads "Pthreads") and parallel section constructs in [OpenMP](https://en.wikipedia.org/wiki/OpenMP "OpenMP"). A runtime system with such parallel execution behaviors may be [modularized](https://en.wikipedia.org/wiki/Modularity "Modularity") according to the proto-runtime approach.
+
+## Program Life Cycle phase
+**Program lifecycle phases** are the stages a [computer program](https://en.wikipedia.org/wiki/Computer_program "Computer program") undergoes, from initial creation to deployment and [execution](https://en.wikipedia.org/wiki/Execution_\(computing\) "Execution (computing)"). The phases are edit time, [compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time"), [link time](https://en.wikipedia.org/wiki/Link_time "Link time"), distribution time, [installation time](https://en.wikipedia.org/wiki/Installation_\(computer_programs\) "Installation (computer programs)"), [load time](https://en.wikipedia.org/wiki/Loader_\(computing\) "Loader (computing)"), and [run time](https://en.wikipedia.org/wiki/Runtime_\(program_lifecycle_phase\) "Runtime (program lifecycle phase)").
+
+Lifecycle phases do not necessarily happen in a linear order, and they can be intertwined in various ways. For example, when modifying a program, [software developers](https://en.wikipedia.org/wiki/Software_developer "Software developer") may need to repeatedly edit, compile, install, and execute it on their own computers to ensure sufficient quality before it can be distributed to [users](https://en.wikipedia.org/wiki/User_\(computing\) "User (computing)"); copies of the modified program are then downloaded, installed, and executed by users on their computers.
+
+### Phases
+**Edit time** is when the [source code](https://en.wikipedia.org/wiki/Source_code "Source code") of the program is being edited. This spans initial creation to any [bug](https://en.wikipedia.org/wiki/Software_bug "Software bug") fix, [refactoring](https://en.wikipedia.org/wiki/Code_refactoring "Code refactoring"), or addition of new [features](https://en.wikipedia.org/wiki/Software_feature "Software feature"). Editing is typically performed by a person, but automated [design tools](https://en.wikipedia.org/wiki/Programming_tool "Programming tool") and [metaprogramming](https://en.wikipedia.org/wiki/Metaprogramming "Metaprogramming") systems may also be used.
+
+**[Compile time](https://en.wikipedia.org/wiki/Compile_time "Compile time")** is when source code is translated into [machine code](https://en.wikipedia.org/wiki/Machine_code "Machine code") by a [compiler](https://en.wikipedia.org/wiki/Compiler "Compiler"). Part of this involves language checking, such as ensuring proper use of the [type system](https://en.wikipedia.org/wiki/Type_system "Type system"). The result of a successful compilation is an [executable](https://en.wikipedia.org/wiki/Executable "Executable").
+
+**[Link time](https://en.wikipedia.org/wiki/Link_time "Link time")** connects all of the necessary machine code components of a program, including externals. It is very common for programs to use functions implemented by external [libraries](https://en.wikipedia.org/wiki/Library_\(computing\) "Library (computing)"), all of which must be properly linked together. There are two types of linking. [Static linking](https://en.wikipedia.org/wiki/Static_linking "Static linking") is when the connection is made by the compiler, which is always prior to execution. [Dynamic linking](https://en.wikipedia.org/wiki/Dynamic_linking "Dynamic linking"), however, is performed by the [operating system](https://en.wikipedia.org/wiki/Operating_system "Operating system") (OS) just before, or even during, execution.
+
+**Distribution time** is the process of transferring a copy of a program to a user. The distribution format is typically an executable, but may also be source code, especially for a program written in an [interpreted language](https://en.wikipedia.org/wiki/Interpreted_language "Interpreted language"). The means of distribution can be physical media such as a [USB flash drive](https://en.wikipedia.org/wiki/USB_flash_drive "USB flash drive") or a remote download via the [Internet](https://en.wikipedia.org/wiki/Internet "Internet").
+
+**[Installation time](https://en.wikipedia.org/wiki/Installation_\(computer_programs\) "Installation (computer programs)")** gets the distributed program ready for execution on the user's computer, which often includes storing the executable for future loading by the OS.
+
+**[Load time](https://en.wikipedia.org/wiki/Load_time "Load time")** is when the OS takes the program's executable from storage, such as a [hard drive](https://en.wikipedia.org/wiki/Hard_disk_drive "Hard disk drive"), and places it into active [memory](https://en.wikipedia.org/wiki/Computer_memory "Computer memory"), in order to begin execution.
+
+**[Run time](https://en.wikipedia.org/wiki/Run_time_\(program_lifecycle_phase\) "Run time (program lifecycle phase)")** is the execution phase, when the [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") executes the program's machine code instructions. Programs may run indefinitely. If execution terminates it will either be normal, expected behavior or an abnormality such as a [crash](https://en.wikipedia.org/wiki/Crash_\(computing\) "Crash (computing)").
